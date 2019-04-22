@@ -188,6 +188,7 @@ def write(f, s, *args, trim=True):
         s = s.format(*args)
     f.write(s+"\n")
 
+char_page = 3500
 with open("analisis.md", "w") as f:
     write(f,'''
 # Resumen
@@ -197,7 +198,7 @@ with open("analisis.md", "w") as f:
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
-        pages = int(d.caracteres/3000)+1
+        pages = int(d.caracteres/char_page)+1
         pdf_pages = d.get("pdf", {}).get("Pages", None)
         if pdf_pages is not None:
             pages = "<sub>%s - %s =</sub> %s" % (pdf_pages, pdf_pages-pages, pages)
@@ -214,10 +215,10 @@ with open("analisis.md", "w") as f:
     write(f,'''
 Notas:
 
-* <sup>1</sup> Suponiendo unos 3000 caracteres por página. En el caso de los `pdf` aparece también una resta que representa el número de páginas del `pdf` original y el número de `páginas` ahorradas gracias a la reconversión, es decir, el espacio que se desaprovechaba por culpa de la maquetación del `pdf` y/o él uso de imagenes irrelevantes.
+* <sup>1</sup> Suponiendo unos {0} caracteres por página. En el caso de los `pdf` aparece también una resta que representa el número de páginas del `pdf` original y el número de `páginas` ahorradas gracias a la reconversión, es decir, el espacio que se desaprovechaba por culpa de la maquetación del `pdf` y/o él uso de imagenes irrelevantes.
 * <sup>2</sup> La contraseña del `zip` es `programaelectoral`
 * Para el conteo de palabras en los gráficos de más abajo se han excluido algunas preposiciones, conjunciones, artículos, pronombres y adverbios
-    ''')
+    ''', char_page)
     write(f,"")
     for d in datas:
         write(f,"# {0}", d.partido)
