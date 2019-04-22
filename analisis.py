@@ -188,7 +188,7 @@ def write(f, s, *args, trim=True):
         s = s.format(*args)
     f.write(s+"\n")
 
-char_page = 3500
+char_page = 3000
 with open("analisis.md", "w") as f:
     write(f,'''
 # Resumen
