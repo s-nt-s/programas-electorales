@@ -192,16 +192,20 @@ with open("analisis.md", "w") as f:
     write(f,'''
 # Resumen
 
-| Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado |
+| Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado<sup>2</sup> |
 |:--------|:------:|--------:|---------:|:---------:|
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
+        pages = int(d.caracteres/3000)+1
+        pdf_pages = d.get("pdf", {}).get("Pages", None)
+        if pdf_pages is not None:
+            pages = "<small>%s-%s=</small> %s" % (pdf_pages, pdf_pages-pages, pages)
         write(f,'''
 | {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}zip) |
         ''',
         d.partido, formato, d.url,
-        int(d.caracteres/3000)+1,
+        pages,
         d.parrafos,
         int(d.riqueza_lexica*100),
         d.root, data.out_name.replace(" ","%20")
@@ -210,7 +214,8 @@ with open("analisis.md", "w") as f:
     write(f,'''
 Notas:
 
-* <sup>1</sup> Suponiendo unos 3000 caracteres por página
+* <sup>1</sup> Suponiendo unos 3000 caracteres por página. En el caso de los `pdf` aparece también una resta que representa el número de páginas del `pdf` original y el número de `páginas` ahorradas gracias a la reconversión, es decir, el espacio que se desaprovechaba por culpa de la maquetación del `pdf` y/o él uso de imagenes irrelevantes.
+* <sup>2</sup> La contraseña del `zip` es `programaelectoral`
 * Para el conteo de palabras en los gráficos de más abajo se han excluido algunas preposiciones, conjunciones, artículos, pronombres y adverbios
     ''')
     write(f,"")
