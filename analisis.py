@@ -203,7 +203,7 @@ with open("analisis.md", "w") as f:
         d.partido, formato, d.url,
         int(d.caracteres/3000)+1,
         d.parrafos, int(d.riqueza_lexica*100),
-        d.root, data.out_name
+        d.root, data.out_name.replace(" ","%20")
         )
     write(f,"")
     for d in datas:
@@ -211,7 +211,7 @@ with open("analisis.md", "w") as f:
         write(f,"")
         write(f,'''
 ![{0}]({1}/analisis/{2})
-        ''',d.partido, d.root, d.imagen)
+        ''',d.partido, d.root, d.imagen.replace(" ","%20"))
         write(f,"")
         for s, vl in d.freq.items():
             c = vl["count"]
