@@ -1,0 +1,90 @@
+partido: PACMA
+year: 2019
+tipo: Generales
+fecha: 2019-04-08
+url: https://pacma.es/elecciones-2019/compromisos
+txt_cover: Programa PACMA Generales 2019
+output: 2019 - Generales - PACMA.md
+out_name: 2019 - Generales - PACMA.
+caracteres: 194617
+palabras: 29524
+parrafos: 853
+root: pacma
+riqueza_lexica: 0.321850590827158
+freq:
+  animal:
+    count: 352
+    words:
+      animales: 258
+      animal: 58
+      animalista: 35
+      animalistas: 1
+  public:
+    count: 123
+    words:
+      pública: 30
+      público: 28
+      públicas: 27
+      públicos: 26
+      publicado: 4
+      publicar: 2
+      publicando: 2
+      publicación: 2
+      públicamente: 1
+      publicarán: 1
+  person:
+    count: 117
+    words:
+      personas: 109
+      persona: 7
+      personan: 1
+  educ:
+    count: 86
+    words:
+      educación: 49
+      educativo: 16
+      educativos: 12
+      educativas: 4
+      educativa: 2
+      educar: 2
+      educadores: 1
+  desarroll:
+    count: 85
+    words:
+      desarrollo: 58
+      desarrollar: 13
+      desarrollen: 7
+      desarrollando: 2
+      desarrollan: 2
+      desarrollos: 1
+      desarrollados: 1
+      desarrolla: 1
+  social:
+    count: 84
+    words:
+      social: 56
+      sociales: 28
+  propon:
+    count: 78
+    words:
+      proponemos: 68
+      propone: 9
+      proponer: 1
+  salud:
+    count: 72
+    words:
+      salud: 66
+      saludables: 4
+      saludable: 2
+  polit:
+    count: 70
+    words:
+      políticas: 35
+      política: 26
+      políticos: 8
+      político: 1
+  proteccion:
+    count: 65
+    words:
+      protección: 65
+imagen: 2019 - Generales - PACMA.png

@@ -1,0 +1,11 @@
+@page {
+	margin-bottom: 5pt;
+	margin-top: 5pt
+}
+h1 {
+    margin-top: 0em;
+}
+body > div.title_page {
+	text-align: center;
+	margin:10px;
+}

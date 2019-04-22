@@ -1,0 +1,89 @@
+partido: Actua
+year: 2019
+tipo: Generales
+fecha: 2019-03-29
+url: http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf
+txt_cover: Programa Actua Generales 2019
+output: 2019 - Generales - Actua.md
+out_name: 2019 - Generales - Actua.
+caracteres: 103490
+palabras: 15946
+parrafos: 369
+root: actua
+riqueza_lexica: 0.4252495892834576
+freq:
+  public:
+    count: 104
+    words:
+      públicos: 44
+      pública: 23
+      públicas: 22
+      público: 13
+      publico: 1
+      publicación: 1
+  social:
+    count: 68
+    words:
+      social: 45
+      sociales: 21
+      socialmente: 2
+  polit:
+    count: 61
+    words:
+      política: 28
+      políticas: 26
+      político: 4
+      políticos: 3
+  derech:
+    count: 60
+    words:
+      derechos: 37
+      derecho: 14
+      derecha: 8
+      derechas: 1
+  model:
+    count: 48
+    words:
+      modelo: 43
+      modelos: 5
+  econom:
+    count: 46
+    words:
+      económica: 15
+      económico: 11
+      economía: 8
+      económicas: 6
+      económicos: 4
+      económicamente: 1
+      economista: 1
+  autonom:
+    count: 40
+    words:
+      autónomas: 14
+      autonomía: 10
+      autónomos: 3
+      autonómico: 3
+      autonómicas: 3
+      autonómica: 3
+      autonómicos: 2
+      autonomías: 2
+  servici:
+    count: 39
+    words:
+      servicios: 31
+      servicio: 8
+  sistem:
+    count: 39
+    words:
+      sistema: 33
+      sistemas: 5
+      sistémica: 1
+  español:
+    count: 37
+    words:
+      españa: 30
+      española: 3
+      españolas: 2
+      españoles: 1
+      español: 1
+imagen: 2019 - Generales - Actua.png

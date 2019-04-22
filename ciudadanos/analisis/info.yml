@@ -1,0 +1,99 @@
+partido: Ciudadanos
+year: 2019
+tipo: Generales
+fecha: 2019-04-16
+url: https://www.ciudadanos-cs.org/programa-electoral
+txt_cover: Programa Ciudadanos Generales 2019
+output: 2019 - Generales - Ciudadanos.md
+out_name: 2019 - Generales - Ciudadanos.
+caracteres: 96779
+palabras: 14494
+parrafos: 268
+root: ciudadanos
+riqueza_lexica: 0.3934403732674626
+freq:
+  español:
+    count: 120
+    words:
+      españa: 72
+      españoles: 19
+      español: 14
+      española: 12
+      españolas: 3
+  public:
+    count: 85
+    words:
+      públicos: 25
+      públicas: 22
+      público: 18
+      pública: 15
+      publicarse: 1
+      publicaremos: 1
+      publicar: 1
+      publicando: 1
+      publicación: 1
+  garantiz:
+    count: 73
+    words:
+      garantizar: 33
+      garantizaremos: 30
+      garantizando: 6
+      garantizará: 2
+      garantizarles: 1
+      garantizado: 1
+  nacional:
+    count: 55
+    words:
+      nacional: 47
+      nacionales: 3
+      nacionalistas: 2
+      nacionalista: 2
+      nacionalidad: 1
+  derech:
+    count: 48
+    words:
+      derecho: 27
+      derechos: 21
+  impuls:
+    count: 47
+    words:
+      impulsaremos: 39
+      impulsando: 4
+      impulsar: 2
+      impulsará: 1
+      impulsada: 1
+  mejor:
+    count: 43
+    words:
+      mejorar: 12
+      mejores: 11
+      mejoraremos: 11
+      mejora: 7
+      mejore: 1
+      mejorando: 1
+  nuev:
+    count: 42
+    words:
+      nuevo: 14
+      nuevos: 11
+      nueva: 11
+      nuevas: 6
+  trabaj:
+    count: 40
+    words:
+      trabajo: 18
+      trabajadores: 11
+      trabajador: 3
+      trabajar: 2
+      trabajos: 1
+      trabajen: 1
+      trabajaremos: 1
+      trabajando: 1
+      trabajadoras: 1
+      trabajadora: 1
+  acab:
+    count: 40
+    words:
+      acabar: 22
+      acabaremos: 18
+imagen: 2019 - Generales - Ciudadanos.png

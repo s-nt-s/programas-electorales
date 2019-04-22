@@ -1,0 +1,111 @@
+partido: PP
+year: 2019
+tipo: Generales
+fecha: 2019-04-08
+url: http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf
+txt_cover: Programa PP Generales 2019
+output: 2019 - Generales - PP.md
+out_name: 2019 - Generales - PP.
+caracteres: 182640
+palabras: 27419
+parrafos: 694
+root: pp
+riqueza_lexica: 0.2896602119108513
+freq:
+  español:
+    count: 156
+    words:
+      españa: 85
+      españoles: 31
+      española: 20
+      español: 12
+      españolas: 8
+  impuls:
+    count: 150
+    words:
+      impulsaremos: 95
+      impulsar: 17
+      impulsando: 17
+      impulso: 12
+      impulsarán: 3
+      impulsen: 2
+      impulse: 1
+      impulsará: 1
+      impulsan: 1
+      impulsado: 1
+  desarroll:
+    count: 109
+    words:
+      desarrollo: 64
+      desarrollaremos: 29
+      desarrollar: 3
+      desarrollando: 3
+      desarrollen: 2
+      desarrolladas: 2
+      desarrollos: 1
+      desarrolle: 1
+      desarrollará: 1
+      desarrollarse: 1
+      desarrollan: 1
+      desarrolladores: 1
+  public:
+    count: 107
+    words:
+      públicos: 37
+      público: 23
+      públicas: 22
+      pública: 21
+      públicamente: 1
+      publicando: 1
+      publicados: 1
+      publicación: 1
+  promov:
+    count: 101
+    words:
+      promoveremos: 76
+      promover: 14
+      promoviendo: 6
+      promoverán: 3
+      promoverá: 2
+  plan:
+    count: 98
+    words:
+      plan: 60
+      planes: 38
+  nacional:
+    count: 96
+    words:
+      nacional: 77
+      nacionales: 15
+      nacionalidad: 2
+      nacionalismos: 1
+      nacionalismo: 1
+  nuev:
+    count: 84
+    words:
+      nuevas: 35
+      nuevos: 25
+      nueva: 13
+      nuevo: 11
+  segur:
+    count: 81
+    words:
+      seguridad: 72
+      seguras: 3
+      seguros: 2
+      seguro: 2
+      segura: 2
+  autonom:
+    count: 79
+    words:
+      autónomas: 36
+      autonómicos: 9
+      autonómico: 8
+      autónomos: 7
+      autonómicas: 6
+      autonomía: 5
+      autónomo: 3
+      autonómica: 3
+      autónoma: 1
+      autonomías: 1
+imagen: 2019 - Generales - PP.png

@@ -1,0 +1,97 @@
+partido: Podemos
+year: 2019
+tipo: Generales
+fecha: 2019-04-01
+url: https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf
+txt_cover: Programa Podemos Generales 2019
+output: 2019 - Generales - Podemos.md
+out_name: 2019 - Generales - Podemos.
+caracteres: 187522
+palabras: 29422
+parrafos: 292
+root: podemos
+riqueza_lexica: 0.3240779991521831
+freq:
+  public:
+    count: 142
+    words:
+      público: 43
+      pública: 42
+      públicas: 29
+      públicos: 24
+      publicaremos: 1
+      publicar: 1
+      publicado: 1
+      publicación: 1
+  derech:
+    count: 124
+    words:
+      derechos: 80
+      derecho: 41
+      derecha: 2
+      derechas: 1
+  trabaj:
+    count: 111
+    words:
+      trabajo: 31
+      trabajadores: 23
+      trabajadoras: 20
+      trabajar: 8
+      trabajan: 7
+      trabajadora: 6
+      trabajará: 4
+      trabajador: 4
+      trabajaremos: 3
+      trabajos: 2
+      trabajamos: 1
+      trabajado: 1
+      trabaja: 1
+  person:
+    count: 107
+    words:
+      personas: 94
+      persona: 13
+  español:
+    count: 89
+    words:
+      españa: 58
+      española: 13
+      españolas: 10
+      españoles: 6
+      español: 2
+  servici:
+    count: 85
+    words:
+      servicios: 65
+      servicio: 20
+  establec:
+    count: 77
+    words:
+      estableceremos: 24
+      establecer: 19
+      establecerá: 10
+      establecerán: 7
+      establecimientos: 4
+      establecimiento: 4
+      establecido: 3
+      estableciendo: 2
+      establecida: 2
+      establece: 2
+  pais:
+    count: 76
+    words:
+      país: 63
+      países: 13
+  sistem:
+    count: 69
+    words:
+      sistema: 60
+      sistemas: 9
+  social:
+    count: 67
+    words:
+      social: 38
+      sociales: 27
+      socialmente: 1
+      socialista: 1
+imagen: 2019 - Generales - Podemos.png

@@ -1,0 +1,107 @@
+partido: PSOE
+year: 2019
+tipo: Generales
+fecha: 2019-04-15
+url: https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf
+txt_cover: Programa PSOE Generales 2019
+output: 2019 - Generales - PSOE.md
+out_name: 2019 - Generales - PSOE.
+caracteres: 415243
+palabras: 64357
+parrafos: 1389
+root: psoe
+riqueza_lexica: 0.2089116845648341
+freq:
+  social:
+    count: 408
+    words:
+      social: 181
+      sociales: 103
+      socialista: 72
+      socialistas: 50
+      socialmente: 2
+  español:
+    count: 309
+    words:
+      españa: 191
+      española: 42
+      españoles: 32
+      español: 22
+      españolas: 21
+      españas: 1
+  derech:
+    count: 224
+    words:
+      derechos: 142
+      derecho: 72
+      derecha: 7
+      derechas: 3
+  public:
+    count: 219
+    words:
+      pública: 59
+      público: 55
+      públicos: 53
+      públicas: 48
+      publicación: 2
+      públicamente: 1
+      publicando: 1
+  polit:
+    count: 215
+    words:
+      políticas: 98
+      política: 95
+      políticos: 12
+      político: 10
+  impuls:
+    count: 204
+    words:
+      impulsar: 69
+      impulsaremos: 54
+      impulso: 32
+      impulsando: 17
+      impulsado: 13
+      impulse: 5
+      impulsará: 5
+      impulsarán: 4
+      impulsadas: 2
+      impulsó: 1
+      impulsan: 1
+      impulsa: 1
+  desarroll:
+    count: 199
+    words:
+      desarrollo: 113
+      desarrollar: 43
+      desarrollando: 12
+      desarrollaremos: 11
+      desarrollen: 4
+      desarrolle: 3
+      desarrollan: 3
+      desarrollos: 2
+      desarrollada: 2
+      desarrolló: 1
+      desarrollaran: 1
+      desarrollados: 1
+      desarrollado: 1
+      desarrolladas: 1
+      desarrolla: 1
+  person:
+    count: 197
+    words:
+      personas: 185
+      persona: 12
+  gobiern:
+    count: 188
+    words:
+      gobierno: 186
+      gobierne: 1
+      gobierna: 1
+  sistem:
+    count: 181
+    words:
+      sistema: 157
+      sistemas: 22
+      sistémico: 1
+      sistémicas: 1
+imagen: 2019 - Generales - PSOE.png

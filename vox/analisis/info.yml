@@ -1,0 +1,78 @@
+partido: Vox
+year: 2019
+tipo: Generales
+fecha: 2018-10-10
+url: https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf
+txt_cover: Programa Vox Generales 2019
+output: 2019 - Generales - Vox.md
+out_name: 2019 - Generales - Vox.
+caracteres: 23242
+palabras: 3590
+parrafos: 100
+root: vox
+riqueza_lexica: 0.6408411732152739
+freq:
+  español:
+    count: 42
+    words:
+      españa: 16
+      españoles: 8
+      española: 7
+      español: 7
+      españolas: 4
+  nacional:
+    count: 23
+    words:
+      nacional: 16
+      nacionalidad: 5
+      nacionalidades: 1
+      nacionales: 1
+  public:
+    count: 19
+    words:
+      públicos: 7
+      público: 5
+      pública: 4
+      públicas: 2
+      publicación: 1
+  famili:
+    count: 15
+    words:
+      familias: 7
+      familiar: 4
+      familia: 4
+  inmigr:
+    count: 12
+    words:
+      inmigrantes: 5
+      inmigración: 5
+      inmigrante: 2
+  empres:
+    count: 12
+    words:
+      empresa: 7
+      empresas: 5
+  estad:
+    count: 11
+    words:
+      estado: 11
+  autonom:
+    count: 10
+    words:
+      autonómicas: 5
+      autónomos: 1
+      autónoma: 1
+      autonómico: 1
+      autonómica: 1
+      autonomía: 1
+  ilegal:
+    count: 9
+    words:
+      ilegales: 5
+      ilegal: 3
+      ilegalmente: 1
+  reduccion:
+    count: 9
+    words:
+      reducción: 9
+imagen: 2019 - Generales - Vox.png
