@@ -192,19 +192,27 @@ with open("analisis.md", "w") as f:
     write(f,'''
 # Resumen
 
-| Partido | Fuente | Páginas | Párrafos | Riqueza<br/>léxica  | Resultado |
+| Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado |
 |:--------|:------:|--------:|---------:|--------------------:|:---------:|
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
         write(f,'''
-| {0} | [{1}]({2}) | {3} | {4} | {5}%  | [HTML + EPUB + MD]({6}/{7}zip)
+| {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}zip)
         ''',
         d.partido, formato, d.url,
         int(d.caracteres/3000)+1,
-        d.parrafos, int(d.riqueza_lexica*100),
+        d.parrafos,
+        int(d.riqueza_lexica*100),
         d.root, data.out_name.replace(" ","%20")
         )
+    write(f,"")
+    write(f,'''
+Notas:
+
+* <sup>1</sup> Suponiendo unos 3000 caracteres por página
+* Para el conteo de palabras en los gráficos de más abajo se han excluido algunas preposiciones, conjunciones, artículos, pronombres y adverbios
+    ''')
     write(f,"")
     for d in datas:
         write(f,"# {0}", d.partido)
