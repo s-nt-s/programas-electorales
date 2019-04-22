@@ -193,12 +193,12 @@ with open("analisis.md", "w") as f:
 # Resumen
 
 | Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado |
-|:--------|:------:|--------:|---------:|--------------------:|:---------:|
+|:--------|:------:|--------:|---------:|:---------:|
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
         write(f,'''
-| {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}zip)
+| {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}zip) |
         ''',
         d.partido, formato, d.url,
         int(d.caracteres/3000)+1,
