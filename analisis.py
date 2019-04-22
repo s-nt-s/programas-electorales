@@ -198,7 +198,7 @@ with open("analisis.md", "w") as f:
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
         write(f,'''
-| {0} | [{1}]({2}) | {3} | {4} | {5}%  | [HTML + EPUB + MD](./{6}/{7}zip)
+| {0} | [{1}]({2}) | {3} | {4} | {5}%  | [HTML + EPUB + MD]({6}/{7}zip)
         ''',
         d.partido, formato, d.url,
         int(d.caracteres/3000)+1,
@@ -210,7 +210,7 @@ with open("analisis.md", "w") as f:
         write(f,"# {0}", d.partido)
         write(f,"")
         write(f,'''
-![{0}](./{1}/analisis/{2})
+![{0}]({1}/analisis/{2})
         ''',d.partido, d.root, d.imagen)
         write(f,"")
         for s, vl in d.freq.items():
