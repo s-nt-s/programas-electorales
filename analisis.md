@@ -2,17 +2,17 @@
 
 | Partido | Fuente | Páginas | Párrafos | Riqueza<br/>léxica  | Resultado |
 |:--------|:------:|--------:|---------:|--------------------:|:---------:|
-| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | 35 | 369 | 42%  | [HTML + EPUB + MD](actua/2019 - Generales - Vox.zip)
-| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 33 | 268 | 39%  | [HTML + EPUB + MD](ciudadanos/2019 - Generales - Vox.zip)
-| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 65 | 853 | 32%  | [HTML + EPUB + MD](pacma/2019 - Generales - Vox.zip)
-| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 63 | 292 | 32%  | [HTML + EPUB + MD](podemos/2019 - Generales - Vox.zip)
-| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 61 | 694 | 28%  | [HTML + EPUB + MD](pp/2019 - Generales - Vox.zip)
-| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 139 | 1389 | 20%  | [HTML + EPUB + MD](psoe/2019 - Generales - Vox.zip)
-| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 8 | 100 | 64%  | [HTML + EPUB + MD](vox/2019 - Generales - Vox.zip)
+| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | 35 | 369 | 42%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
+| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 33 | 268 | 39%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
+| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 65 | 853 | 32%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
+| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 63 | 292 | 32%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
+| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 61 | 694 | 28%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
+| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 139 | 1389 | 20%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
+| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 8 | 100 | 64%  | [HTML + EPUB + MD](2019 - Generales - Vox.zip)
 
 # Actua
 
-![Actua](actua/analisis/2019 - Generales - Actua.png)
+![Actua](2019 - Generales - Actua.png)
 
 * `104x` public*:
     * `44x` públicos
@@ -71,7 +71,7 @@
 
 # Ciudadanos
 
-![Ciudadanos](ciudadanos/analisis/2019 - Generales - Ciudadanos.png)
+![Ciudadanos](2019 - Generales - Ciudadanos.png)
 
 * `120x` español*:
     * `72x` españa
@@ -140,7 +140,7 @@
 
 # PACMA
 
-![PACMA](pacma/analisis/2019 - Generales - PACMA.png)
+![PACMA](2019 - Generales - PACMA.png)
 
 * `352x` animal*:
     * `258x` animales
@@ -199,7 +199,7 @@
 
 # Podemos
 
-![Podemos](podemos/analisis/2019 - Generales - Podemos.png)
+![Podemos](2019 - Generales - Podemos.png)
 
 * `142x` public*:
     * `43x` público
@@ -266,7 +266,7 @@
 
 # PP
 
-![PP](pp/analisis/2019 - Generales - PP.png)
+![PP](2019 - Generales - PP.png)
 
 * `156x` español*:
     * `85x` españa
@@ -347,7 +347,7 @@
 
 # PSOE
 
-![PSOE](psoe/analisis/2019 - Generales - PSOE.png)
+![PSOE](2019 - Generales - PSOE.png)
 
 * `408x` social*:
     * `181x` social
@@ -424,7 +424,7 @@
 
 # Vox
 
-![Vox](vox/analisis/2019 - Generales - Vox.png)
+![Vox](2019 - Generales - Vox.png)
 
 * `42x` español*:
     * `16x` españa
