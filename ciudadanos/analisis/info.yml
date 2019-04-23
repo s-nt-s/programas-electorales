@@ -10,6 +10,11 @@ caracteres: 96779
 palabras: 14494
 parrafos: 268
 root: ciudadanos
+filesize:
+  md: 100125
+  html: 108900
+  epub: 59790
+  src_html: 151410
 riqueza_lexica: 0.3934403732674626
 freq:
   español:

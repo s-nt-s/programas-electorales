@@ -27,6 +27,13 @@ caracteres: 182640
 palabras: 27419
 parrafos: 694
 root: pp
+filesize:
+  md: 189191
+  html: 202300
+  epub: 83069
+  src_pdf: 5846812
+  src_html: 465169
+  src_xml: 482241
 riqueza_lexica: 0.2896602119108513
 freq:
   español:

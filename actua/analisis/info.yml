@@ -29,6 +29,13 @@ caracteres: 103490
 palabras: 15946
 parrafos: 369
 root: actua
+filesize:
+  md: 107191
+  html: 113374
+  epub: 58702
+  src_pdf: 1537368
+  src_html: 381970
+  src_xml: 288221
 riqueza_lexica: 0.4252495892834576
 freq:
   public:

@@ -27,6 +27,13 @@ caracteres: 23242
 palabras: 3590
 parrafos: 100
 root: vox
+filesize:
+  md: 24570
+  html: 26986
+  epub: 23875
+  src_pdf: 187727
+  src_html: 64651
+  src_xml: 51018
 riqueza_lexica: 0.6408411732152739
 freq:
   español:

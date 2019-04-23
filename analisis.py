@@ -105,6 +105,15 @@ for y in sorted(glob("*/info.yml")):
     data.palabras = len(body_slp)
     data.parrafos = len(body.findAll(["p", "li"]))
     data.root = d
+    data.filesize = {k:os.path.getsize(data.out_name+k) for k in ("md", "html", "epub")}
+    for k in ("pdf", "html", "xml"):
+        book = "wks/book."+k
+        if os.path.isfile(book):
+            data.filesize["src_"+k]=os.path.getsize(book)
+        book = "wks/books."+k
+        if os.path.isfile(book):
+            data.filesize["src_"+k]=data.filesize.get(k, 0) + os.path.getsize(book)
+
 
     corpus = []
     stems = {}

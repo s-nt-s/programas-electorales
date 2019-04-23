@@ -27,6 +27,13 @@ caracteres: 415243
 palabras: 64357
 parrafos: 1389
 root: psoe
+filesize:
+  md: 455667
+  html: 482639
+  epub: 165745
+  src_pdf: 630621
+  src_html: 1110311
+  src_xml: 1068306
 riqueza_lexica: 0.2089116845648341
 freq:
   social:

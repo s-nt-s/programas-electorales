@@ -23,6 +23,13 @@ caracteres: 187522
 palabras: 29422
 parrafos: 292
 root: podemos
+filesize:
+  md: 192990
+  html: 198784
+  epub: 84532
+  src_pdf: 859415
+  src_html: 458030
+  src_xml: 455581
 riqueza_lexica: 0.3240779991521831
 freq:
   public:

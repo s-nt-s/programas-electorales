@@ -26,6 +26,12 @@ caracteres: 194617
 palabras: 29524
 parrafos: 853
 root: pacma
+filesize:
+  md: 201049
+  html: 218575
+  epub: 82248
+  src_pdf: 898949
+  src_html: 247099
 riqueza_lexica: 0.321850590827158
 freq:
   animal:
