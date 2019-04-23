@@ -35,8 +35,8 @@ y mucho menos es libre, abierto, transparente o flexible.
 <thead>
     <tr>
         <th rowspan="2">Partido</th>
-        <th colspan="2">Páginas</th>
-        <th colspan="2">Tamaño (KB)</th>
+        <th colspan="2" align="center">Páginas</th>
+        <th colspan="2" align="center">Tamaño (KB)</th>
     </tr>
         <tr>
             <th>Original</th>
