@@ -285,7 +285,7 @@ y mucho menos es libre, abierto, transparente o flexible.
         d.partido,
         p0,
         d.pages,
-        int((p0-d.pages)*100/s0),
+        int((p0-d.pages)*100/p0),
         int(s0/1024),
         int(d.filesize["epub"]/1024),
         int((s0-d.filesize["epub"])*100/s0)
