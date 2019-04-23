@@ -16,6 +16,30 @@ from urllib.request import urlretrieve
 re_float = re.compile(r"^\d+\.\d+$")
 dname=os.getcwd()
 
+def get_pdfinfo(pdf, info=None):
+    if info is None:
+        info = {}
+    pdfinfo = subprocess.check_output(["pdfinfo", pdf])
+    pdfinfo = pdfinfo.decode(sys.stdout.encoding)
+    for l in pdfinfo.split("\n"):
+        l = l.strip()
+        if len(l):
+            k, v = l.split(":", 1)
+            k = k.strip()
+            v = v.strip()
+            if len(v)==0 or v=='none':
+                v = None
+            elif v.isdigit():
+                v = int(v)
+            elif re_float.match(v):
+                v = float(v)
+            elif v == 'no':
+                v = False
+            elif v == 'yes':
+                v = True
+            info[k]=v
+    return info
+
 indices=[]
 for c in glob("*/info.yml"):
     indices.append((c, os.path.dirname(c), get_info(c, autocomplete=False)))
@@ -37,26 +61,7 @@ for path_info, codigo, info in sorted(indices):
             urlretrieve(info.url, filename=pdf)
 
         flag = True
-        pdfinfo = subprocess.check_output(["pdfinfo", pdf])
-        pdfinfo = pdfinfo.decode(sys.stdout.encoding)
-        info.pdf = {}
-        for l in pdfinfo.split("\n"):
-            l = l.strip()
-            if len(l):
-                k, v = l.split(":", 1)
-                k = k.strip()
-                v = v.strip()
-                if len(v)==0 or v=='none':
-                    v = None
-                elif v.isdigit():
-                    v = int(v)
-                elif re_float.match(v):
-                    v = float(v)
-                elif v == 'no':
-                    v = False
-                elif v == 'yes':
-                    v = True
-                info.pdf[k]=v
+        info.pdf = get_pdfinfo(pdf, info.pdf)
 
         if not os.path.isfile(xml):
             os.chdir(pth)
@@ -71,6 +76,12 @@ for path_info, codigo, info in sorted(indices):
     else:
         if not os.path.isfile(htm):
             urlretrieve(url, filename=htm)
+        url = info.get("pdf", {}).get("url", None)
+        if url:
+            if not os.path.isfile(pdf):
+                urlretrieve(url, filename=pdf)
+            flag = True
+            info.pdf = get_pdfinfo(pdf, info.pdf)
 
     if flag:
         os.chdir(dname)

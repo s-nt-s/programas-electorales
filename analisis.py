@@ -201,7 +201,11 @@ with open("analisis.md", "w") as f:
         pages = int(d.caracteres/char_page)+1
         pdf_pages = d.get("pdf", {}).get("Pages", None)
         if pdf_pages is not None:
-            pages = "<sub>%s - %s =</sub> %s" % (pdf_pages, pdf_pages-pages, pages)
+            pdf_url = d.pdf.get("url", None)
+            if pdf_url:
+                pages = "<sub>[%s](%s) - %s =</sub> %s" % (pdf_pages, pdf_url, pdf_pages-pages, pages)
+            else:
+                pages = "<sub>%s - %s =</sub> %s" % (pdf_pages, pdf_pages-pages, pages)
         write(f,'''
 | {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}zip) |
         ''',
