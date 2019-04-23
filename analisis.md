@@ -56,7 +56,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">1501</td>
             <td align="right">57</td>
             <td align="right">96 %</td>
-        <tr>
+        </tr>
 <tr>
             <td>Ciudadanos</td>
             <td align="right">26</td>
@@ -65,7 +65,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">1125</td>
             <td align="right">58</td>
             <td align="right">94 %</td>
-        <tr>
+        </tr>
 <tr>
             <td>PACMA</td>
             <td align="right">92</td>
@@ -74,7 +74,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">877</td>
             <td align="right">80</td>
             <td align="right">90 %</td>
-        <tr>
+        </tr>
 <tr>
             <td>Podemos</td>
             <td align="right">105</td>
@@ -83,7 +83,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">839</td>
             <td align="right">82</td>
             <td align="right">90 %</td>
-        <tr>
+        </tr>
 <tr>
             <td>PP</td>
             <td align="right">102</td>
@@ -92,7 +92,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">5709</td>
             <td align="right">81</td>
             <td align="right">98 %</td>
-        <tr>
+        </tr>
 <tr>
             <td>PSOE</td>
             <td align="right">152</td>
@@ -101,7 +101,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">615</td>
             <td align="right">161</td>
             <td align="right">73 %</td>
-        <tr>
+        </tr>
 <tr>
             <td>Vox</td>
             <td align="right">25</td>
@@ -110,7 +110,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">183</td>
             <td align="right">23</td>
             <td align="right">87 %</td>
-        <tr>
+        </tr>
 </tbody>
 </table>
 # Actua

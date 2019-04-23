@@ -280,7 +280,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td align="right">{4}</td>
             <td align="right">{5}</td>
             <td align="right">{6} %</td>
-        <tr>
+        </tr>
         ''',
         d.partido,
         p0,
