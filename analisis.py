@@ -106,15 +106,19 @@ if reload:
         data.palabras = len(body_slp)
         data.parrafos = len(body.findAll(["p", "li"]))
         data.root = d
-        data.filesize = {k:os.path.getsize(data.output+'.'+k) for k in ("md", "html", "epub")}
+        filesize = data.get("filesize", {})
+        for k in ("md", "html", "epub"):
+            filesize[k]=os.path.getsize(data.output+'.'+k)
         for k in ("pdf", "html", "xml"):
+            if "src_"+k in filesize:
+                continue
             book = "wks/book."+k
             if os.path.isfile(book):
-                data.filesize["src_"+k]=os.path.getsize(book)
+                filesize["src_"+k]=os.path.getsize(book)
             book = "wks/books."+k
             if os.path.isfile(book):
-                data.filesize["src_"+k]=data.filesize.get(k, 0) + os.path.getsize(book)
-
+                filesize["src_"+k]=filesize.get(k, 0) + os.path.getsize(book)
+        data.filesize = filesize
 
         corpus = []
         stems = {}
@@ -208,7 +212,6 @@ with open("analisis.md", "w") as f:
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
-        pages = d.pages
         write(f,'''
 | {0} | [{1}]({2}) | {4}  | [HTML + EPUB + MD]({6}/{7}.zip) | {3} |
         ''',
@@ -216,17 +219,76 @@ with open("analisis.md", "w") as f:
         d.pages,
         d.parrafos,
         int(d.riqueza_lexica*100),
-        d.root,
-        d.output.replace(" ","%20")
+        "#", d.root,
+        "#" #d.output.replace(" ","%20")
         )
     write(f,"")
     write(f,'''
 Notas:
 
-* <sup>1</sup> La contraseña del `zip` es `programaelectoral`
+* <sup>1</sup> ~~La contraseña del `zip` es `programaelectoral`~~ Actualmente no esta disponible para descargar.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`
     ''', char_page)
-    write(f,"")
+    write(f,'''
+# ¿Por qué no usar PDF?
+
+Hay muchos motivos para no usar `pdf` pero lo resumiria en que el `pdf`
+esta pensado para que el usuario vea el `pdf` como quiere el autor, no
+como quiere y necesita el usuario.
+
+Si necesitas cambiar los margenes, el tipo de letra, o quitar las imagenes
+decorativas sera un infierno.
+
+Quiza el programa hable de ecologia, diversidad funcional, transparencia,
+open data, licencias libres y flexibilidad, pero su propio formato no te deja remaquetarlo
+para ahorrar papel cuando lo imprimas, tampoco te deja cambiarle el tipo
+de letra para ayudarte con la comprexión lectora si sufres algún tipo de
+dislexia, en muchos casos usar un lector de texto para ciegos sera imposible,
+y mucho menos es libre, abierto, transparente o flexible.
+    ''', char_page)
+
+    write(f,'''
+# Páginas
+
+<table>
+<thead>
+    <tr>
+        <th rowspan="2">Partido</th>
+        <th colspan="2">Páginas</th>
+        <th colspan="2">Tamaño (KB)</th>
+    </tr>
+        <tr>
+            <th>Original</th>
+            <th>HTML</th>
+            <th>Original</th>
+            <th>PDF</th>
+        </tr>
+</thead>
+<tbody>
+    ''')
+    for d in datas:
+        p0 = d.get("src_pages", None) or d.pdf["Pages"]
+        s0 = d.filesize.get("src_pdf", None) or d.filesize["src_html"]
+        write(f,'''
+        <tr>
+            <td>{0}</td>
+            <td>{1}</td>
+            <td>{2}</td>
+            <td>{3}</td>
+            <td>{4}</td>
+        <tr>
+        ''',
+        d.partido,
+        p0,
+        d.pages,
+        d.parrafos,
+        int(s0/1024),
+        int(d.filesize["epub"]/1024)
+        )
+    write(f,'''
+</tbody>
+</table>
+    ''')
     for d in datas:
         write(f,"# {0}", d.partido)
         write(f,"")

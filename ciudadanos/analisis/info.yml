@@ -3,6 +3,12 @@ year: 2019
 tipo: Generales
 fecha: 2019-04-16
 url: https://www.ciudadanos-cs.org/programa-electoral
+src_pages: 26
+filesize:
+  src_html: 1152708
+  md: 100125
+  html: 108900
+  epub: 59790
 txt_cover: Programa Ciudadanos Generales 2019
 output: 2019 - Generales - Ciudadanos
 pages: 21
@@ -10,11 +16,6 @@ caracteres: 96779
 palabras: 14494
 parrafos: 268
 root: ciudadanos
-filesize:
-  md: 100125
-  html: 108900
-  epub: 59790
-  src_html: 151410
 riqueza_lexica: 0.3934403732674626
 freq:
   español:

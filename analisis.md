@@ -2,19 +2,101 @@
 
 | Partido | Fuente | Párrafos | Resultado<sup>1</sup> | Páginas<sup>2</sup>
 |:--------|:------:|--------:|:---------:|---------:|
-| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | 369  | [HTML + EPUB + MD](actua/2019%20-%20Generales%20-%20Actua.zip) | 23 |
-| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 268  | [HTML + EPUB + MD](ciudadanos/2019%20-%20Generales%20-%20Ciudadanos.zip) | 21 |
-| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 853  | [HTML + EPUB + MD](pacma/2019%20-%20Generales%20-%20PACMA.zip) | 45 |
-| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 292  | [HTML + EPUB + MD](podemos/2019%20-%20Generales%20-%20Podemos.zip) | 33 |
-| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 694  | [HTML + EPUB + MD](pp/2019%20-%20Generales%20-%20PP.zip) | 42 |
-| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 1389  | [HTML + EPUB + MD](psoe/2019%20-%20Generales%20-%20PSOE.zip) | 91 |
-| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 100  | [HTML + EPUB + MD](vox/2019%20-%20Generales%20-%20Vox.zip) | 6 |
+| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | 369  | [HTML + EPUB + MD](#/actua.zip) | 23 |
+| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 268  | [HTML + EPUB + MD](#/ciudadanos.zip) | 21 |
+| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 853  | [HTML + EPUB + MD](#/pacma.zip) | 45 |
+| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 292  | [HTML + EPUB + MD](#/podemos.zip) | 33 |
+| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 694  | [HTML + EPUB + MD](#/pp.zip) | 42 |
+| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 1389  | [HTML + EPUB + MD](#/psoe.zip) | 91 |
+| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 100  | [HTML + EPUB + MD](#/vox.zip) | 6 |
 
 Notas:
 
-* <sup>1</sup> La contraseña del `zip` es `programaelectoral`
+* <sup>1</sup> ~~La contraseña del `zip` es `programaelectoral`~~ Actualmente no esta disponible para descargar.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`
+# ¿Por qué no usar PDF?
 
+Hay muchos motivos para no usar `pdf` pero lo resumiria en que el `pdf`
+esta pensado para que el usuario vea el `pdf` como quiere el autor, no
+como quiere y necesita el usuario.
+
+Si necesitas cambiar los margenes, el tipo de letra, o quitar las imagenes
+decorativas sera un infierno.
+
+Quiza el programa hable de ecologia, diversidad funcional, transparencia,
+open data, licencias libres y flexibilidad, pero su propio formato no te deja remaquetarlo
+para ahorrar papel cuando lo imprimas, tampoco te deja cambiarle el tipo
+de letra para ayudarte con la comprexión lectora si sufres algún tipo de
+dislexia, en muchos casos usar un lector de texto para ciegos sera imposible,
+y mucho menos es libre, abierto, transparente o flexible.
+# Páginas
+
+<table>
+<thead>
+    <tr>
+        <th rowspan="2">Partido</th>
+        <th colspan="2">Páginas</th>
+        <th colspan="2">Tamaño (KB)</th>
+    </tr>
+        <tr>
+            <th>Original</th>
+            <th>HTML</th>
+            <th>Original</th>
+            <th>PDF</th>
+        </tr>
+</thead>
+<tbody>
+<tr>
+            <td>Actua</td>
+            <td>41</td>
+            <td>23</td>
+            <td>369</td>
+            <td>1501</td>
+        <tr>
+<tr>
+            <td>Ciudadanos</td>
+            <td>26</td>
+            <td>21</td>
+            <td>268</td>
+            <td>1125</td>
+        <tr>
+<tr>
+            <td>PACMA</td>
+            <td>92</td>
+            <td>45</td>
+            <td>853</td>
+            <td>877</td>
+        <tr>
+<tr>
+            <td>Podemos</td>
+            <td>105</td>
+            <td>33</td>
+            <td>292</td>
+            <td>839</td>
+        <tr>
+<tr>
+            <td>PP</td>
+            <td>102</td>
+            <td>42</td>
+            <td>694</td>
+            <td>5709</td>
+        <tr>
+<tr>
+            <td>PSOE</td>
+            <td>152</td>
+            <td>91</td>
+            <td>1389</td>
+            <td>615</td>
+        <tr>
+<tr>
+            <td>Vox</td>
+            <td>25</td>
+            <td>6</td>
+            <td>100</td>
+            <td>183</td>
+        <tr>
+</tbody>
+</table>
 # Actua
 
 ![Actua](actua/analisis/2019%20-%20Generales%20-%20Actua.png)
