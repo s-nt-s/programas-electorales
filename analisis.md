@@ -35,14 +35,16 @@ y mucho menos es libre, abierto, transparente o flexible.
 <thead>
     <tr>
         <th rowspan="2">Partido</th>
-        <th colspan="2" align="center">Páginas</th>
-        <th colspan="2" align="center">Tamaño (KB)</th>
+        <th colspan="3" align="center">Páginas</th>
+        <th colspan="3" align="center">Tamaño (KB)</th>
     </tr>
         <tr>
             <th>Original</th>
             <th>HTML</th>
+            <th>Ahorro</th>
             <th>Original</th>
             <th>EPUB</th>
+            <th>Ahorro</th>
         </tr>
 </thead>
 <tbody>
@@ -50,50 +52,64 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td>Actua</td>
             <td align="right">41</td>
             <td align="right">23</td>
+            <td align="right">0 %</td>
             <td align="right">1501</td>
             <td align="right">57</td>
+            <td align="right">96 %</td>
         <tr>
 <tr>
             <td>Ciudadanos</td>
             <td align="right">26</td>
             <td align="right">21</td>
+            <td align="right">0 %</td>
             <td align="right">1125</td>
             <td align="right">58</td>
+            <td align="right">94 %</td>
         <tr>
 <tr>
             <td>PACMA</td>
             <td align="right">92</td>
             <td align="right">45</td>
+            <td align="right">0 %</td>
             <td align="right">877</td>
             <td align="right">80</td>
+            <td align="right">90 %</td>
         <tr>
 <tr>
             <td>Podemos</td>
             <td align="right">105</td>
             <td align="right">33</td>
+            <td align="right">0 %</td>
             <td align="right">839</td>
             <td align="right">82</td>
+            <td align="right">90 %</td>
         <tr>
 <tr>
             <td>PP</td>
             <td align="right">102</td>
             <td align="right">42</td>
+            <td align="right">0 %</td>
             <td align="right">5709</td>
             <td align="right">81</td>
+            <td align="right">98 %</td>
         <tr>
 <tr>
             <td>PSOE</td>
             <td align="right">152</td>
             <td align="right">91</td>
+            <td align="right">0 %</td>
             <td align="right">615</td>
             <td align="right">161</td>
+            <td align="right">73 %</td>
         <tr>
 <tr>
             <td>Vox</td>
             <td align="right">25</td>
             <td align="right">6</td>
+            <td align="right">0 %</td>
             <td align="right">183</td>
             <td align="right">23</td>
+            <td align="right">87 %</td>
         <tr>
 </tbody>
 </table>

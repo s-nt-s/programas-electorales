@@ -254,14 +254,16 @@ y mucho menos es libre, abierto, transparente o flexible.
 <thead>
     <tr>
         <th rowspan="2">Partido</th>
-        <th colspan="2" align="center">Páginas</th>
-        <th colspan="2" align="center">Tamaño (KB)</th>
+        <th colspan="3" align="center">Páginas</th>
+        <th colspan="3" align="center">Tamaño (KB)</th>
     </tr>
         <tr>
             <th>Original</th>
             <th>HTML</th>
+            <th>Ahorro</th>
             <th>Original</th>
             <th>EPUB</th>
+            <th>Ahorro</th>
         </tr>
 </thead>
 <tbody>
@@ -274,15 +276,19 @@ y mucho menos es libre, abierto, transparente o flexible.
             <td>{0}</td>
             <td align="right">{1}</td>
             <td align="right">{2}</td>
-            <td align="right">{3}</td>
+            <td align="right">{3} %</td>
             <td align="right">{4}</td>
+            <td align="right">{5}</td>
+            <td align="right">{6} %</td>
         <tr>
         ''',
         d.partido,
         p0,
         d.pages,
+        int((p0-d.pages)*100/s0),
         int(s0/1024),
-        int(d.filesize["epub"]/1024)
+        int(d.filesize["epub"]/1024),
+        int((s0-d.filesize["epub"])*100/s0)
         )
     write(f,'''
 </tbody>
