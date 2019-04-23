@@ -42,58 +42,58 @@ y mucho menos es libre, abierto, transparente o flexible.
             <th>Original</th>
             <th>HTML</th>
             <th>Original</th>
-            <th>PDF</th>
+            <th>EPUB</th>
         </tr>
 </thead>
 <tbody>
 <tr>
             <td>Actua</td>
-            <td>41</td>
-            <td>23</td>
-            <td>369</td>
-            <td>1501</td>
+            <td align="right">41</td>
+            <td align="right">23</td>
+            <td align="right">1501</td>
+            <td align="right">57</td>
         <tr>
 <tr>
             <td>Ciudadanos</td>
-            <td>26</td>
-            <td>21</td>
-            <td>268</td>
-            <td>1125</td>
+            <td align="right">26</td>
+            <td align="right">21</td>
+            <td align="right">1125</td>
+            <td align="right">58</td>
         <tr>
 <tr>
             <td>PACMA</td>
-            <td>92</td>
-            <td>45</td>
-            <td>853</td>
-            <td>877</td>
+            <td align="right">92</td>
+            <td align="right">45</td>
+            <td align="right">877</td>
+            <td align="right">80</td>
         <tr>
 <tr>
             <td>Podemos</td>
-            <td>105</td>
-            <td>33</td>
-            <td>292</td>
-            <td>839</td>
+            <td align="right">105</td>
+            <td align="right">33</td>
+            <td align="right">839</td>
+            <td align="right">82</td>
         <tr>
 <tr>
             <td>PP</td>
-            <td>102</td>
-            <td>42</td>
-            <td>694</td>
-            <td>5709</td>
+            <td align="right">102</td>
+            <td align="right">42</td>
+            <td align="right">5709</td>
+            <td align="right">81</td>
         <tr>
 <tr>
             <td>PSOE</td>
-            <td>152</td>
-            <td>91</td>
-            <td>1389</td>
-            <td>615</td>
+            <td align="right">152</td>
+            <td align="right">91</td>
+            <td align="right">615</td>
+            <td align="right">161</td>
         <tr>
 <tr>
             <td>Vox</td>
-            <td>25</td>
-            <td>6</td>
-            <td>100</td>
-            <td>183</td>
+            <td align="right">25</td>
+            <td align="right">6</td>
+            <td align="right">183</td>
+            <td align="right">23</td>
         <tr>
 </tbody>
 </table>

@@ -261,7 +261,7 @@ y mucho menos es libre, abierto, transparente o flexible.
             <th>Original</th>
             <th>HTML</th>
             <th>Original</th>
-            <th>PDF</th>
+            <th>EPUB</th>
         </tr>
 </thead>
 <tbody>
@@ -272,16 +272,15 @@ y mucho menos es libre, abierto, transparente o flexible.
         write(f,'''
         <tr>
             <td>{0}</td>
-            <td>{1}</td>
-            <td>{2}</td>
-            <td>{3}</td>
-            <td>{4}</td>
+            <td align="right">{1}</td>
+            <td align="right">{2}</td>
+            <td align="right">{3}</td>
+            <td align="right">{4}</td>
         <tr>
         ''',
         d.partido,
         p0,
         d.pages,
-        d.parrafos,
         int(s0/1024),
         int(d.filesize["epub"]/1024)
         )
