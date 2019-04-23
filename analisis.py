@@ -203,25 +203,17 @@ with open("analisis.md", "w") as f:
     write(f,'''
 # Resumen
 
-| Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado<sup>2</sup> |
-|:--------|:------:|--------:|---------:|:---------:|
+| Partido | Fuente | Párrafos | Resultado<sup>1</sup> | Páginas<sup>2</sup>
+|:--------|:------:|--------:|:---------:|---------:|
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
         pages = d.pages
-        #pages = int(d.caracteres/char_page)+1
-        pdf_pages = d.get("pdf", {}).get("Pages", None)
-        if pdf_pages is not None:
-            pdf_url = d.pdf.get("url", None)
-            if pdf_url:
-                pages = "<sub>[%s](%s) - %s =</sub> %s" % (pdf_pages, pdf_url, pdf_pages-pages, pages)
-            else:
-                pages = "<sub>%s - %s =</sub> %s" % (pdf_pages, pdf_pages-pages, pages)
         write(f,'''
 | {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}.zip) |
         ''',
         d.partido, formato, d.url,
-        pages,
+        d.pages,
         d.parrafos,
         int(d.riqueza_lexica*100),
         d.root,
@@ -231,9 +223,8 @@ with open("analisis.md", "w") as f:
     write(f,'''
 Notas:
 
-* <sup>1</sup> Valor calculado del resultar de imprimir la versión `html` en formato `Din A4` y con fuente `Arial 12pt`
-* <sup>2</sup> La contraseña del `zip` es `programaelectoral`
-* Para el conteo de palabras en los gráficos de más abajo se han excluido algunas preposiciones, conjunciones, artículos, pronombres y adverbios
+* <sup>1</sup> La contraseña del `zip` es `programaelectoral`
+* <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`
     ''', char_page)
     write(f,"")
     for d in datas:
