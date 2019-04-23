@@ -210,7 +210,7 @@ with open("analisis.md", "w") as f:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
         pages = d.pages
         write(f,'''
-| {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}.zip) |
+| {0} | [{1}]({2}) | {4}  | [HTML + EPUB + MD]({6}/{7}.zip) | {3} |
         ''',
         d.partido, formato, d.url,
         d.pages,
