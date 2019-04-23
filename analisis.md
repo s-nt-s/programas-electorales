@@ -113,6 +113,7 @@ y mucho menos es libre, abierto, transparente o flexible.
         </tr>
 </tbody>
 </table>
+
 # Actua
 
 ![Actua](actua/analisis/2019%20-%20Generales%20-%20Actua.png)

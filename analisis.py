@@ -294,6 +294,7 @@ y mucho menos es libre, abierto, transparente o flexible.
 </tbody>
 </table>
     ''')
+    write(f,"")
     for d in datas:
         write(f,"# {0}", d.partido)
         write(f,"")
