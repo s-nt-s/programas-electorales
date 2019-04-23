@@ -35,7 +35,7 @@ def fprint(txt, *args, re_clean=None, **kargs):
         print(txt, *args, **kargs)
     isLastLineBlank = len(txt.split("\n")[-1])==0
 
-out = open(yml.output, "w")
+out = open(yml.output+".md", "w")
 
 def print_meta(yml, fprint):
     fprint('''
@@ -77,20 +77,18 @@ print_meta(yml, fprint)
 pre_convert(xml)
 convert(xml, fprint)
 out.close()
-end_convert(yml.output)
-post_convert(yml.output)
+end_convert(yml.output+".md")
+post_convert(yml.output+".md")
 print("")
 
-file_out = yml.output[:-2]
-file_html = file_out+"html"
-run(["pandoc", "--standalone", "-t", "html5", "-o", file_html, yml.output])
-soup = get_soup(file_html)
+run(["pandoc", "--standalone", "-t", "html5", "-o", file_html, yml.output+".md"])
+soup = get_soup(yml.output+".html")
 soup.find("header").extract()
 for n in soup.findAll(["div", "p"]):
     if len(n.select("*"))==0 and len(n.get_text().strip())==0:
         n.extract()
-with open(file_html, "w") as f:
+with open(yml.output+".html", "w") as f:
     f.write(str(soup))
-run(["miepub", "--chapter-level", "1", "--css", "../epub.css", "--txt-cover", yml.txt_cover, yml.output])
+run(["miepub", "--chapter-level", "1", "--css", "../epub.css", "--txt-cover", yml.txt_cover, yml.output+".md"])
 
 pyminizip.compress_multiple([file_out+i for i in ("md", "html", "epub")], [], file_out+"zip", "programaelectoral", 9)

@@ -15,6 +15,8 @@ import matplotlib.pyplot as plt
 from nltk import word_tokenize
 from nltk.stem import SnowballStemmer
 
+reload = len(sys.argv)>1 and sys.argv[1]=="--reload"
+
 stemmer = SnowballStemmer('spanish')
 
 cwd = os.getcwd()
@@ -84,109 +86,105 @@ def get_stem(w):
         _w = "español"
     return _w
 
-datas = []
-for y in sorted(glob("*/info.yml")):
-    d = os.path.dirname(y)
-    if d in ("psoe110",):
-        continue
-    print("Analizando %s" % d)
-    os.chdir(cwd)
-    os.chdir(d)
-
-    data = get_info(autocomplete=True)
-    data.out_name = data.output[:-2]
-    file_html = data.out_name+"html"
-    soup = get_soup(file_html)
-    body = soup.find("body")
-    body_txt = re.sub(r"  +", " ", body.get_text()).strip()
-    body_slp = body_txt.split()
-
-    data.pages = get_pages(file_html)
-    data.caracteres = len(body_txt)
-    data.palabras = len(body_slp)
-    data.parrafos = len(body.findAll(["p", "li"]))
-    data.root = d
-    data.filesize = {k:os.path.getsize(data.out_name+k) for k in ("md", "html", "epub")}
-    for k in ("pdf", "html", "xml"):
-        book = "wks/book."+k
-        if os.path.isfile(book):
-            data.filesize["src_"+k]=os.path.getsize(book)
-        book = "wks/books."+k
-        if os.path.isfile(book):
-            data.filesize["src_"+k]=data.filesize.get(k, 0) + os.path.getsize(book)
-
-
-    corpus = []
-    stems = {}
-    for w in body_slp:
-        w = re_corpus.sub("", w)
-        if len(w)>3 and w.lower() not in excluir and not re_number.match(w):
-            corpus.append(w)
-    for i, w in enumerate(corpus):
-        _w = w.lower()
-        if w.upper() != w and _w != w:
-            w = _w
-            corpus[i]=w
-
-    data.riqueza_lexica = len(set(corpus)) / len(corpus)
-    #data.corpus = sorted(set(corpus), key=lambda x: (-len(x), x))
-
-    corpus_stem = []
-    for w in corpus:
-        if w in excluir2:
+if reload:
+    for y in sorted(glob("*/info.yml")):
+        d = os.path.dirname(y)
+        if d in ("psoe110",):
             continue
-        _w = get_stem(w)
-        if len(_w)<4:
-            continue
-        corpus_stem.append(_w)
-        st = stems.get(_w, set())
-        st.add(w)
-        stems[_w]=st
+        print("Analizando %s" % d)
+        os.chdir(cwd)
+        os.chdir(d)
+
+        data = get_info(autocomplete=True)
+        soup = get_soup(data.output+".html")
+        body = soup.find("body")
+        body_txt = re.sub(r"  +", " ", body.get_text()).strip()
+        body_slp = body_txt.split()
+
+        data.pages = get_pages(data.output+".html")
+        data.caracteres = len(body_txt)
+        data.palabras = len(body_slp)
+        data.parrafos = len(body.findAll(["p", "li"]))
+        data.root = d
+        data.filesize = {k:os.path.getsize(data.output+'.'+k) for k in ("md", "html", "epub")}
+        for k in ("pdf", "html", "xml"):
+            book = "wks/book."+k
+            if os.path.isfile(book):
+                data.filesize["src_"+k]=os.path.getsize(book)
+            book = "wks/books."+k
+            if os.path.isfile(book):
+                data.filesize["src_"+k]=data.filesize.get(k, 0) + os.path.getsize(book)
 
 
-    objects = []
-    performance = []
-    slices = []
-    freq_stem = nltk.FreqDist(corpus_stem)
-    freq_corpus = {w:c for w,c in nltk.FreqDist(corpus).most_common()}
-    data.freq={}
-    for s, c in freq_stem.most_common(10):
-        words=[]
-        prct=[]
-        for w in stems[s]:
-            f = freq_corpus[w]
-            words.append((f,w))
-            prct.append(f)
-        words={w:c for c,w in sorted(words, reverse=True)}
-        data.freq[s]={
-            "count": c,
-            "words": words
-        }
-        if len(words)==1:
-            s=list(words.keys())[0]
-        else:
-            s=s+"*"
-        objects.append(s)
-        performance.append(c)
-        slices.append(sorted(prct))
+        corpus = []
+        stems = {}
+        for w in body_slp:
+            w = re_corpus.sub("", w)
+            if len(w)>3 and w.lower() not in excluir and not re_number.match(w):
+                corpus.append(w)
+        for i, w in enumerate(corpus):
+            _w = w.lower()
+            if w.upper() != w and _w != w:
+                w = _w
+                corpus[i]=w
 
-    cd_mkdir("analisis")
-    data.imagen = data.out_name+"png"
-    set_info(data)
+        data.riqueza_lexica = len(set(corpus)) / len(corpus)
+        #data.corpus = sorted(set(corpus), key=lambda x: (-len(x), x))
 
-    y_pos = np.arange(len(objects))
-    plt.rcdefaults()
-    plt.barh(y_pos, performance, align='center', alpha=0.5)
-    plt.yticks(y_pos, objects)#, rotation='30')
-    plt.xlabel('Uso')
-    plt.ylabel('Raiz')
-    plt.title("%s - %s - %s" % (data.year, data.partido, data.tipo))
-    plt.tight_layout()
+        corpus_stem = []
+        for w in corpus:
+            if w in excluir2:
+                continue
+            _w = get_stem(w)
+            if len(_w)<4:
+                continue
+            corpus_stem.append(_w)
+            st = stems.get(_w, set())
+            st.add(w)
+            stems[_w]=st
 
-    plt.savefig(data.imagen)
-    plt.clf()
 
-    datas.append(data)
+        objects = []
+        performance = []
+        slices = []
+        freq_stem = nltk.FreqDist(corpus_stem)
+        freq_corpus = {w:c for w,c in nltk.FreqDist(corpus).most_common()}
+        data.freq={}
+        for s, c in freq_stem.most_common(10):
+            words=[]
+            prct=[]
+            for w in stems[s]:
+                f = freq_corpus[w]
+                words.append((f,w))
+                prct.append(f)
+            words={w:c for c,w in sorted(words, reverse=True)}
+            data.freq[s]={
+                "count": c,
+                "words": words
+            }
+            if len(words)==1:
+                s=list(words.keys())[0]
+            else:
+                s=s+"*"
+            objects.append(s)
+            performance.append(c)
+            slices.append(sorted(prct))
+
+        cd_mkdir("analisis")
+        data.imagen = data.output+".png"
+        set_info(data)
+
+        y_pos = np.arange(len(objects))
+        plt.rcdefaults()
+        plt.barh(y_pos, performance, align='center', alpha=0.5)
+        plt.yticks(y_pos, objects)#, rotation='30')
+        plt.xlabel('Uso')
+        plt.ylabel('Raiz')
+        plt.title("%s - %s - %s" % (data.year, data.partido, data.tipo))
+        plt.tight_layout()
+
+        plt.savefig(data.imagen)
+        plt.clf()
 
 os.chdir(cwd)
 re_ltrim = re.compile(r" +$", re.MULTILINE)
@@ -198,6 +196,8 @@ def write(f, s, *args, trim=True):
         s = s.format(*args)
     f.write(s+"\n")
 
+
+datas = [get_info(yml_file=i, autocomplete=False) for i in sorted(glob("*/analisis/info.yml"))]
 char_page = 3000
 with open("analisis.md", "w") as f:
     write(f,'''
@@ -218,13 +218,14 @@ with open("analisis.md", "w") as f:
             else:
                 pages = "<sub>%s - %s =</sub> %s" % (pdf_pages, pdf_pages-pages, pages)
         write(f,'''
-| {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}zip) |
+| {0} | [{1}]({2}) | {3} | {4}  | [HTML + EPUB + MD]({6}/{7}.zip) |
         ''',
         d.partido, formato, d.url,
         pages,
         d.parrafos,
         int(d.riqueza_lexica*100),
-        d.root, data.out_name.replace(" ","%20")
+        d.root,
+        d.output.replace(" ","%20")
         )
     write(f,"")
     write(f,'''

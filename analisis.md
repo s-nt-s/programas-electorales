@@ -2,12 +2,12 @@
 
 | Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado<sup>2</sup> |
 |:--------|:------:|--------:|---------:|:---------:|
-| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | <sub>41 - 18 =</sub> 23 | 369  | [HTML + EPUB + MD](actua/2019%20-%20Generales%20-%20Vox.zip) |
-| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 21 | 268  | [HTML + EPUB + MD](ciudadanos/2019%20-%20Generales%20-%20Vox.zip) |
-| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | <sub>[92](https://pacma.es/elecciones-2019/files/pacma-compromisos-elecciones-generales-2019.pdf) - 47 =</sub> 45 | 853  | [HTML + EPUB + MD](pacma/2019%20-%20Generales%20-%20Vox.zip) |
-| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | <sub>105 - 72 =</sub> 33 | 292  | [HTML + EPUB + MD](podemos/2019%20-%20Generales%20-%20Vox.zip) |
-| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | <sub>102 - 60 =</sub> 42 | 694  | [HTML + EPUB + MD](pp/2019%20-%20Generales%20-%20Vox.zip) |
-| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | <sub>152 - 61 =</sub> 91 | 1389  | [HTML + EPUB + MD](psoe/2019%20-%20Generales%20-%20Vox.zip) |
+| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | <sub>41 - 18 =</sub> 23 | 369  | [HTML + EPUB + MD](actua/2019%20-%20Generales%20-%20Actua.zip) |
+| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 21 | 268  | [HTML + EPUB + MD](ciudadanos/2019%20-%20Generales%20-%20Ciudadanos.zip) |
+| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | <sub>[92](https://pacma.es/elecciones-2019/files/pacma-compromisos-elecciones-generales-2019.pdf) - 47 =</sub> 45 | 853  | [HTML + EPUB + MD](pacma/2019%20-%20Generales%20-%20PACMA.zip) |
+| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | <sub>105 - 72 =</sub> 33 | 292  | [HTML + EPUB + MD](podemos/2019%20-%20Generales%20-%20Podemos.zip) |
+| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | <sub>102 - 60 =</sub> 42 | 694  | [HTML + EPUB + MD](pp/2019%20-%20Generales%20-%20PP.zip) |
+| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | <sub>152 - 61 =</sub> 91 | 1389  | [HTML + EPUB + MD](psoe/2019%20-%20Generales%20-%20PSOE.zip) |
 | Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | <sub>25 - 19 =</sub> 6 | 100  | [HTML + EPUB + MD](vox/2019%20-%20Generales%20-%20Vox.zip) |
 
 Notas:

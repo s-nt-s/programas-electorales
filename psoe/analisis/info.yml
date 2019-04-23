@@ -21,8 +21,7 @@ pdf:
   Optimized: false
   PDF version: 1.6
 txt_cover: Programa PSOE Generales 2019
-output: 2019 - Generales - PSOE.md
-out_name: 2019 - Generales - PSOE.
+output: 2019 - Generales - PSOE
 pages: 91
 caracteres: 415243
 palabras: 64357

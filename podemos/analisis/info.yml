@@ -17,8 +17,7 @@ pdf:
   Optimized: false
   PDF version: 1.4
 txt_cover: Programa Podemos Generales 2019
-output: 2019 - Generales - Podemos.md
-out_name: 2019 - Generales - Podemos.
+output: 2019 - Generales - Podemos
 pages: 33
 caracteres: 187522
 palabras: 29422

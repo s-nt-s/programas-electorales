@@ -21,8 +21,7 @@ pdf:
   Optimized: true
   PDF version: 1.4
 txt_cover: Programa Vox Generales 2019
-output: 2019 - Generales - Vox.md
-out_name: 2019 - Generales - Vox.
+output: 2019 - Generales - Vox
 pages: 6
 caracteres: 23242
 palabras: 3590

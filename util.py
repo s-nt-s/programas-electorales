@@ -43,7 +43,7 @@ def get_info(yml_file = "info.yml", autocomplete=False):
             if "txt_cover" not in yml:
                 yml.txt_cover = "Programa %s %s %s" % (yml.partido, yml.tipo, yml.year)
             if "output" not in yml:
-                yml.output = "%s - %s - %s.md" % (yml.year, yml.tipo, yml.partido)
+                yml.output = "%s - %s - %s" % (yml.year, yml.tipo, yml.partido)
     return yml
 
 def set_info(yml, yml_file = "info.yml"):

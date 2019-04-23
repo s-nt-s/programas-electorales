@@ -21,8 +21,7 @@ pdf:
   Optimized: true
   PDF version: 1.5
 txt_cover: Programa PP Generales 2019
-output: 2019 - Generales - PP.md
-out_name: 2019 - Generales - PP.
+output: 2019 - Generales - PP
 pages: 42
 caracteres: 182640
 palabras: 27419
