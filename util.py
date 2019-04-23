@@ -6,8 +6,29 @@ import re
 from markdownify import markdownify
 import argparse
 import sys
+from PyPDF2 import PdfFileReader
+import pdfkit
+import io
 
 re_sp = re.compile(r"\s+")
+
+def get_pages(html):
+    options = {
+        'page-size': 'A4',
+        'margin-top': '10mm',
+        'margin-right': '10mm',
+        'margin-bottom': '10mm',
+        'margin-left': '10mm',
+        'zoom': 1
+    }
+    if html.startswith("http"):
+        pdf = pdfkit.from_url(html, False, options=options)
+    else:
+        pdf = pdfkit.from_file(html, False, options=options)
+    with io.BytesIO(pdf) as fp:
+        pdf = PdfFileReader(fp)
+        print(pdf.getNumPages())
+        return pdf.getNumPages()
 
 class CustomDumper(yaml.Dumper):
     def represent_dict_preserve_order(self, data):

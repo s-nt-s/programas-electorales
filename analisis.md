@@ -2,17 +2,17 @@
 
 | Partido | Fuente | Páginas<sup>1</sup> | Párrafos | Resultado<sup>2</sup> |
 |:--------|:------:|--------:|---------:|:---------:|
-| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | <sub>41 - 6 =</sub> 35 | 369  | [HTML + EPUB + MD](actua/2019%20-%20Generales%20-%20Vox.zip) |
-| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 33 | 268  | [HTML + EPUB + MD](ciudadanos/2019%20-%20Generales%20-%20Vox.zip) |
-| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | <sub>[92](https://pacma.es/elecciones-2019/files/pacma-compromisos-elecciones-generales-2019.pdf) - 27 =</sub> 65 | 853  | [HTML + EPUB + MD](pacma/2019%20-%20Generales%20-%20Vox.zip) |
-| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | <sub>105 - 42 =</sub> 63 | 292  | [HTML + EPUB + MD](podemos/2019%20-%20Generales%20-%20Vox.zip) |
-| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | <sub>102 - 41 =</sub> 61 | 694  | [HTML + EPUB + MD](pp/2019%20-%20Generales%20-%20Vox.zip) |
-| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | <sub>152 - 13 =</sub> 139 | 1389  | [HTML + EPUB + MD](psoe/2019%20-%20Generales%20-%20Vox.zip) |
-| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | <sub>25 - 17 =</sub> 8 | 100  | [HTML + EPUB + MD](vox/2019%20-%20Generales%20-%20Vox.zip) |
+| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | <sub>41 - 18 =</sub> 23 | 369  | [HTML + EPUB + MD](actua/2019%20-%20Generales%20-%20Vox.zip) |
+| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 21 | 268  | [HTML + EPUB + MD](ciudadanos/2019%20-%20Generales%20-%20Vox.zip) |
+| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | <sub>[92](https://pacma.es/elecciones-2019/files/pacma-compromisos-elecciones-generales-2019.pdf) - 47 =</sub> 45 | 853  | [HTML + EPUB + MD](pacma/2019%20-%20Generales%20-%20Vox.zip) |
+| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | <sub>105 - 72 =</sub> 33 | 292  | [HTML + EPUB + MD](podemos/2019%20-%20Generales%20-%20Vox.zip) |
+| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | <sub>102 - 60 =</sub> 42 | 694  | [HTML + EPUB + MD](pp/2019%20-%20Generales%20-%20Vox.zip) |
+| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | <sub>152 - 61 =</sub> 91 | 1389  | [HTML + EPUB + MD](psoe/2019%20-%20Generales%20-%20Vox.zip) |
+| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | <sub>25 - 19 =</sub> 6 | 100  | [HTML + EPUB + MD](vox/2019%20-%20Generales%20-%20Vox.zip) |
 
 Notas:
 
-* <sup>1</sup> Suponiendo unos 3000 caracteres por página. En el caso de los `pdf` aparece también una resta que representa el número de páginas del `pdf` original y el número de `páginas` ahorradas gracias a la reconversión, es decir, el espacio que se desaprovechaba por culpa de la maquetación del `pdf` y/o él uso de imagenes irrelevantes.
+* <sup>1</sup> Valor calculado del resultar de imprimir la versión `html` en formato `Din A4` y con fuente `Arial 12pt`
 * <sup>2</sup> La contraseña del `zip` es `programaelectoral`
 * Para el conteo de palabras en los gráficos de más abajo se han excluido algunas preposiciones, conjunciones, artículos, pronombres y adverbios
 

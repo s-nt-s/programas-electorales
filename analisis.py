@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import nltk
 import re
-from util import get_arg, get_info, get_soup, set_info
+from util import get_arg, get_info, get_soup, set_info, get_pages
 from glob import glob
 import os
 import sys
@@ -101,6 +101,7 @@ for y in sorted(glob("*/info.yml")):
     body_txt = re.sub(r"  +", " ", body.get_text()).strip()
     body_slp = body_txt.split()
 
+    data.pages = get_pages(file_html)
     data.caracteres = len(body_txt)
     data.palabras = len(body_slp)
     data.parrafos = len(body.findAll(["p", "li"]))
@@ -207,7 +208,8 @@ with open("analisis.md", "w") as f:
     '''.strip())
     for d in datas:
         formato = "PDF" if d.url.endswith(".pdf") else "HTML"
-        pages = int(d.caracteres/char_page)+1
+        pages = d.pages
+        #pages = int(d.caracteres/char_page)+1
         pdf_pages = d.get("pdf", {}).get("Pages", None)
         if pdf_pages is not None:
             pdf_url = d.pdf.get("url", None)
@@ -228,7 +230,7 @@ with open("analisis.md", "w") as f:
     write(f,'''
 Notas:
 
-* <sup>1</sup> Suponiendo unos {0} caracteres por página. En el caso de los `pdf` aparece también una resta que representa el número de páginas del `pdf` original y el número de `páginas` ahorradas gracias a la reconversión, es decir, el espacio que se desaprovechaba por culpa de la maquetación del `pdf` y/o él uso de imagenes irrelevantes.
+* <sup>1</sup> Valor calculado del resultar de imprimir la versión `html` en formato `Din A4` y con fuente `Arial 12pt`
 * <sup>2</sup> La contraseña del `zip` es `programaelectoral`
 * Para el conteo de palabras en los gráficos de más abajo se han excluido algunas preposiciones, conjunciones, artículos, pronombres y adverbios
     ''', char_page)
