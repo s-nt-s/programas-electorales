@@ -29,6 +29,39 @@ para ahorrar papel cuando lo imprimas, tampoco te deja cambiarle el tipo
 de letra para ayudarte con la comprexión lectora si sufres algún tipo de
 dislexia, en muchos casos usar un lector de texto para ciegos sera imposible,
 y mucho menos es libre, abierto, transparente o flexible.
+
+# Dificultad de conversión
+
+La dificultad principal al convertir un `pdf` a texto plano, en concreto a un
+lenguaje de marcado, es detectar el texto relevante, ensamblarlo correctamente
+(pues en un `pdf` el texto no es "fluido"), incluso recolocarlo en no pocas ocasiones,
+y a menudo corregir erratas que se producen en la transformación... pero veamos
+en más detalle cad caso:
+
+## Fácil
+
+El programa más fácil de convertir ha sido sin duda PACMA. La razón es obvia,
+existe una versión `HTML` bastante bien maquetada ([solo tiene 10 errores `HTML`](https://validator.w3.org/check?charset=%28detect+automatically%29&doctype=Inline&group=1&uri=https://pacma.es/elecciones-2019/compromisos) y solo dos nos afectaban directamente).
+y estaba cerca de cumplir las normas de Accesibilidad Web AA ([solo 8 problemas](https://www.tawdis.net/resumen?url=https%3A%2F%2Fpacma.es%2Felecciones-2019%2Fcompromisos&nivel=aa&crc=0)).
+
+## Regular
+
+El segundo programa más facil en convertir fue el otro tambien disponible en `HTML`, el de Ciudadanos.
+La diferencia con el predecesor es que estaba muy mal maquetado ([104 errores `HTML`](https://validator.w3.org/check?charset=%28detect+automatically%29&doctype=Inline&group=1&uri=https://www.ciudadanos-cs.org/programa-electoral))
+y no cumple Accesibilidad Web AA ni de lejos ([68 problemas](https://www.tawdis.net/resumen?url=https%3A%2F%2Fwww.ciudadanos-cs.org%2Felecciones-2019&nivel=aa&crc=0)).
+
+Aún así esto siempre será mejor que un `PDF`.
+
+El caso de Ciudadanos llama la atención porque su programa de 2015 fue el `pdf`
+más dificil con el que me he topado: El texto no era texto, si no imagenes de texto
+(hubo que usar `OCR` para intentar sacar algo), la identación y los simbolos
+que marcaban la jerarquia de los capitulos y listas era totalmente ambigua,
+habia partes repetidas en distintos capitulos, etc...
+
+El porqué de este cambio lo atribuyo a la absorción de parte de UPyD por Ciudadanos,
+ya que UPyD era uno de los pocos pártidos que publicaba sistematicamente su
+programa en `HTML` y lo hacia de la misma manera (con multiples problemas de maquetación
+y accesibilidad).
 # Páginas
 
 <table>
