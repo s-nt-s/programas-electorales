@@ -330,7 +330,7 @@ y no cumple Accesibilidad Web AA ni de lejos ([68 problemas](https://www.tawdis.
 Aún así esto siempre será mejor que un `pdf`.
 
 El caso de Ciudadanos llama la atención porque su programa de 2015 fue el `pdf`
-más chungo que he visto: El texto no era texto, si no imágenes de texto
+más dificil que he visto: El texto no era texto, si no imágenes de texto
 (hubo que usar `OCR` para intentar sacar algo), la indentación y los símbolos
 que marcaban la jerarquía de los capítulos y listas era totalmente ambigua,
 había partes repetidas en distintos capítulos, etc...
@@ -360,7 +360,7 @@ El del **PP** está lleno de fotos del líder posando que estorban,
 empieza con páginas a una sola columna,
 luego a dos columnas en un determinado formato, luego sigue a dos columnas pero en
 otro formato y los márgenes no son estables, obligándote a readaptar el script
-cada dos por tres y a renunciar
+en cada movimiento y a renunciar
 a detectar algunos contenidos (como los títulos, o algunas páginas en concreto)
 de manera elegante y terminar hardcodeándolo.
 
