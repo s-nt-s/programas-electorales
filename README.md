@@ -6,148 +6,249 @@
 | Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 268  | [HTML + EPUB + MD](#/ciudadanos.zip) | 21 |
 | PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 853  | [HTML + EPUB + MD](#/pacma.zip) | 45 |
 | Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 292  | [HTML + EPUB + MD](#/podemos.zip) | 33 |
-| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 694  | [HTML + EPUB + MD](#/pp.zip) | 42 |
+| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 693  | [HTML + EPUB + MD](#/pp.zip) | 42 |
 | PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 1389  | [HTML + EPUB + MD](#/psoe.zip) | 91 |
 | Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 100  | [HTML + EPUB + MD](#/vox.zip) | 6 |
 
 Notas:
 
 * <sup>1</sup> ~~La contraseña del `zip` es `programaelectoral`~~ Actualmente no esta disponible para descargar.
-* <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`
+* <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`.
 # ¿Por qué no usar PDF?
 
-Hay muchos motivos para no usar `pdf` pero lo resumiria en que el `pdf`
+Hay muchos motivos para no usar `pdf` pero lo resumiría en que el `pdf`
 esta pensado para que el usuario vea el `pdf` como quiere el autor, no
 como quiere y necesita el usuario.
 
-Si necesitas cambiar los margenes, el tipo de letra, o quitar las imagenes
+Si necesitas cambiar los margenes, el tipo de letra, o quitar las imágenes
 decorativas sera un infierno.
 
-Quiza el programa hable de ecologia, diversidad funcional, transparencia,
+Quizá el programa hable de ecología, diversidad funcional, transparencia,
 open data, licencias libres y flexibilidad, pero su propio formato no te deja remaquetarlo
 para ahorrar papel cuando lo imprimas, tampoco te deja cambiarle el tipo
-de letra para ayudarte con la comprexión lectora si sufres algún tipo de
+de letra para ayudarte con la compresión lectora si sufres algún tipo de
 dislexia, en muchos casos usar un lector de texto para ciegos sera imposible,
 y mucho menos es libre, abierto, transparente o flexible.
+
+# ¿Cómo se ha hecho la conversión?
+
+Muy a grandes rasgos se han usado las herramientas de `poppler-utils` para
+generar de cada `pdf` un `xml` y un `txt`, los cuales lee un script `python`
+para conseguir recolocar y ensamblar el texto a la vez que detecta que es
+un título, que es un párrafo y que es una lista, para finalmente generar un
+fichero `Markdown` el cual se convierte a `epub` y `html` con `pandoc`.
+
+En los casos que se podía usar como fuente un `html` en vez de un `pdf`
+solo ha hecho falta la arreglar los problemas de maquetación para generar
+un `Markdown` que ya sirviera para el resto del proceso.
 
 # Dificultad de conversión
 
 La dificultad principal al convertir un `pdf` a texto plano, en concreto a un
-lenguaje de marcado, es detectar el texto relevante, ensamblarlo correctamente
+lenguaje de marcado, es detectar el texto relevante (por ejemplo, no quieres copiar
+los números de página), ensamblarlo correctamente
 (pues en un `pdf` el texto no es "fluido"), incluso recolocarlo en no pocas ocasiones,
 y a menudo corregir erratas que se producen en la transformación... pero veamos
-en más detalle cad caso:
+en más detalle cada caso:
 
 ## Fácil
 
-El programa más fácil de convertir ha sido sin duda PACMA. La razón es obvia,
-existe una versión `HTML` bastante bien maquetada ([solo tiene 10 errores `HTML`](https://validator.w3.org/check?charset=%28detect+automatically%29&doctype=Inline&group=1&uri=https://pacma.es/elecciones-2019/compromisos) y solo dos nos afectaban directamente).
-y estaba cerca de cumplir las normas de Accesibilidad Web AA ([solo 8 problemas](https://www.tawdis.net/resumen?url=https%3A%2F%2Fpacma.es%2Felecciones-2019%2Fcompromisos&nivel=aa&crc=0)).
+El programa más fácil de convertir ha sido sin duda **PACMA**. La razón es obvia,
+existe una versión `html` bastante bien maquetada
+([aunque el validador encuentra errores graves que le impiden completar el analisis `HTML`](https://validator.w3.org/check?charset=%28detect+automatically%29&doctype=Inline&group=1&uri=https://pacma.es/elecciones-2019/compromisos)
+para nuestro proposito solo habia dos errores que realmente nos afectaban y eran de fácil solución)
+y estaba cerca de cumplir las normas de Accesibilidad Web AA
+([solo 8 problemas](https://www.tawdis.net/resumen?url=https%3A%2F%2Fpacma.es%2Felecciones-2019%2Fcompromisos&nivel=aa&crc=0)).
 
 ## Regular
 
-El segundo programa más facil en convertir fue el otro tambien disponible en `HTML`, el de Ciudadanos.
+El segundo programa más fácil en convertir fue el otro también disponible en `HTML`, el de **Ciudadanos**.
 La diferencia con el predecesor es que estaba muy mal maquetado ([104 errores `HTML`](https://validator.w3.org/check?charset=%28detect+automatically%29&doctype=Inline&group=1&uri=https://www.ciudadanos-cs.org/programa-electoral))
 y no cumple Accesibilidad Web AA ni de lejos ([68 problemas](https://www.tawdis.net/resumen?url=https%3A%2F%2Fwww.ciudadanos-cs.org%2Felecciones-2019&nivel=aa&crc=0)).
 
-Aún así esto siempre será mejor que un `PDF`.
+Aún así esto siempre será mejor que un `pdf`.
 
 El caso de Ciudadanos llama la atención porque su programa de 2015 fue el `pdf`
-más dificil con el que me he topado: El texto no era texto, si no imagenes de texto
-(hubo que usar `OCR` para intentar sacar algo), la identación y los simbolos
-que marcaban la jerarquia de los capitulos y listas era totalmente ambigua,
-habia partes repetidas en distintos capitulos, etc...
+más chungo que he visto: El texto no era texto, si no imágenes de texto
+(hubo que usar `OCR` para intentar sacar algo), la indentación y los símbolos
+que marcaban la jerarquía de los capítulos y listas era totalmente ambigua,
+había partes repetidas en distintos capítulos, etc...
 
-El porqué de este cambio lo atribuyo a la absorción de parte de UPyD por Ciudadanos,
-ya que UPyD era uno de los pocos pártidos que publicaba sistematicamente su
-programa en `HTML` y lo hacia de la misma manera (con multiples problemas de maquetación
+El porqué de este cambio lo atribuyo a la absorción de parte de **UPyD** por Ciudadanos,
+ya que UPyD era uno de los pocos partidos que publicaba sistemáticamente su
+programa en `HTML` y lo hacia de la misma manera (con múltiples problemas de maquetación
 y accesibilidad).
-# Páginas
+
+## Difícil
+
+Los programas de **Vox** y **Podemos** se encuentran en un nivel similar, y esperable, de dificultad.
+Es decir, el propio de un `pdf` que al menos es lo suficientemente homogeneizo y simple
+(básicamente son una lista de puntos con un solo nivel de indentación) como para
+que no sea un infierno reensamblar el texto.
+
+## Innecesariamente difíciles
+
+Los tres que nos quedan son innecesariamente difíciles por distintas razones:
+
+El de **Actua** esta mal generado (por los metadatos se ve que se ha hecho imprimiendo un `docx` a `pdf`)
+de manera que al extraer el texto muchas palabras se dividen en varios
+trozos (por ejemplo, `Póli tica So i a l`) y la posición y las coordenadas de los
+bloques de texto están de tal manera que dificultaban la programación.
+
+El del **PP** esta lleno de fotos del líder posando que estorban,
+empieza con paginas a una sola columna,
+luego a dos columnas en un determinado formato, luego sigue a dos columnas pero en
+otro formato y los margenes no son estables, obligándote a readaptar el script
+cada dos por tres y a renunciar
+a detectar algunos contenidos (como los títulos, o algunas páginas en concreto)
+de manera elegante y terminar hardcodeandolo.
+
+El del **PSOE** aunque también es a dos columnas mantienen su formato
+durante todo el documento, sin embargo, lo que es un caos es la indentación.
+En ocasiones el uso de `-`, `*`, números y letras para listas se va alternando
+sin quedar claro cual es su jerarquía. A veces hay el típico aumento del
+margen derecho que denota dicha jerarquía y otras veces no, a veces
+parece que la lógica es "primero número, luego `-` y luego `*`" y otras veces
+"primero número, luego `*` y luego `-`" u otra combinación posible.
+De manera que al final renuncie a representar de manera semántica mediante un
+buen lenguaje de marcado cualquier
+tipo de jerarquía en las listas y simplemente muestro todo como un párrafo
+detrás de otro.
+
+## Resultado
+
+Solo el de PACMA queda realmente bien ya que el de Ciudadanos pierde o recupera
+estilos según se mire (no lo explico por no enrollarme, pero quien vea el código
+y sepa de `html` lo entenderá) y los que estaban en `pdf` cada uno tiene sus problemas
+no pudiéndose reproducir en ningún caso todos los estilos o formatos.
+
+Sin embargo los textos están completos, que es lo que importa. Así que puedes
+usar las versiones `epub`, `html` y `markdown` sin problemas y más cómodamente
+que cualquiera de los originales.
+# Páginas y tamaño
 
 <table>
 <thead>
+<tr>
+    <th rowspan="2">Partido</th>
+    <th colspan="3" align="center">Páginas</th>
+    <th colspan="3" align="center">Tamaño (KB)</th>
+</tr>
     <tr>
-        <th rowspan="2">Partido</th>
-        <th colspan="3" align="center">Páginas</th>
-        <th colspan="3" align="center">Tamaño (KB)</th>
+        <th>Original<sup>1</sup></th>
+        <th>HTML</th>
+        <th>Ahorro</th>
+        <th>Original<sup>2</sup></th>
+        <th>EPUB</th>
+        <th>Ahorro</th>
     </tr>
-        <tr>
-            <th>Original</th>
-            <th>HTML</th>
-            <th>Ahorro</th>
-            <th>Original</th>
-            <th>EPUB</th>
-            <th>Ahorro</th>
-        </tr>
 </thead>
 <tbody>
 <tr>
-            <td>Actua</td>
-            <td align="right">41</td>
-            <td align="right">23</td>
-            <td align="right">43 %</td>
-            <td align="right">1501</td>
-            <td align="right">57</td>
-            <td align="right">96 %</td>
-        </tr>
+        <td>Actua</td>
+        <td align="right">41</td>
+        <td align="right">23</td>
+        <td align="right">43 %</td>
+        <td align="right">1501</td>
+        <td align="right">57</td>
+        <td align="right">96 %</td>
+    </tr>
 <tr>
-            <td>Ciudadanos</td>
-            <td align="right">26</td>
-            <td align="right">21</td>
-            <td align="right">19 %</td>
-            <td align="right">1125</td>
-            <td align="right">58</td>
-            <td align="right">94 %</td>
-        </tr>
+        <td>Ciudadanos</td>
+        <td align="right">26</td>
+        <td align="right">21</td>
+        <td align="right">19 %</td>
+        <td align="right">1125</td>
+        <td align="right">58</td>
+        <td align="right">94 %</td>
+    </tr>
 <tr>
-            <td>PACMA</td>
-            <td align="right">92</td>
-            <td align="right">45</td>
-            <td align="right">51 %</td>
-            <td align="right">877</td>
-            <td align="right">80</td>
-            <td align="right">90 %</td>
-        </tr>
+        <td>PACMA</td>
+        <td align="right">92</td>
+        <td align="right">45</td>
+        <td align="right">51 %</td>
+        <td align="right">877</td>
+        <td align="right">80</td>
+        <td align="right">90 %</td>
+    </tr>
 <tr>
-            <td>Podemos</td>
-            <td align="right">105</td>
-            <td align="right">33</td>
-            <td align="right">68 %</td>
-            <td align="right">839</td>
-            <td align="right">82</td>
-            <td align="right">90 %</td>
-        </tr>
+        <td>Podemos</td>
+        <td align="right">105</td>
+        <td align="right">33</td>
+        <td align="right">68 %</td>
+        <td align="right">839</td>
+        <td align="right">82</td>
+        <td align="right">90 %</td>
+    </tr>
 <tr>
-            <td>PP</td>
-            <td align="right">102</td>
-            <td align="right">42</td>
-            <td align="right">58 %</td>
-            <td align="right">5709</td>
-            <td align="right">81</td>
-            <td align="right">98 %</td>
-        </tr>
+        <td>PP</td>
+        <td align="right">102</td>
+        <td align="right">42</td>
+        <td align="right">58 %</td>
+        <td align="right">5709</td>
+        <td align="right">81</td>
+        <td align="right">98 %</td>
+    </tr>
 <tr>
-            <td>PSOE</td>
-            <td align="right">152</td>
-            <td align="right">91</td>
-            <td align="right">40 %</td>
-            <td align="right">615</td>
-            <td align="right">161</td>
-            <td align="right">73 %</td>
-        </tr>
+        <td>PSOE</td>
+        <td align="right">152</td>
+        <td align="right">91</td>
+        <td align="right">40 %</td>
+        <td align="right">615</td>
+        <td align="right">161</td>
+        <td align="right">73 %</td>
+    </tr>
 <tr>
-            <td>Vox</td>
-            <td align="right">25</td>
-            <td align="right">6</td>
-            <td align="right">76 %</td>
-            <td align="right">183</td>
-            <td align="right">23</td>
-            <td align="right">87 %</td>
-        </tr>
+        <td>Vox</td>
+        <td align="right">25</td>
+        <td align="right">6</td>
+        <td align="right">76 %</td>
+        <td align="right">183</td>
+        <td align="right">23</td>
+        <td align="right">87 %</td>
+    </tr>
 </tbody>
 </table>
 
-# Actua
+Notas:
+
+* <sup>1</sup> Para Ciudadanos el valor es lo que resultaría de imprimir su página web.
+Para el resto es el número de páginas de sus `pdf` (esto incluye a PACMA porque también tenían una [versión `pdf`](https://pacma.es/elecciones-2019/files/pacma-compromisos-elecciones-generales-2019.pdf)).
+* <sup>2</sup> Para Ciudadanos el valor es lo que resultaría de descargar su página web, incluido `css`, `javascript` e imágenes.
+Para el resto es el número tamaño de su `pdf`.
+
+## ¿En qué se van tantas páginas?
+
+![Páginas](/analisis/pag.png)
+
+Lo más común es que se rellenen páginas con grandes margenes y un tamaño de letra
+amplio (si, justo como en el cole), lo cual, aunque no me gusta,
+es hasta cierto punto normal porque mucha
+gente encuentra la lectura más cómoda así. Este es el caso de la mayoría, con
+la excepción del **PP**, que usando un tipo de letra relativamente pequeño
+en comparación con los otros derrocha espacio con múltiples fotos del líder
+posando y otras con pinta de `powerpoint` de una presentación corporativa.
+
+## ¿En qué se van tantos KB?
+
+![Tamaño](/analisis/size.png)
+
+Aquí se ve muy bien lo dicho anteriormente sobre el **PP**, mientras que en los
+demás la reducción de peso es la normal, en el PP se dispara al prescindir de
+los elementos decorativos o de exhibición del líder.
+
+# Palabras más usadas
+
+Tras eliminar algunas preposiciones, conjunciones, artículos, pronombres, adverbios
+y otras palabras poco relevantes pero muy usadas en nuestro idioma, se buscan
+las raíces de palabras más usadas (representadas con la raíz más un `*`) y se
+escogen las 10 más usadas. Si da la casualidad de que alguna de esas raíces
+solo corresponde a una palabra, indico directamente la palabra en vez de la raíz
+(y por lo tanto no llevara `*`).
+
+Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una raíz.
+
+## Actua
 
 ![Actua](actua/analisis/2019%20-%20Generales%20-%20Actua.png)
 
@@ -155,8 +256,7 @@ y accesibilidad).
     * `44x` públicos
     * `23x` pública
     * `22x` públicas
-    * `13x` público
-    * ` 1x` publico
+    * `14x` público
     * ` 1x` publicación
 * `68x` social*:
     * `45x` social
@@ -206,7 +306,7 @@ y accesibilidad).
     * ` 1x` españoles
     * ` 1x` español
 
-# Ciudadanos
+## Ciudadanos
 
 ![Ciudadanos](ciudadanos/analisis/2019%20-%20Generales%20-%20Ciudadanos.png)
 
@@ -275,7 +375,7 @@ y accesibilidad).
     * `22x` acabar
     * `18x` acabaremos
 
-# PACMA
+## PACMA
 
 ![PACMA](pacma/analisis/2019%20-%20Generales%20-%20PACMA.png)
 
@@ -334,7 +434,7 @@ y accesibilidad).
     * ` 1x` político
 * `65x` protección
 
-# Podemos
+## Podemos
 
 ![Podemos](podemos/analisis/2019%20-%20Generales%20-%20Podemos.png)
 
@@ -401,7 +501,7 @@ y accesibilidad).
     * ` 1x` socialmente
     * ` 1x` socialista
 
-# PP
+## PP
 
 ![PP](pp/analisis/2019%20-%20Generales%20-%20PP.png)
 
@@ -464,8 +564,8 @@ y accesibilidad).
     * `25x` nuevos
     * `13x` nueva
     * `11x` nuevo
-* `81x` segur*:
-    * `72x` seguridad
+* `80x` segur*:
+    * `71x` seguridad
     * ` 3x` seguras
     * ` 2x` seguros
     * ` 2x` seguro
@@ -482,7 +582,7 @@ y accesibilidad).
     * ` 1x` autónoma
     * ` 1x` autonomías
 
-# PSOE
+## PSOE
 
 ![PSOE](psoe/analisis/2019%20-%20Generales%20-%20PSOE.png)
 
@@ -559,7 +659,7 @@ y accesibilidad).
     * ` 1x` sistémico
     * ` 1x` sistémicas
 
-# Vox
+## Vox
 
 ![Vox](vox/analisis/2019%20-%20Generales%20-%20Vox.png)
 
@@ -605,3 +705,7 @@ y accesibilidad).
     * ` 1x` ilegalmente
 * `9x` reducción
 
+## Conclusiones
+
+No creo que realmente se pueda extraer conclusiones serias de estos gráficos
+que no supiéramos todos ya.
