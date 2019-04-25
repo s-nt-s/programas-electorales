@@ -21,13 +21,13 @@ esta pensado para que el usuario vea el `pdf` como quiere el autor, no
 como quiere y necesita el usuario.
 
 Si necesitas cambiar los margenes, el tipo de letra, o quitar las imágenes
-decorativas sera un infierno.
+decorativas será un infierno.
 
 Quizá el programa hable de ecología, diversidad funcional, transparencia,
 open data, licencias libres y flexibilidad, pero su propio formato no te deja remaquetarlo
 para ahorrar papel cuando lo imprimas, tampoco te deja cambiarle el tipo
 de letra para ayudarte con la compresión lectora si sufres algún tipo de
-dislexia, en muchos casos usar un lector de texto para ciegos sera imposible,
+dislexia, en muchos casos usar un lector de texto para ciegos será imposible,
 y mucho menos es libre, abierto, transparente o flexible.
 
 # ¿Cómo se ha hecho la conversión?
@@ -39,7 +39,7 @@ un título, que es un párrafo y que es una lista, para finalmente generar un
 fichero `Markdown` el cual se convierte a `epub` y `html` con `pandoc`.
 
 En los casos que se podía usar como fuente un `html` en vez de un `pdf`
-solo ha hecho falta la arreglar los problemas de maquetación para generar
+solo ha hecho falta arreglar los problemas de maquetación para generar
 un `Markdown` que ya sirviera para el resto del proceso.
 
 # Dificultad de conversión
@@ -82,7 +82,7 @@ y accesibilidad).
 ## Difícil
 
 Los programas de **Vox** y **Podemos** se encuentran en un nivel similar, y esperable, de dificultad.
-Es decir, el propio de un `pdf` que al menos es lo suficientemente homogeneizo y simple
+Es decir, el propio de un `pdf` que al menos es lo suficientemente homogenio y simple
 (básicamente son una lista de puntos con un solo nivel de indentación) como para
 que no sea un infierno reensamblar el texto.
 
@@ -95,22 +95,22 @@ de manera que al extraer el texto muchas palabras se dividen en varios
 trozos (por ejemplo, `Póli tica So i a l`) y la posición y las coordenadas de los
 bloques de texto están de tal manera que dificultaban la programación.
 
-El del **PP** esta lleno de fotos del líder posando que estorban,
-empieza con paginas a una sola columna,
+El del **PP** está lleno de fotos del líder posando que estorban,
+empieza con páginas a una sola columna,
 luego a dos columnas en un determinado formato, luego sigue a dos columnas pero en
-otro formato y los margenes no son estables, obligándote a readaptar el script
+otro formato y los márgenes no son estables, obligándote a readaptar el script
 cada dos por tres y a renunciar
 a detectar algunos contenidos (como los títulos, o algunas páginas en concreto)
-de manera elegante y terminar hardcodeandolo.
+de manera elegante y terminar hardcodeándolo.
 
 El del **PSOE** aunque también es a dos columnas mantienen su formato
 durante todo el documento, sin embargo, lo que es un caos es la indentación.
 En ocasiones el uso de `-`, `*`, números y letras para listas se va alternando
-sin quedar claro cual es su jerarquía. A veces hay el típico aumento del
+sin quedar claro cuál es su jerarquía. A veces hay el típico aumento del
 margen derecho que denota dicha jerarquía y otras veces no, a veces
 parece que la lógica es "primero número, luego `-` y luego `*`" y otras veces
 "primero número, luego `*` y luego `-`" u otra combinación posible.
-De manera que al final renuncie a representar de manera semántica mediante un
+De manera que al final renuncié a representar de manera semántica mediante un
 buen lenguaje de marcado cualquier
 tipo de jerarquía en las listas y simplemente muestro todo como un párrafo
 detrás de otro.
@@ -244,7 +244,7 @@ y otras palabras poco relevantes pero muy usadas en nuestro idioma, se buscan
 las raíces de palabras más usadas (representadas con la raíz más un `*`) y se
 escogen las 10 más usadas. Si da la casualidad de que alguna de esas raíces
 solo corresponde a una palabra, indico directamente la palabra en vez de la raíz
-(y por lo tanto no llevara `*`).
+(y por lo tanto no llevará `*`).
 
 Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una raíz.
 
