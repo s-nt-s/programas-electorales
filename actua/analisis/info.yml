@@ -30,13 +30,13 @@ palabras: 15946
 parrafos: 369
 root: actua
 filesize:
-  md: 107191
-  html: 113374
-  epub: 58702
+  md: 107192
+  html: 113375
+  epub: 58696
   src_pdf: 1537368
-  src_html: 381970
+  src_html: 381971
   src_xml: 288221
-riqueza_lexica: 0.4252495892834576
+riqueza_lexica: 0.4251232149627196
 freq:
   public:
     count: 104
@@ -44,8 +44,7 @@ freq:
       públicos: 44
       pública: 23
       públicas: 22
-      público: 13
-      publico: 1
+      público: 14
       publicación: 1
   social:
     count: 68

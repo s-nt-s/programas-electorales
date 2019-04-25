@@ -23,16 +23,16 @@ pdf:
 txt_cover: Programa PP Generales 2019
 output: 2019 - Generales - PP
 pages: 42
-caracteres: 182640
-palabras: 27419
-parrafos: 694
+caracteres: 182643
+palabras: 27420
+parrafos: 693
 root: pp
 filesize:
-  md: 189191
-  html: 202300
-  epub: 83069
+  md: 189194
+  html: 202297
+  epub: 83067
   src_pdf: 5846812
-  src_html: 465169
+  src_html: 465166
   src_xml: 482241
 riqueza_lexica: 0.2896602119108513
 freq:
@@ -112,9 +112,9 @@ freq:
       nueva: 13
       nuevo: 11
   segur:
-    count: 81
+    count: 80
     words:
-      seguridad: 72
+      seguridad: 71
       seguras: 3
       seguros: 2
       seguro: 2

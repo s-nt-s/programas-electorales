@@ -7,7 +7,7 @@ re_punto = re.compile(r"^(\d+\.)\s*$")
 re_sp = re.compile(r"\s+")
 
 min_top = 295 - 1
-max_top = 807 + 1
+max_top = 823 + 1
 
 def get_cap(pag, punto=None):
     if punto == 452:
@@ -235,6 +235,7 @@ def post_convert(file_out):
     md = re.sub("“(\s+)", r"\1“", md)
     md = re.sub(r"^ +", r"", md, flags=re.MULTILINE)
     md = md.replace("I\nmplantaremos", "Implantaremos")
+    md = re.sub(r"^Seguridad vial\s+## Seguridad vial$", r"## Seguridad vial", md, flags=re.MULTILINE)
 
     with open(file_out, "w") as f:
         f.write(md.strip())

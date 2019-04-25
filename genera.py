@@ -81,7 +81,7 @@ end_convert(yml.output+".md")
 post_convert(yml.output+".md")
 print("")
 
-run(["pandoc", "--standalone", "-t", "html5", "-o", file_html, yml.output+".md"])
+run(["pandoc", "--standalone", "-t", "html5", "-o", yml.output+".html", yml.output+".md"])
 soup = get_soup(yml.output+".html")
 soup.find("header").extract()
 for n in soup.findAll(["div", "p"]):
@@ -91,4 +91,4 @@ with open(yml.output+".html", "w") as f:
     f.write(str(soup))
 run(["miepub", "--chapter-level", "1", "--css", "../epub.css", "--txt-cover", yml.txt_cover, yml.output+".md"])
 
-pyminizip.compress_multiple([file_out+i for i in ("md", "html", "epub")], [], file_out+"zip", "programaelectoral", 9)
+pyminizip.compress_multiple([yml.output+'.'+i for i in ("md", "html", "epub")], [], yml.output+".zip", "programaelectoral", 9)
