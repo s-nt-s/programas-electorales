@@ -2,17 +2,17 @@
 
 | Partido | Fuente | Párrafos | Resultado<sup>1</sup> | Páginas<sup>2</sup>
 |:--------|:------:|--------:|:---------:|---------:|
-| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | 369  | [HTML + EPUB + MD](#/actua.zip) | 23 |
-| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 268  | [HTML + EPUB + MD](#/ciudadanos.zip) | 21 |
-| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 853  | [HTML + EPUB + MD](#/pacma.zip) | 45 |
-| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 292  | [HTML + EPUB + MD](#/podemos.zip) | 33 |
-| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 693  | [HTML + EPUB + MD](#/pp.zip) | 42 |
-| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 1389  | [HTML + EPUB + MD](#/psoe.zip) | 91 |
-| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 100  | [HTML + EPUB + MD](#/vox.zip) | 6 |
+| Actua | [PDF](http://reaccionayactua.com/wp-content/uploads/2019/04/Programa-Actu%CC%81a-Generales-19.pdf) | 369  | HTML + EPUB + MD | 23 |
+| Ciudadanos | [HTML](https://www.ciudadanos-cs.org/programa-electoral) | 268  | HTML + EPUB + MD | 21 |
+| PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | 853  | HTML + EPUB + MD | 45 |
+| Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | 292  | HTML + EPUB + MD | 33 |
+| PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | 693  | HTML + EPUB + MD | 42 |
+| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | 1389  | HTML + EPUB + MD | 91 |
+| Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | 100  | HTML + EPUB + MD | 6 |
 
 Notas:
 
-* <sup>1</sup> ~~La contraseña del `zip` es `programaelectoral`~~ Actualmente no esta disponible para descargar.
+* <sup>1</sup> Se puede descargar de https://we.tl/t-CwCneKiaFF y la contraseña de los `zip` es `programaelectoral`.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`.
 # ¿Por qué no usar PDF?
 

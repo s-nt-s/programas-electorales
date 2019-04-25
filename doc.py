@@ -257,7 +257,7 @@ write(f,'''
 for d in datas:
     formato = "PDF" if d.url.endswith(".pdf") else "HTML"
     write(f,'''
-| {0} | [{1}]({2}) | {4}  | [HTML + EPUB + MD]({6}/{7}.zip) | {3} |
+| {0} | [{1}]({2}) | {4}  | HTML + EPUB + MD | {3} |
     ''',
     d.partido, formato, d.url,
     d.pages,
@@ -270,7 +270,7 @@ write(f,"")
 write(f,'''
 Notas:
 
-* <sup>1</sup> ~~La contraseña del `zip` es `programaelectoral`~~ Actualmente no esta disponible para descargar.
+* <sup>1</sup> Se puede descargar de https://we.tl/t-CwCneKiaFF y la contraseña de los `zip` es `programaelectoral`.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`.
 ''')
 write(f,'''
