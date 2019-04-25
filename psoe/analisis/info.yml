@@ -37,95 +37,95 @@ filesize:
 riqueza_lexica: 0.2089116845648341
 freq:
   social:
-    count: 408
+    count: 13.97403842860568
     words:
-      social: 181
-      sociales: 103
-      socialista: 72
-      socialistas: 50
-      socialmente: 2
+      social: 5.80221189293156
+      sociales: 3.301811187690335
+      socialista: 2.308062189453438
+      socialistas: 1.6028209648982208
+      socialmente: 0.06411283859592884
   español:
-    count: 309
+    count: 10.583279104017537
     words:
-      españa: 191
-      española: 42
-      españoles: 32
-      español: 22
-      españolas: 21
-      españas: 1
+      españa: 6.1227760859112035
+      española: 1.3463696105145055
+      españoles: 1.0258054175348614
+      español: 0.7052412245552172
+      españolas: 0.6731848052572528
+      españas: 0.03205641929796442
   derech:
-    count: 224
+    count: 7.6720210980580195
     words:
-      derechos: 142
-      derecho: 72
-      derecha: 7
-      derechas: 3
+      derechos: 4.552011540310947
+      derecho: 2.308062189453438
+      derecha: 0.22439493508575092
+      derechas: 0.09616925789389325
   public:
-    count: 219
+    count: 7.500770627119224
     words:
-      pública: 59
-      público: 55
-      públicos: 53
-      públicas: 48
-      publicación: 2
-      públicamente: 1
-      publicando: 1
+      pública: 1.8913287385799007
+      público: 1.763103061388043
+      públicos: 1.698990222792114
+      públicas: 1.538708126302292
+      publicación: 0.06411283859592884
+      públicamente: 0.03205641929796442
+      publicando: 0.03205641929796442
   polit:
-    count: 215
+    count: 7.363770250368188
     words:
-      políticas: 98
-      política: 95
-      políticos: 12
-      político: 10
+      políticas: 3.1415290912005127
+      política: 3.0453598333066196
+      políticos: 0.384677031575573
+      político: 0.32056419297964417
   impuls:
-    count: 204
+    count: 6.98701921430284
     words:
-      impulsar: 69
-      impulsaremos: 54
-      impulso: 32
-      impulsando: 17
-      impulsado: 13
-      impulse: 5
-      impulsará: 5
-      impulsarán: 4
-      impulsadas: 2
-      impulsó: 1
-      impulsan: 1
-      impulsa: 1
+      impulsar: 2.211892931559545
+      impulsaremos: 1.7310466420900785
+      impulso: 1.0258054175348614
+      impulsando: 0.5449591280653951
+      impulsado: 0.4167334508735374
+      impulse: 0.16028209648982208
+      impulsará: 0.16028209648982208
+      impulsarán: 0.12822567719185768
+      impulsadas: 0.06411283859592884
+      impulsó: 0.03205641929796442
+      impulsan: 0.03205641929796442
+      impulsa: 0.03205641929796442
   desarroll:
-    count: 199
+    count: 6.815768743364044
     words:
-      desarrollo: 113
-      desarrollar: 43
-      desarrollando: 12
-      desarrollaremos: 11
-      desarrollen: 4
-      desarrolle: 3
-      desarrollan: 3
-      desarrollos: 2
-      desarrollada: 2
-      desarrolló: 1
-      desarrollaran: 1
-      desarrollados: 1
-      desarrollado: 1
-      desarrolladas: 1
-      desarrolla: 1
+      desarrollo: 3.622375380669979
+      desarrollar: 1.37842602981247
+      desarrollando: 0.384677031575573
+      desarrollaremos: 0.3526206122776086
+      desarrollen: 0.12822567719185768
+      desarrolle: 0.09616925789389325
+      desarrollan: 0.09616925789389325
+      desarrollos: 0.06411283859592884
+      desarrollada: 0.06411283859592884
+      desarrolló: 0.03205641929796442
+      desarrollaran: 0.03205641929796442
+      desarrollados: 0.03205641929796442
+      desarrollado: 0.03205641929796442
+      desarrolladas: 0.03205641929796442
+      desarrolla: 0.03205641929796442
   person:
-    count: 197
+    count: 6.747268554988526
     words:
-      personas: 185
-      persona: 12
+      personas: 5.930437570123417
+      persona: 0.384677031575573
   gobiern:
-    count: 188
+    count: 6.439017707298695
     words:
-      gobierno: 186
-      gobierne: 1
-      gobierna: 1
+      gobierno: 5.9624939894213815
+      gobierne: 0.03205641929796442
+      gobierna: 0.03205641929796442
   sistem:
-    count: 181
+    count: 6.199267047984382
     words:
-      sistema: 157
-      sistemas: 22
-      sistémico: 1
-      sistémicas: 1
+      sistema: 5.032857829780413
+      sistemas: 0.7052412245552172
+      sistémico: 0.03205641929796442
+      sistémicas: 0.03205641929796442
 imagen: 2019 - Generales - PSOE.png

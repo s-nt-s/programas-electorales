@@ -33,85 +33,85 @@ filesize:
 riqueza_lexica: 0.3240779991521831
 freq:
   public:
-    count: 142
+    count: 10.996670022457987
     words:
-      público: 43
-      pública: 42
-      públicas: 29
-      públicos: 24
-      publicaremos: 1
-      publicar: 1
-      publicado: 1
-      publicación: 1
+      público: 3.0380104564080823
+      pública: 2.9673590504451037
+      públicas: 2.048890772926381
+      públicos: 1.6956337431114878
+      publicaremos: 0.07065140596297867
+      publicar: 0.07065140596297867
+      publicado: 0.07065140596297867
+      publicación: 0.07065140596297867
   derech:
-    count: 124
+    count: 9.602725935104159
     words:
-      derechos: 80
-      derecho: 41
-      derecha: 2
-      derechas: 1
+      derechos: 5.652112477038293
+      derecho: 2.896707644482125
+      derecha: 0.14130281192595734
+      derechas: 0.07065140596297867
   trabaj:
-    count: 111
+    count: 8.595988538681949
     words:
-      trabajo: 31
-      trabajadores: 23
-      trabajadoras: 20
-      trabajar: 8
-      trabajan: 7
-      trabajadora: 6
-      trabajará: 4
-      trabajador: 4
-      trabajaremos: 3
-      trabajos: 2
-      trabajamos: 1
-      trabajado: 1
-      trabaja: 1
+      trabajo: 2.1901935848523384
+      trabajadores: 1.6249823371485093
+      trabajadoras: 1.4130281192595733
+      trabajar: 0.5652112477038294
+      trabajan: 0.49455984174085066
+      trabajadora: 0.42390843577787196
+      trabajará: 0.2826056238519147
+      trabajador: 0.2826056238519147
+      trabajaremos: 0.21195421788893598
+      trabajos: 0.14130281192595734
+      trabajamos: 0.07065140596297867
+      trabajado: 0.07065140596297867
+      trabaja: 0.07065140596297867
   person:
-    count: 107
+    count: 8.286223185936652
     words:
-      personas: 94
-      persona: 13
+      personas: 6.641232160519994
+      persona: 0.9184682775187226
   español:
-    count: 89
+    count: 6.892279098582824
     words:
-      españa: 58
-      española: 13
-      españolas: 10
-      españoles: 6
-      español: 2
+      españa: 4.097781545852762
+      española: 0.9184682775187226
+      españolas: 0.7065140596297866
+      españoles: 0.42390843577787196
+      español: 0.14130281192595734
   servici:
-    count: 85
+    count: 6.582513745837528
     words:
-      servicios: 65
-      servicio: 20
+      servicios: 4.592341387593613
+      servicio: 1.4130281192595733
   establec:
-    count: 77
+    count: 5.962983040346937
     words:
-      estableceremos: 24
-      establecer: 19
-      establecerá: 10
-      establecerán: 7
-      establecimientos: 4
-      establecimiento: 4
-      establecido: 3
-      estableciendo: 2
-      establecida: 2
-      establece: 2
+      estableceremos: 1.6956337431114878
+      establecer: 1.3423767132965947
+      establecerá: 0.7065140596297866
+      establecerán: 0.49455984174085066
+      establecimientos: 0.2826056238519147
+      establecimiento: 0.2826056238519147
+      establecido: 0.21195421788893598
+      estableciendo: 0.14130281192595734
+      establecida: 0.14130281192595734
+      establece: 0.14130281192595734
   pais:
-    count: 76
+    count: 5.885541702160613
     words:
-      país: 63
-      países: 13
+      país: 4.451038575667655
+      países: 0.9184682775187226
   sistem:
-    count: 69
+    count: 5.343452334856346
     words:
-      sistema: 60
-      sistemas: 9
+      sistema: 4.23908435777872
+      sistemas: 0.6358626536668079
   social:
-    count: 67
+    count: 5.188569658483699
     words:
-      social: 38
-      sociales: 27
-      socialmente: 1
-      socialista: 1
+      social: 2.6847534265931894
+      sociales: 1.9075879610004238
+      socialmente: 0.07065140596297867
+      socialista: 0.07065140596297867
 imagen: 2019 - Generales - Podemos.png

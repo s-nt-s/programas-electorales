@@ -35,78 +35,78 @@ filesize:
 riqueza_lexica: 0.321850590827158
 freq:
   animal:
-    count: 352
+    count: 25.44639629870599
     words:
-      animales: 258
-      animal: 58
-      animalista: 35
-      animalistas: 1
+      animales: 17.22411375926297
+      animal: 3.872087589291675
+      animalista: 2.3366045797449764
+      animalistas: 0.06676013084985646
   public:
-    count: 123
+    count: 8.891780524831924
     words:
-      pública: 30
-      público: 28
-      públicas: 27
-      públicos: 26
-      publicado: 4
-      publicar: 2
-      publicando: 2
-      publicación: 2
-      públicamente: 1
-      publicarán: 1
+      pública: 2.002803925495694
+      público: 1.869283663795981
+      públicas: 1.8025235329461247
+      públicos: 1.735763402096268
+      publicado: 0.26704052339942586
+      publicar: 0.13352026169971293
+      publicando: 0.13352026169971293
+      publicación: 0.13352026169971293
+      públicamente: 0.06676013084985646
+      publicarán: 0.06676013084985646
   person:
-    count: 117
+    count: 8.458035133376708
     words:
-      personas: 109
-      persona: 7
-      personan: 1
+      personas: 7.276854262634354
+      persona: 0.4673209159489953
+      personan: 0.06676013084985646
   educ:
-    count: 86
+    count: 6.21701727752476
     words:
-      educación: 49
-      educativo: 16
-      educativos: 12
-      educativas: 4
-      educativa: 2
-      educar: 2
-      educadores: 1
+      educación: 3.271246411642967
+      educativo: 1.0681620935977034
+      educativos: 0.8011215701982776
+      educativas: 0.26704052339942586
+      educativa: 0.13352026169971293
+      educar: 0.13352026169971293
+      educadores: 0.06676013084985646
   desarroll:
-    count: 85
+    count: 6.14472637894889
     words:
-      desarrollo: 58
-      desarrollar: 13
-      desarrollen: 7
-      desarrollando: 2
-      desarrollan: 2
-      desarrollos: 1
-      desarrollados: 1
-      desarrolla: 1
+      desarrollo: 3.872087589291675
+      desarrollar: 0.867881701048134
+      desarrollen: 0.4673209159489953
+      desarrollando: 0.13352026169971293
+      desarrollan: 0.13352026169971293
+      desarrollos: 0.06676013084985646
+      desarrollados: 0.06676013084985646
+      desarrolla: 0.06676013084985646
   social:
-    count: 84
+    count: 6.072435480373021
     words:
-      social: 56
-      sociales: 28
+      social: 3.738567327591962
+      sociales: 1.869283663795981
   propon:
-    count: 78
+    count: 5.638690088917805
     words:
-      proponemos: 68
-      propone: 9
-      proponer: 1
+      proponemos: 4.539688897790239
+      propone: 0.6008411776487081
+      proponer: 0.06676013084985646
   salud:
-    count: 72
+    count: 5.204944697462589
     words:
-      salud: 66
-      saludables: 4
-      saludable: 2
+      salud: 4.406168636090527
+      saludables: 0.26704052339942586
+      saludable: 0.13352026169971293
   polit:
-    count: 70
+    count: 5.060362900310851
     words:
-      políticas: 35
-      política: 26
-      políticos: 8
-      político: 1
+      políticas: 2.3366045797449764
+      política: 1.735763402096268
+      políticos: 0.5340810467988517
+      político: 0.06676013084985646
   proteccion:
-    count: 65
+    count: 4.698908407431504
     words:
-      protección: 65
+      protección: 4.33940850524067
 imagen: 2019 - Generales - PACMA.png

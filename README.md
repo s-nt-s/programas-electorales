@@ -248,462 +248,464 @@ solo corresponde a una palabra, indico directamente la palabra en vez de la raí
 
 Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una raíz.
 
+**¡OJO!** Que los porcentajes son en ‰ (tanto por mil), no en % (tanto por ciento).
+
 ## Actua
 
 ![Actua](actua/analisis/2019%20-%20Generales%20-%20Actua.png)
 
-* `104x` public*:
-    * `44x` públicos
-    * `23x` pública
-    * `22x` públicas
-    * `14x` público
-    * ` 1x` publicación
-* `68x` social*:
-    * `45x` social
-    * `21x` sociales
-    * ` 2x` socialmente
-* `61x` polit*:
-    * `28x` política
-    * `26x` políticas
-    * ` 4x` político
-    * ` 3x` políticos
-* `60x` derech*:
-    * `37x` derechos
-    * `14x` derecho
-    * ` 8x` derecha
-    * ` 1x` derechas
-* `48x` model*:
-    * `43x` modelo
-    * ` 5x` modelos
-* `46x` econom*:
-    * `15x` económica
-    * `11x` económico
-    * ` 8x` economía
-    * ` 6x` económicas
-    * ` 4x` económicos
-    * ` 1x` económicamente
-    * ` 1x` economista
-* `40x` autonom*:
-    * `14x` autónomas
-    * `10x` autonomía
-    * ` 3x` autónomos
-    * ` 3x` autonómico
-    * ` 3x` autonómicas
-    * ` 3x` autonómica
-    * ` 2x` autonómicos
-    * ` 2x` autonomías
-* `39x` servici*:
-    * `31x` servicios
-    * ` 8x` servicio
-* `39x` sistem*:
-    * `33x` sistema
-    * ` 5x` sistemas
-    * ` 1x` sistémica
-* `37x` español*:
-    * `30x` españa
-    * ` 3x` española
-    * ` 2x` españolas
-    * ` 1x` españoles
-    * ` 1x` español
+* `14.13` ‰ public*:
+    * `5.56` ‰ públicos
+    * `2.91` ‰ pública
+    * `2.78` ‰ públicas
+    * `1.77` ‰ público
+    * `0.13` ‰ publicación
+* `9.24` ‰ social*:
+    * `5.69` ‰ social
+    * `2.65` ‰ sociales
+    * `0.25` ‰ socialmente
+* `8.29` ‰ polit*:
+    * `3.54` ‰ política
+    * `3.29` ‰ políticas
+    * `0.51` ‰ político
+    * `0.38` ‰ políticos
+* `8.15` ‰ derech*:
+    * `4.68` ‰ derechos
+    * `1.77` ‰ derecho
+    * `1.01` ‰ derecha
+    * `0.13` ‰ derechas
+* `6.52` ‰ model*:
+    * `5.43` ‰ modelo
+    * `0.63` ‰ modelos
+* `6.25` ‰ econom*:
+    * `1.90` ‰ económica
+    * `1.39` ‰ económico
+    * `1.01` ‰ economía
+    * `0.76` ‰ económicas
+    * `0.51` ‰ económicos
+    * `0.13` ‰ económicamente
+    * `0.13` ‰ economista
+* `5.43` ‰ autonom*:
+    * `1.77` ‰ autónomas
+    * `1.26` ‰ autonomía
+    * `0.38` ‰ autónomos
+    * `0.38` ‰ autonómico
+    * `0.38` ‰ autonómicas
+    * `0.38` ‰ autonómica
+    * `0.25` ‰ autonómicos
+    * `0.25` ‰ autonomías
+* `5.30` ‰ servici*:
+    * `3.92` ‰ servicios
+    * `1.01` ‰ servicio
+* `5.30` ‰ sistem*:
+    * `4.17` ‰ sistema
+    * `0.63` ‰ sistemas
+    * `0.13` ‰ sistémica
+* `5.03` ‰ español*:
+    * `3.79` ‰ españa
+    * `0.38` ‰ española
+    * `0.25` ‰ españolas
+    * `0.13` ‰ españoles
+    * `0.13` ‰ español
 
 ## Ciudadanos
 
 ![Ciudadanos](ciudadanos/analisis/2019%20-%20Generales%20-%20Ciudadanos.png)
 
-* `120x` español*:
-    * `72x` españa
-    * `19x` españoles
-    * `14x` español
-    * `12x` española
-    * ` 3x` españolas
-* `85x` public*:
-    * `25x` públicos
-    * `22x` públicas
-    * `18x` público
-    * `15x` pública
-    * ` 1x` publicarse
-    * ` 1x` publicaremos
-    * ` 1x` publicar
-    * ` 1x` publicando
-    * ` 1x` publicación
-* `73x` garantiz*:
-    * `33x` garantizar
-    * `30x` garantizaremos
-    * ` 6x` garantizando
-    * ` 2x` garantizará
-    * ` 1x` garantizarles
-    * ` 1x` garantizado
-* `55x` nacional*:
-    * `47x` nacional
-    * ` 3x` nacionales
-    * ` 2x` nacionalistas
-    * ` 2x` nacionalista
-    * ` 1x` nacionalidad
-* `48x` derech*:
-    * `27x` derecho
-    * `21x` derechos
-* `47x` impuls*:
-    * `39x` impulsaremos
-    * ` 4x` impulsando
-    * ` 2x` impulsar
-    * ` 1x` impulsará
-    * ` 1x` impulsada
-* `43x` mejor*:
-    * `12x` mejorar
-    * `11x` mejores
-    * `11x` mejoraremos
-    * ` 7x` mejora
-    * ` 1x` mejore
-    * ` 1x` mejorando
-* `42x` nuev*:
-    * `14x` nuevo
-    * `11x` nuevos
-    * `11x` nueva
-    * ` 6x` nuevas
-* `40x` trabaj*:
-    * `18x` trabajo
-    * `11x` trabajadores
-    * ` 3x` trabajador
-    * ` 2x` trabajar
-    * ` 1x` trabajos
-    * ` 1x` trabajen
-    * ` 1x` trabajaremos
-    * ` 1x` trabajando
-    * ` 1x` trabajadoras
-    * ` 1x` trabajadora
-* `40x` acab*:
-    * `22x` acabar
-    * `18x` acabaremos
+* `17.63` ‰ español*:
+    * `9.88` ‰ españa
+    * `2.61` ‰ españoles
+    * `1.92` ‰ español
+    * `1.65` ‰ española
+    * `0.41` ‰ españolas
+* `12.49` ‰ public*:
+    * `3.43` ‰ públicos
+    * `3.02` ‰ públicas
+    * `2.47` ‰ público
+    * `2.06` ‰ pública
+    * `0.14` ‰ publicarse
+    * `0.14` ‰ publicaremos
+    * `0.14` ‰ publicar
+    * `0.14` ‰ publicando
+    * `0.14` ‰ publicación
+* `10.72` ‰ garantiz*:
+    * `4.53` ‰ garantizar
+    * `4.12` ‰ garantizaremos
+    * `0.82` ‰ garantizando
+    * `0.27` ‰ garantizará
+    * `0.14` ‰ garantizarles
+    * `0.14` ‰ garantizado
+* `8.08` ‰ nacional*:
+    * `6.45` ‰ nacional
+    * `0.41` ‰ nacionales
+    * `0.27` ‰ nacionalistas
+    * `0.27` ‰ nacionalista
+    * `0.14` ‰ nacionalidad
+* `7.05` ‰ derech*:
+    * `3.71` ‰ derecho
+    * `2.88` ‰ derechos
+* `6.90` ‰ impuls*:
+    * `5.35` ‰ impulsaremos
+    * `0.55` ‰ impulsando
+    * `0.27` ‰ impulsar
+    * `0.14` ‰ impulsará
+    * `0.14` ‰ impulsada
+* `6.32` ‰ mejor*:
+    * `1.65` ‰ mejorar
+    * `1.51` ‰ mejores
+    * `1.51` ‰ mejoraremos
+    * `0.96` ‰ mejora
+    * `0.14` ‰ mejore
+    * `0.14` ‰ mejorando
+* `6.17` ‰ nuev*:
+    * `1.92` ‰ nuevo
+    * `1.51` ‰ nuevos
+    * `1.51` ‰ nueva
+    * `0.82` ‰ nuevas
+* `5.88` ‰ trabaj*:
+    * `2.47` ‰ trabajo
+    * `1.51` ‰ trabajadores
+    * `0.41` ‰ trabajador
+    * `0.27` ‰ trabajar
+    * `0.14` ‰ trabajos
+    * `0.14` ‰ trabajen
+    * `0.14` ‰ trabajaremos
+    * `0.14` ‰ trabajando
+    * `0.14` ‰ trabajadoras
+    * `0.14` ‰ trabajadora
+* `5.88` ‰ acab*:
+    * `3.02` ‰ acabar
+    * `2.47` ‰ acabaremos
 
 ## PACMA
 
 ![PACMA](pacma/analisis/2019%20-%20Generales%20-%20PACMA.png)
 
-* `352x` animal*:
-    * `258x` animales
-    * `58x` animal
-    * `35x` animalista
-    * ` 1x` animalistas
-* `123x` public*:
-    * `30x` pública
-    * `28x` público
-    * `27x` públicas
-    * `26x` públicos
-    * ` 4x` publicado
-    * ` 2x` publicar
-    * ` 2x` publicando
-    * ` 2x` publicación
-    * ` 1x` públicamente
-    * ` 1x` publicarán
-* `117x` person*:
-    * `109x` personas
-    * ` 7x` persona
-    * ` 1x` personan
-* `86x` educ*:
-    * `49x` educación
-    * `16x` educativo
-    * `12x` educativos
-    * ` 4x` educativas
-    * ` 2x` educativa
-    * ` 2x` educar
-    * ` 1x` educadores
-* `85x` desarroll*:
-    * `58x` desarrollo
-    * `13x` desarrollar
-    * ` 7x` desarrollen
-    * ` 2x` desarrollando
-    * ` 2x` desarrollan
-    * ` 1x` desarrollos
-    * ` 1x` desarrollados
-    * ` 1x` desarrolla
-* `84x` social*:
-    * `56x` social
-    * `28x` sociales
-* `78x` propon*:
-    * `68x` proponemos
-    * ` 9x` propone
-    * ` 1x` proponer
-* `72x` salud*:
-    * `66x` salud
-    * ` 4x` saludables
-    * ` 2x` saludable
-* `70x` polit*:
-    * `35x` políticas
-    * `26x` política
-    * ` 8x` políticos
-    * ` 1x` político
-* `65x` protección
+* `25.45` ‰ animal*:
+    * `17.22` ‰ animales
+    * `3.87` ‰ animal
+    * `2.34` ‰ animalista
+    * `0.07` ‰ animalistas
+* `8.89` ‰ public*:
+    * `2.00` ‰ pública
+    * `1.87` ‰ público
+    * `1.80` ‰ públicas
+    * `1.74` ‰ públicos
+    * `0.27` ‰ publicado
+    * `0.13` ‰ publicar
+    * `0.13` ‰ publicando
+    * `0.13` ‰ publicación
+    * `0.07` ‰ públicamente
+    * `0.07` ‰ publicarán
+* `8.46` ‰ person*:
+    * `7.28` ‰ personas
+    * `0.47` ‰ persona
+    * `0.07` ‰ personan
+* `6.22` ‰ educ*:
+    * `3.27` ‰ educación
+    * `1.07` ‰ educativo
+    * `0.80` ‰ educativos
+    * `0.27` ‰ educativas
+    * `0.13` ‰ educativa
+    * `0.13` ‰ educar
+    * `0.07` ‰ educadores
+* `6.14` ‰ desarroll*:
+    * `3.87` ‰ desarrollo
+    * `0.87` ‰ desarrollar
+    * `0.47` ‰ desarrollen
+    * `0.13` ‰ desarrollando
+    * `0.13` ‰ desarrollan
+    * `0.07` ‰ desarrollos
+    * `0.07` ‰ desarrollados
+    * `0.07` ‰ desarrolla
+* `6.07` ‰ social*:
+    * `3.74` ‰ social
+    * `1.87` ‰ sociales
+* `5.64` ‰ propon*:
+    * `4.54` ‰ proponemos
+    * `0.60` ‰ propone
+    * `0.07` ‰ proponer
+* `5.20` ‰ salud*:
+    * `4.41` ‰ salud
+    * `0.27` ‰ saludables
+    * `0.13` ‰ saludable
+* `5.06` ‰ polit*:
+    * `2.34` ‰ políticas
+    * `1.74` ‰ política
+    * `0.53` ‰ políticos
+    * `0.07` ‰ político
+* `4.70` ‰ protección
 
 ## Podemos
 
 ![Podemos](podemos/analisis/2019%20-%20Generales%20-%20Podemos.png)
 
-* `142x` public*:
-    * `43x` público
-    * `42x` pública
-    * `29x` públicas
-    * `24x` públicos
-    * ` 1x` publicaremos
-    * ` 1x` publicar
-    * ` 1x` publicado
-    * ` 1x` publicación
-* `124x` derech*:
-    * `80x` derechos
-    * `41x` derecho
-    * ` 2x` derecha
-    * ` 1x` derechas
-* `111x` trabaj*:
-    * `31x` trabajo
-    * `23x` trabajadores
-    * `20x` trabajadoras
-    * ` 8x` trabajar
-    * ` 7x` trabajan
-    * ` 6x` trabajadora
-    * ` 4x` trabajará
-    * ` 4x` trabajador
-    * ` 3x` trabajaremos
-    * ` 2x` trabajos
-    * ` 1x` trabajamos
-    * ` 1x` trabajado
-    * ` 1x` trabaja
-* `107x` person*:
-    * `94x` personas
-    * `13x` persona
-* `89x` español*:
-    * `58x` españa
-    * `13x` española
-    * `10x` españolas
-    * ` 6x` españoles
-    * ` 2x` español
-* `85x` servici*:
-    * `65x` servicios
-    * `20x` servicio
-* `77x` establec*:
-    * `24x` estableceremos
-    * `19x` establecer
-    * `10x` establecerá
-    * ` 7x` establecerán
-    * ` 4x` establecimientos
-    * ` 4x` establecimiento
-    * ` 3x` establecido
-    * ` 2x` estableciendo
-    * ` 2x` establecida
-    * ` 2x` establece
-* `76x` pais*:
-    * `63x` país
-    * `13x` países
-* `69x` sistem*:
-    * `60x` sistema
-    * ` 9x` sistemas
-* `67x` social*:
-    * `38x` social
-    * `27x` sociales
-    * ` 1x` socialmente
-    * ` 1x` socialista
+* `11.00` ‰ public*:
+    * `3.04` ‰ público
+    * `2.97` ‰ pública
+    * `2.05` ‰ públicas
+    * `1.70` ‰ públicos
+    * `0.07` ‰ publicaremos
+    * `0.07` ‰ publicar
+    * `0.07` ‰ publicado
+    * `0.07` ‰ publicación
+* `9.60` ‰ derech*:
+    * `5.65` ‰ derechos
+    * `2.90` ‰ derecho
+    * `0.14` ‰ derecha
+    * `0.07` ‰ derechas
+* `8.60` ‰ trabaj*:
+    * `2.19` ‰ trabajo
+    * `1.62` ‰ trabajadores
+    * `1.41` ‰ trabajadoras
+    * `0.57` ‰ trabajar
+    * `0.49` ‰ trabajan
+    * `0.42` ‰ trabajadora
+    * `0.28` ‰ trabajará
+    * `0.28` ‰ trabajador
+    * `0.21` ‰ trabajaremos
+    * `0.14` ‰ trabajos
+    * `0.07` ‰ trabajamos
+    * `0.07` ‰ trabajado
+    * `0.07` ‰ trabaja
+* `8.29` ‰ person*:
+    * `6.64` ‰ personas
+    * `0.92` ‰ persona
+* `6.89` ‰ español*:
+    * `4.10` ‰ españa
+    * `0.92` ‰ española
+    * `0.71` ‰ españolas
+    * `0.42` ‰ españoles
+    * `0.14` ‰ español
+* `6.58` ‰ servici*:
+    * `4.59` ‰ servicios
+    * `1.41` ‰ servicio
+* `5.96` ‰ establec*:
+    * `1.70` ‰ estableceremos
+    * `1.34` ‰ establecer
+    * `0.71` ‰ establecerá
+    * `0.49` ‰ establecerán
+    * `0.28` ‰ establecimientos
+    * `0.28` ‰ establecimiento
+    * `0.21` ‰ establecido
+    * `0.14` ‰ estableciendo
+    * `0.14` ‰ establecida
+    * `0.14` ‰ establece
+* `5.89` ‰ pais*:
+    * `4.45` ‰ país
+    * `0.92` ‰ países
+* `5.34` ‰ sistem*:
+    * `4.24` ‰ sistema
+    * `0.64` ‰ sistemas
+* `5.19` ‰ social*:
+    * `2.68` ‰ social
+    * `1.91` ‰ sociales
+    * `0.07` ‰ socialmente
+    * `0.07` ‰ socialista
 
 ## PP
 
 ![PP](pp/analisis/2019%20-%20Generales%20-%20PP.png)
 
-* `156x` español*:
-    * `85x` españa
-    * `31x` españoles
-    * `20x` española
-    * `12x` español
-    * ` 8x` españolas
-* `150x` impuls*:
-    * `95x` impulsaremos
-    * `17x` impulsar
-    * `17x` impulsando
-    * `12x` impulso
-    * ` 3x` impulsarán
-    * ` 2x` impulsen
-    * ` 1x` impulse
-    * ` 1x` impulsará
-    * ` 1x` impulsan
-    * ` 1x` impulsado
-* `109x` desarroll*:
-    * `64x` desarrollo
-    * `29x` desarrollaremos
-    * ` 3x` desarrollar
-    * ` 3x` desarrollando
-    * ` 2x` desarrollen
-    * ` 2x` desarrolladas
-    * ` 1x` desarrollos
-    * ` 1x` desarrolle
-    * ` 1x` desarrollará
-    * ` 1x` desarrollarse
-    * ` 1x` desarrollan
-    * ` 1x` desarrolladores
-* `107x` public*:
-    * `37x` públicos
-    * `23x` público
-    * `22x` públicas
-    * `21x` pública
-    * ` 1x` públicamente
-    * ` 1x` publicando
-    * ` 1x` publicados
-    * ` 1x` publicación
-* `101x` promov*:
-    * `76x` promoveremos
-    * `14x` promover
-    * ` 6x` promoviendo
-    * ` 3x` promoverán
-    * ` 2x` promoverá
-* `98x` plan*:
-    * `60x` plan
-    * `38x` planes
-* `96x` nacional*:
-    * `77x` nacional
-    * `15x` nacionales
-    * ` 2x` nacionalidad
-    * ` 1x` nacionalismos
-    * ` 1x` nacionalismo
-* `84x` nuev*:
-    * `35x` nuevas
-    * `25x` nuevos
-    * `13x` nueva
-    * `11x` nuevo
-* `80x` segur*:
-    * `71x` seguridad
-    * ` 3x` seguras
-    * ` 2x` seguros
-    * ` 2x` seguro
-    * ` 2x` segura
-* `79x` autonom*:
-    * `36x` autónomas
-    * ` 9x` autonómicos
-    * ` 8x` autonómico
-    * ` 7x` autónomos
-    * ` 6x` autonómicas
-    * ` 5x` autonomía
-    * ` 3x` autónomo
-    * ` 3x` autonómica
-    * ` 1x` autónoma
-    * ` 1x` autonomías
+* `12.06` ‰ español*:
+    * `6.21` ‰ españa
+    * `2.27` ‰ españoles
+    * `1.46` ‰ española
+    * `0.88` ‰ español
+    * `0.58` ‰ españolas
+* `11.60` ‰ impuls*:
+    * `6.94` ‰ impulsaremos
+    * `1.24` ‰ impulsar
+    * `1.24` ‰ impulsando
+    * `0.88` ‰ impulso
+    * `0.22` ‰ impulsarán
+    * `0.15` ‰ impulsen
+    * `0.07` ‰ impulse
+    * `0.07` ‰ impulsará
+    * `0.07` ‰ impulsan
+    * `0.07` ‰ impulsado
+* `8.43` ‰ desarroll*:
+    * `4.68` ‰ desarrollo
+    * `2.12` ‰ desarrollaremos
+    * `0.22` ‰ desarrollar
+    * `0.22` ‰ desarrollando
+    * `0.15` ‰ desarrollen
+    * `0.15` ‰ desarrolladas
+    * `0.07` ‰ desarrollos
+    * `0.07` ‰ desarrolle
+    * `0.07` ‰ desarrollará
+    * `0.07` ‰ desarrollarse
+    * `0.07` ‰ desarrollan
+    * `0.07` ‰ desarrolladores
+* `8.27` ‰ public*:
+    * `2.70` ‰ públicos
+    * `1.68` ‰ público
+    * `1.61` ‰ públicas
+    * `1.53` ‰ pública
+    * `0.07` ‰ públicamente
+    * `0.07` ‰ publicando
+    * `0.07` ‰ publicados
+    * `0.07` ‰ publicación
+* `7.81` ‰ promov*:
+    * `5.55` ‰ promoveremos
+    * `1.02` ‰ promover
+    * `0.44` ‰ promoviendo
+    * `0.22` ‰ promoverán
+    * `0.15` ‰ promoverá
+* `7.58` ‰ plan*:
+    * `4.38` ‰ plan
+    * `2.78` ‰ planes
+* `7.42` ‰ nacional*:
+    * `5.63` ‰ nacional
+    * `1.10` ‰ nacionales
+    * `0.15` ‰ nacionalidad
+    * `0.07` ‰ nacionalismos
+    * `0.07` ‰ nacionalismo
+* `6.49` ‰ nuev*:
+    * `2.56` ‰ nuevas
+    * `1.83` ‰ nuevos
+    * `0.95` ‰ nueva
+    * `0.80` ‰ nuevo
+* `6.18` ‰ segur*:
+    * `5.19` ‰ seguridad
+    * `0.22` ‰ seguras
+    * `0.15` ‰ seguros
+    * `0.15` ‰ seguro
+    * `0.15` ‰ segura
+* `6.11` ‰ autonom*:
+    * `2.63` ‰ autónomas
+    * `0.66` ‰ autonómicos
+    * `0.58` ‰ autonómico
+    * `0.51` ‰ autónomos
+    * `0.44` ‰ autonómicas
+    * `0.37` ‰ autonomía
+    * `0.22` ‰ autónomo
+    * `0.22` ‰ autonómica
+    * `0.07` ‰ autónoma
+    * `0.07` ‰ autonomías
 
 ## PSOE
 
 ![PSOE](psoe/analisis/2019%20-%20Generales%20-%20PSOE.png)
 
-* `408x` social*:
-    * `181x` social
-    * `103x` sociales
-    * `72x` socialista
-    * `50x` socialistas
-    * ` 2x` socialmente
-* `309x` español*:
-    * `191x` españa
-    * `42x` española
-    * `32x` españoles
-    * `22x` español
-    * `21x` españolas
-    * ` 1x` españas
-* `224x` derech*:
-    * `142x` derechos
-    * `72x` derecho
-    * ` 7x` derecha
-    * ` 3x` derechas
-* `219x` public*:
-    * `59x` pública
-    * `55x` público
-    * `53x` públicos
-    * `48x` públicas
-    * ` 2x` publicación
-    * ` 1x` públicamente
-    * ` 1x` publicando
-* `215x` polit*:
-    * `98x` políticas
-    * `95x` política
-    * `12x` políticos
-    * `10x` político
-* `204x` impuls*:
-    * `69x` impulsar
-    * `54x` impulsaremos
-    * `32x` impulso
-    * `17x` impulsando
-    * `13x` impulsado
-    * ` 5x` impulse
-    * ` 5x` impulsará
-    * ` 4x` impulsarán
-    * ` 2x` impulsadas
-    * ` 1x` impulsó
-    * ` 1x` impulsan
-    * ` 1x` impulsa
-* `199x` desarroll*:
-    * `113x` desarrollo
-    * `43x` desarrollar
-    * `12x` desarrollando
-    * `11x` desarrollaremos
-    * ` 4x` desarrollen
-    * ` 3x` desarrolle
-    * ` 3x` desarrollan
-    * ` 2x` desarrollos
-    * ` 2x` desarrollada
-    * ` 1x` desarrolló
-    * ` 1x` desarrollaran
-    * ` 1x` desarrollados
-    * ` 1x` desarrollado
-    * ` 1x` desarrolladas
-    * ` 1x` desarrolla
-* `197x` person*:
-    * `185x` personas
-    * `12x` persona
-* `188x` gobiern*:
-    * `186x` gobierno
-    * ` 1x` gobierne
-    * ` 1x` gobierna
-* `181x` sistem*:
-    * `157x` sistema
-    * `22x` sistemas
-    * ` 1x` sistémico
-    * ` 1x` sistémicas
+* `13.97` ‰ social*:
+    * `5.80` ‰ social
+    * `3.30` ‰ sociales
+    * `2.31` ‰ socialista
+    * `1.60` ‰ socialistas
+    * `0.06` ‰ socialmente
+* `10.58` ‰ español*:
+    * `6.12` ‰ españa
+    * `1.35` ‰ española
+    * `1.03` ‰ españoles
+    * `0.71` ‰ español
+    * `0.67` ‰ españolas
+    * `0.03` ‰ españas
+* `7.67` ‰ derech*:
+    * `4.55` ‰ derechos
+    * `2.31` ‰ derecho
+    * `0.22` ‰ derecha
+    * `0.10` ‰ derechas
+* `7.50` ‰ public*:
+    * `1.89` ‰ pública
+    * `1.76` ‰ público
+    * `1.70` ‰ públicos
+    * `1.54` ‰ públicas
+    * `0.06` ‰ publicación
+    * `0.03` ‰ públicamente
+    * `0.03` ‰ publicando
+* `7.36` ‰ polit*:
+    * `3.14` ‰ políticas
+    * `3.05` ‰ política
+    * `0.38` ‰ políticos
+    * `0.32` ‰ político
+* `6.99` ‰ impuls*:
+    * `2.21` ‰ impulsar
+    * `1.73` ‰ impulsaremos
+    * `1.03` ‰ impulso
+    * `0.54` ‰ impulsando
+    * `0.42` ‰ impulsado
+    * `0.16` ‰ impulse
+    * `0.16` ‰ impulsará
+    * `0.13` ‰ impulsarán
+    * `0.06` ‰ impulsadas
+    * `0.03` ‰ impulsó
+    * `0.03` ‰ impulsan
+    * `0.03` ‰ impulsa
+* `6.82` ‰ desarroll*:
+    * `3.62` ‰ desarrollo
+    * `1.38` ‰ desarrollar
+    * `0.38` ‰ desarrollando
+    * `0.35` ‰ desarrollaremos
+    * `0.13` ‰ desarrollen
+    * `0.10` ‰ desarrolle
+    * `0.10` ‰ desarrollan
+    * `0.06` ‰ desarrollos
+    * `0.06` ‰ desarrollada
+    * `0.03` ‰ desarrolló
+    * `0.03` ‰ desarrollaran
+    * `0.03` ‰ desarrollados
+    * `0.03` ‰ desarrollado
+    * `0.03` ‰ desarrolladas
+    * `0.03` ‰ desarrolla
+* `6.75` ‰ person*:
+    * `5.93` ‰ personas
+    * `0.38` ‰ persona
+* `6.44` ‰ gobiern*:
+    * `5.96` ‰ gobierno
+    * `0.03` ‰ gobierne
+    * `0.03` ‰ gobierna
+* `6.20` ‰ sistem*:
+    * `5.03` ‰ sistema
+    * `0.71` ‰ sistemas
+    * `0.03` ‰ sistémico
+    * `0.03` ‰ sistémicas
 
 ## Vox
 
 ![Vox](vox/analisis/2019%20-%20Generales%20-%20Vox.png)
 
-* `42x` español*:
-    * `16x` españa
-    * ` 8x` españoles
-    * ` 7x` española
-    * ` 7x` español
-    * ` 4x` españolas
-* `23x` nacional*:
-    * `16x` nacional
-    * ` 5x` nacionalidad
-    * ` 1x` nacionalidades
-    * ` 1x` nacionales
-* `19x` public*:
-    * ` 7x` públicos
-    * ` 5x` público
-    * ` 4x` pública
-    * ` 2x` públicas
-    * ` 1x` publicación
-* `15x` famili*:
-    * ` 7x` familias
-    * ` 4x` familiar
-    * ` 4x` familia
-* `12x` inmigr*:
-    * ` 5x` inmigrantes
-    * ` 5x` inmigración
-    * ` 2x` inmigrante
-* `12x` empres*:
-    * ` 7x` empresa
-    * ` 5x` empresas
-* `11x` estado
-* `10x` autonom*:
-    * ` 5x` autonómicas
-    * ` 1x` autónomos
-    * ` 1x` autónoma
-    * ` 1x` autonómico
-    * ` 1x` autonómica
-    * ` 1x` autonomía
-* `9x` ilegal*:
-    * ` 5x` ilegales
-    * ` 3x` ilegal
-    * ` 1x` ilegalmente
-* `9x` reducción
+* `24.96` ‰ español*:
+    * `8.85` ‰ españa
+    * `4.43` ‰ españoles
+    * `3.87` ‰ española
+    * `3.87` ‰ español
+    * `2.21` ‰ españolas
+* `13.67` ‰ nacional*:
+    * `8.85` ‰ nacional
+    * `2.77` ‰ nacionalidad
+    * `0.55` ‰ nacionalidades
+    * `0.55` ‰ nacionales
+* `11.29` ‰ public*:
+    * `3.87` ‰ públicos
+    * `2.77` ‰ público
+    * `2.21` ‰ pública
+    * `1.11` ‰ públicas
+    * `0.55` ‰ publicación
+* `8.91` ‰ famili*:
+    * `3.87` ‰ familias
+    * `2.21` ‰ familiar
+    * `2.21` ‰ familia
+* `7.13` ‰ inmigr*:
+    * `2.77` ‰ inmigrantes
+    * `2.77` ‰ inmigración
+    * `1.11` ‰ inmigrante
+* `7.13` ‰ empres*:
+    * `3.87` ‰ empresa
+    * `2.77` ‰ empresas
+* `6.54` ‰ estado
+* `5.94` ‰ autonom*:
+    * `2.77` ‰ autonómicas
+    * `0.55` ‰ autónomos
+    * `0.55` ‰ autónoma
+    * `0.55` ‰ autonómico
+    * `0.55` ‰ autonómica
+    * `0.55` ‰ autonomía
+* `5.35` ‰ ilegal*:
+    * `2.77` ‰ ilegales
+    * `1.66` ‰ ilegal
+    * `0.55` ‰ ilegalmente
+* `5.35` ‰ reducción
 
 ## Conclusiones
 

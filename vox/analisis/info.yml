@@ -37,66 +37,66 @@ filesize:
 riqueza_lexica: 0.6408411732152739
 freq:
   español:
-    count: 42
+    count: 24.955436720142604
     words:
-      españa: 16
-      españoles: 8
-      española: 7
-      español: 7
-      españolas: 4
+      españa: 8.854454897620366
+      españoles: 4.427227448810183
+      española: 3.87382401770891
+      español: 3.87382401770891
+      españolas: 2.2136137244050915
   nacional:
-    count: 23
+    count: 13.666072489601902
     words:
-      nacional: 16
-      nacionalidad: 5
-      nacionalidades: 1
-      nacionales: 1
+      nacional: 8.854454897620366
+      nacionalidad: 2.7670171555063643
+      nacionalidades: 0.5534034311012729
+      nacionales: 0.5534034311012729
   public:
-    count: 19
+    count: 11.2893642305407
     words:
-      públicos: 7
-      público: 5
-      pública: 4
-      públicas: 2
-      publicación: 1
+      públicos: 3.87382401770891
+      público: 2.7670171555063643
+      pública: 2.2136137244050915
+      públicas: 1.1068068622025458
+      publicación: 0.5534034311012729
   famili:
-    count: 15
+    count: 8.9126559714795
     words:
-      familias: 7
-      familiar: 4
-      familia: 4
+      familias: 3.87382401770891
+      familiar: 2.2136137244050915
+      familia: 2.2136137244050915
   inmigr:
-    count: 12
+    count: 7.1301247771836005
     words:
-      inmigrantes: 5
-      inmigración: 5
-      inmigrante: 2
+      inmigrantes: 2.7670171555063643
+      inmigración: 2.7670171555063643
+      inmigrante: 1.1068068622025458
   empres:
-    count: 12
+    count: 7.1301247771836005
     words:
-      empresa: 7
-      empresas: 5
+      empresa: 3.87382401770891
+      empresas: 2.7670171555063643
   estad:
-    count: 11
+    count: 6.5359477124183005
     words:
-      estado: 11
+      estado: 6.087437742114001
   autonom:
-    count: 10
+    count: 5.941770647653001
     words:
-      autonómicas: 5
-      autónomos: 1
-      autónoma: 1
-      autonómico: 1
-      autonómica: 1
-      autonomía: 1
+      autonómicas: 2.7670171555063643
+      autónomos: 0.5534034311012729
+      autónoma: 0.5534034311012729
+      autonómico: 0.5534034311012729
+      autonómica: 0.5534034311012729
+      autonomía: 0.5534034311012729
   ilegal:
-    count: 9
+    count: 5.347593582887701
     words:
-      ilegales: 5
-      ilegal: 3
-      ilegalmente: 1
+      ilegales: 2.7670171555063643
+      ilegal: 1.6602102933038185
+      ilegalmente: 0.5534034311012729
   reduccion:
-    count: 9
+    count: 5.347593582887701
     words:
-      reducción: 9
+      reducción: 4.980630879911455
 imagen: 2019 - Generales - Vox.png

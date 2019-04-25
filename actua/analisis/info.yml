@@ -39,76 +39,76 @@ filesize:
 riqueza_lexica: 0.4251232149627196
 freq:
   public:
-    count: 104
+    count: 14.126596033686498
     words:
-      públicos: 44
-      pública: 23
-      públicas: 22
-      público: 14
-      publicación: 1
+      públicos: 5.560470112473145
+      pública: 2.9066093769745986
+      públicas: 2.7802350562365725
+      público: 1.7692404903323644
+      publicación: 0.12637432073802604
   social:
-    count: 68
+    count: 9.236620483564248
     words:
-      social: 45
-      sociales: 21
-      socialmente: 2
+      social: 5.686844433211172
+      sociales: 2.653860735498547
+      socialmente: 0.2527486414760521
   polit:
-    count: 61
+    count: 8.285791904373811
     words:
-      política: 28
-      políticas: 26
-      político: 4
-      políticos: 3
+      política: 3.538480980664729
+      políticas: 3.285732339188677
+      político: 0.5054972829521042
+      políticos: 0.3791229622140781
   derech:
-    count: 60
+    count: 8.149959250203748
     words:
-      derechos: 37
-      derecho: 14
-      derecha: 8
-      derechas: 1
+      derechos: 4.6758498673069635
+      derecho: 1.7692404903323644
+      derecha: 1.0109945659042083
+      derechas: 0.12637432073802604
   model:
-    count: 48
+    count: 6.519967400162999
     words:
-      modelo: 43
-      modelos: 5
+      modelo: 5.434095791735119
+      modelos: 0.6318716036901302
   econom:
-    count: 46
+    count: 6.248302091822874
     words:
-      económica: 15
-      económico: 11
-      economía: 8
-      económicas: 6
-      económicos: 4
-      económicamente: 1
-      economista: 1
+      económica: 1.8956148110703905
+      económico: 1.3901175281182863
+      economía: 1.0109945659042083
+      económicas: 0.7582459244281562
+      económicos: 0.5054972829521042
+      económicamente: 0.12637432073802604
+      economista: 0.12637432073802604
   autonom:
-    count: 40
+    count: 5.433306166802499
     words:
-      autónomas: 14
-      autonomía: 10
-      autónomos: 3
-      autonómico: 3
-      autonómicas: 3
-      autonómica: 3
-      autonómicos: 2
-      autonomías: 2
+      autónomas: 1.7692404903323644
+      autonomía: 1.2637432073802604
+      autónomos: 0.3791229622140781
+      autonómico: 0.3791229622140781
+      autonómicas: 0.3791229622140781
+      autonómica: 0.3791229622140781
+      autonómicos: 0.2527486414760521
+      autonomías: 0.2527486414760521
   servici:
-    count: 39
+    count: 5.297473512632437
     words:
-      servicios: 31
-      servicio: 8
+      servicios: 3.917603942878807
+      servicio: 1.0109945659042083
   sistem:
-    count: 39
+    count: 5.297473512632437
     words:
-      sistema: 33
-      sistemas: 5
-      sistémica: 1
+      sistema: 4.170352584354859
+      sistemas: 0.6318716036901302
+      sistémica: 0.12637432073802604
   español:
-    count: 37
+    count: 5.025808204292312
     words:
-      españa: 30
-      española: 3
-      españolas: 2
-      españoles: 1
-      español: 1
+      españa: 3.791229622140781
+      española: 0.3791229622140781
+      españolas: 0.2527486414760521
+      españoles: 0.12637432073802604
+      español: 0.12637432073802604
 imagen: 2019 - Generales - Actua.png

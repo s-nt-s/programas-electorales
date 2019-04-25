@@ -37,99 +37,99 @@ filesize:
 riqueza_lexica: 0.2896602119108513
 freq:
   español:
-    count: 156
+    count: 12.059369202226344
     words:
-      españa: 85
-      españoles: 31
-      española: 20
-      español: 12
-      españolas: 8
+      españa: 6.211180124223603
+      españoles: 2.2652539276580197
+      española: 1.4614541468761417
+      español: 0.8768724881256851
+      españolas: 0.5845816587504568
   impuls:
-    count: 150
+    count: 11.595547309833025
     words:
-      impulsaremos: 95
-      impulsar: 17
-      impulsando: 17
-      impulso: 12
-      impulsarán: 3
-      impulsen: 2
-      impulse: 1
-      impulsará: 1
-      impulsan: 1
-      impulsado: 1
+      impulsaremos: 6.941907197661673
+      impulsar: 1.2422360248447204
+      impulsando: 1.2422360248447204
+      impulso: 0.8768724881256851
+      impulsarán: 0.21921812203142127
+      impulsen: 0.1461454146876142
+      impulse: 0.0730727073438071
+      impulsará: 0.0730727073438071
+      impulsan: 0.0730727073438071
+      impulsado: 0.0730727073438071
   desarroll:
-    count: 109
+    count: 8.426097711811998
     words:
-      desarrollo: 64
-      desarrollaremos: 29
-      desarrollar: 3
-      desarrollando: 3
-      desarrollen: 2
-      desarrolladas: 2
-      desarrollos: 1
-      desarrolle: 1
-      desarrollará: 1
-      desarrollarse: 1
-      desarrollan: 1
-      desarrolladores: 1
+      desarrollo: 4.676653270003654
+      desarrollaremos: 2.1191085129704055
+      desarrollar: 0.21921812203142127
+      desarrollando: 0.21921812203142127
+      desarrollen: 0.1461454146876142
+      desarrolladas: 0.1461454146876142
+      desarrollos: 0.0730727073438071
+      desarrolle: 0.0730727073438071
+      desarrollará: 0.0730727073438071
+      desarrollarse: 0.0730727073438071
+      desarrollan: 0.0730727073438071
+      desarrolladores: 0.0730727073438071
   public:
-    count: 107
+    count: 8.271490414347557
     words:
-      públicos: 37
-      público: 23
-      públicas: 22
-      pública: 21
-      públicamente: 1
-      publicando: 1
-      publicados: 1
-      publicación: 1
+      públicos: 2.7036901717208623
+      público: 1.680672268907563
+      públicas: 1.607599561563756
+      pública: 1.5345268542199488
+      públicamente: 0.0730727073438071
+      publicando: 0.0730727073438071
+      publicados: 0.0730727073438071
+      publicación: 0.0730727073438071
   promov:
-    count: 101
+    count: 7.807668521954236
     words:
-      promoveremos: 76
-      promover: 14
-      promoviendo: 6
-      promoverán: 3
-      promoverá: 2
+      promoveremos: 5.5535257581293385
+      promover: 1.0230179028132993
+      promoviendo: 0.43843624406284254
+      promoverán: 0.21921812203142127
+      promoverá: 0.1461454146876142
   plan:
-    count: 98
+    count: 7.575757575757576
     words:
-      plan: 60
-      planes: 38
+      plan: 4.384362440628426
+      planes: 2.7767628790646692
   nacional:
-    count: 96
+    count: 7.421150278293135
     words:
-      nacional: 77
-      nacionales: 15
-      nacionalidad: 2
-      nacionalismos: 1
-      nacionalismo: 1
+      nacional: 5.626598465473146
+      nacionales: 1.0960906101571064
+      nacionalidad: 0.1461454146876142
+      nacionalismos: 0.0730727073438071
+      nacionalismo: 0.0730727073438071
   nuev:
-    count: 84
+    count: 6.4935064935064934
     words:
-      nuevas: 35
-      nuevos: 25
-      nueva: 13
-      nuevo: 11
+      nuevas: 2.557544757033248
+      nuevos: 1.8268176835951773
+      nueva: 0.9499451954694922
+      nuevo: 0.803799780781878
   segur:
-    count: 80
+    count: 6.184291898577613
     words:
-      seguridad: 71
-      seguras: 3
-      seguros: 2
-      seguro: 2
-      segura: 2
+      seguridad: 5.188162221410304
+      seguras: 0.21921812203142127
+      seguros: 0.1461454146876142
+      seguro: 0.1461454146876142
+      segura: 0.1461454146876142
   autonom:
-    count: 79
+    count: 6.106988249845393
     words:
-      autónomas: 36
-      autonómicos: 9
-      autonómico: 8
-      autónomos: 7
-      autonómicas: 6
-      autonomía: 5
-      autónomo: 3
-      autonómica: 3
-      autónoma: 1
-      autonomías: 1
+      autónomas: 2.630617464377055
+      autonómicos: 0.6576543660942638
+      autonómico: 0.5845816587504568
+      autónomos: 0.5115089514066496
+      autonómicas: 0.43843624406284254
+      autonomía: 0.36536353671903543
+      autónomo: 0.21921812203142127
+      autonómica: 0.21921812203142127
+      autónoma: 0.0730727073438071
+      autonomías: 0.0730727073438071
 imagen: 2019 - Generales - PP.png

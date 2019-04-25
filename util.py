@@ -27,7 +27,6 @@ def get_pages(html):
         pdf = pdfkit.from_file(html, False, options=options)
     with io.BytesIO(pdf) as fp:
         pdf = PdfFileReader(fp)
-        print(pdf.getNumPages())
         return pdf.getNumPages()
 
 class CustomDumper(yaml.Dumper):

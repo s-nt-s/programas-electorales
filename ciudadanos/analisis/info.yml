@@ -19,87 +19,87 @@ root: ciudadanos
 riqueza_lexica: 0.3934403732674626
 freq:
   español:
-    count: 120
+    count: 17.626321974148063
     words:
-      españa: 72
-      españoles: 19
-      español: 14
-      española: 12
-      españolas: 3
+      españa: 9.880609304240428
+      españoles: 2.607383010841224
+      español: 1.9212295869356388
+      española: 1.6467682173734046
+      españolas: 0.41169205434335115
   public:
-    count: 85
+    count: 12.485311398354877
     words:
-      públicos: 25
-      públicas: 22
-      público: 18
-      pública: 15
-      publicarse: 1
-      publicaremos: 1
-      publicar: 1
-      publicando: 1
-      publicación: 1
+      públicos: 3.4307671195279266
+      públicas: 3.0190750651845755
+      público: 2.470152326060107
+      pública: 2.058460271716756
+      publicarse: 0.13723068478111705
+      publicaremos: 0.13723068478111705
+      publicar: 0.13723068478111705
+      publicando: 0.13723068478111705
+      publicación: 0.13723068478111705
   garantiz:
-    count: 73
+    count: 10.722679200940071
     words:
-      garantizar: 33
-      garantizaremos: 30
-      garantizando: 6
-      garantizará: 2
-      garantizarles: 1
-      garantizado: 1
+      garantizar: 4.5286125977768625
+      garantizaremos: 4.116920543433512
+      garantizando: 0.8233841086867023
+      garantizará: 0.2744613695622341
+      garantizarles: 0.13723068478111705
+      garantizado: 0.13723068478111705
   nacional:
-    count: 55
+    count: 8.078730904817862
     words:
-      nacional: 47
-      nacionales: 3
-      nacionalistas: 2
-      nacionalista: 2
-      nacionalidad: 1
+      nacional: 6.449842184712502
+      nacionales: 0.41169205434335115
+      nacionalistas: 0.2744613695622341
+      nacionalista: 0.2744613695622341
+      nacionalidad: 0.13723068478111705
   derech:
-    count: 48
+    count: 7.050528789659224
     words:
-      derecho: 27
-      derechos: 21
+      derecho: 3.705228489090161
+      derechos: 2.881844380403458
   impuls:
-    count: 47
+    count: 6.903642773207991
     words:
-      impulsaremos: 39
-      impulsando: 4
-      impulsar: 2
-      impulsará: 1
-      impulsada: 1
+      impulsaremos: 5.351996706463566
+      impulsando: 0.5489227391244682
+      impulsar: 0.2744613695622341
+      impulsará: 0.13723068478111705
+      impulsada: 0.13723068478111705
   mejor:
-    count: 43
+    count: 6.3160987074030555
     words:
-      mejorar: 12
-      mejores: 11
-      mejoraremos: 11
-      mejora: 7
-      mejore: 1
-      mejorando: 1
+      mejorar: 1.6467682173734046
+      mejores: 1.5095375325922877
+      mejoraremos: 1.5095375325922877
+      mejora: 0.9606147934678194
+      mejore: 0.13723068478111705
+      mejorando: 0.13723068478111705
   nuev:
-    count: 42
+    count: 6.169212690951821
     words:
-      nuevo: 14
-      nuevos: 11
-      nueva: 11
-      nuevas: 6
+      nuevo: 1.9212295869356388
+      nuevos: 1.5095375325922877
+      nueva: 1.5095375325922877
+      nuevas: 0.8233841086867023
   trabaj:
-    count: 40
+    count: 5.875440658049354
     words:
-      trabajo: 18
-      trabajadores: 11
-      trabajador: 3
-      trabajar: 2
-      trabajos: 1
-      trabajen: 1
-      trabajaremos: 1
-      trabajando: 1
-      trabajadoras: 1
-      trabajadora: 1
+      trabajo: 2.470152326060107
+      trabajadores: 1.5095375325922877
+      trabajador: 0.41169205434335115
+      trabajar: 0.2744613695622341
+      trabajos: 0.13723068478111705
+      trabajen: 0.13723068478111705
+      trabajaremos: 0.13723068478111705
+      trabajando: 0.13723068478111705
+      trabajadoras: 0.13723068478111705
+      trabajadora: 0.13723068478111705
   acab:
-    count: 40
+    count: 5.875440658049354
     words:
-      acabar: 22
-      acabaremos: 18
+      acabar: 3.0190750651845755
+      acabaremos: 2.470152326060107
 imagen: 2019 - Generales - Ciudadanos.png

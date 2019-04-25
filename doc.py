@@ -151,6 +151,8 @@ if reload:
         objects = []
         performance = []
         slices = []
+        l_corpus_stem = len(corpus_stem)
+        l_corpus = len(corpus)
         freq_stem = nltk.FreqDist(corpus_stem)
         freq_corpus = {w:c for w,c in nltk.FreqDist(corpus).most_common()}
         data.freq={}
@@ -161,7 +163,8 @@ if reload:
                 f = freq_corpus[w]
                 words.append((f,w))
                 prct.append(f)
-            words={w:c for c,w in sorted(words, reverse=True)}
+            words={w:(c*1000/l_corpus) for c,w in sorted(words, reverse=True)}
+            c = (c*1000/l_corpus_stem)
             data.freq[s]={
                 "count": c,
                 "words": words
@@ -182,7 +185,7 @@ if reload:
         plt.rcdefaults()
         plt.barh(y_pos, performance, align='center', alpha=0.5)
         plt.yticks(y_pos, objects)#, rotation='30')
-        plt.xlabel('Uso')
+        plt.xlabel('‰ de uso')
         plt.ylabel('Raiz')
         plt.title("%s - %s - %s" % (data.year, data.partido, data.tipo))
         plt.tight_layout()
@@ -243,7 +246,7 @@ def write(f, s, *args, trim=True):
     f.write(s+"\n")
 
 
-f=open("analisis.md", "w")
+f=open("README.md", "w")
 
 write(f,'''
 # Resumen
@@ -471,6 +474,8 @@ solo corresponde a una palabra, indico directamente la palabra en vez de la raí
 
 Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una raíz.
 
+**¡OJO!** Que los porcentajes son en ‰ (tanto por mil), no en % (tanto por ciento).
+
 ''')
 write(f,"")
 for d in datas:
@@ -487,10 +492,10 @@ for d in datas:
             s = list(words.keys())[0]
         else:
             s = s + "*:"
-        write(f,"* `{0}x` {1}", c, s)
+        write(f,"* `{0:.2f}` ‰ {1}", c, s)
         if len(words)>1:
             for w, c in words.items():
-                write(f,"    * `{0:2}x` {1}", c, w, trim=False)
+                write(f,"    * `{0:2.2f}` ‰ {1}", c, w, trim=False)
     write(f,"")
 write(f,'''
 ## Conclusiones
