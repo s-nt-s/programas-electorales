@@ -10,15 +10,15 @@ from glob import glob
 import sys
 import yaml
 from util import get_info, set_info
+from datetime import datetime
 
 from urllib.request import urlretrieve
 
 re_float = re.compile(r"^\d+\.\d+$")
 dname=os.getcwd()
 
-def get_pdfinfo(pdf, info=None):
-    if info is None:
-        info = {}
+def set_pdfinfo(pdf, info):
+    info.pdf = info.get("pdf", {})
     pdfinfo = subprocess.check_output(["pdfinfo", pdf])
     pdfinfo = pdfinfo.decode(sys.stdout.encoding)
     for l in pdfinfo.split("\n"):
@@ -37,8 +37,16 @@ def get_pdfinfo(pdf, info=None):
                 v = False
             elif v == 'yes':
                 v = True
-            info[k]=v
-    return info
+            info.pdf[k]=v
+
+    fecha=None
+    for k, v in info.pdf.items():
+        if v and k.endswith("Date"):
+            d = datetime.strptime(v, "%a %b %d %H:%M:%S %Y %Z")
+            if fecha is None or d < fecha:
+                fecha = d
+    if fecha:
+        info.fecha = fecha.date()#.strftime('%Y-%m-%d')
 
 indices=[]
 for c in glob("*/info.yml"):
@@ -61,7 +69,7 @@ for path_info, codigo, info in sorted(indices):
             urlretrieve(info.url, filename=pdf)
 
         flag = True
-        info.pdf = get_pdfinfo(pdf, info.pdf)
+        set_pdfinfo(pdf, info)
 
         if not os.path.isfile(xml):
             os.chdir(pth)
@@ -81,7 +89,7 @@ for path_info, codigo, info in sorted(indices):
             if not os.path.isfile(pdf):
                 urlretrieve(url, filename=pdf)
             flag = True
-            info.pdf = get_pdfinfo(pdf, info.pdf)
+            set_pdfinfo(pdf, info)
 
     if flag:
         os.chdir(dname)

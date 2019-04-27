@@ -47,6 +47,7 @@ def get_info(yml_file = "info.yml", autocomplete=False):
 
 def set_info(yml, yml_file = "info.yml"):
     with open(yml_file, 'w') as f:
+        yml = dict(yml)
         yaml.dump(dict(yml), f, default_flow_style=False, Dumper=CustomDumper, allow_unicode=True)
 
 
