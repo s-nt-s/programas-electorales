@@ -14,6 +14,7 @@ Notas:
 
 * <sup>1</sup> Se puede descargar de https://we.tl/t-CwCneKiaFF y la contraseña de los `zip` es `programaelectoral`.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`.
+
 # ¿Por qué no usar PDF?
 
 Hay muchos motivos para no usar `pdf` pero lo resumiría en que el `pdf`
