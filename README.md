@@ -216,7 +216,7 @@ Notas:
 * <sup>1</sup> Para Ciudadanos el valor es lo que resultaría de imprimir su página web.
 Para el resto es el número de páginas de sus `pdf` (esto incluye a PACMA porque también tenían una [versión `pdf`](https://pacma.es/elecciones-2019/files/pacma-compromisos-elecciones-generales-2019.pdf)).
 * <sup>2</sup> Para Ciudadanos el valor es lo que resultaría de descargar su página web, incluido `css`, `javascript` e imágenes.
-Para el resto es el número tamaño de su `pdf`.
+Para el resto es el tamaño de su `pdf`.
 
 ## ¿En qué se van tantas páginas?
 
