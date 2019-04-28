@@ -6,6 +6,7 @@ from util import get_arg, get_info, get_soup, set_info, get_pages
 from glob import glob
 import os
 import sys
+import pandas as pd
 
 from bunch import Bunch
 
@@ -14,6 +15,11 @@ import matplotlib.pyplot as plt
 
 from nltk import word_tokenize
 from nltk.stem import SnowballStemmer
+
+from collections import Counter
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+from scipy import spatial
 
 reload = len(sys.argv)>1 and sys.argv[1]=="--reload"
 
@@ -25,6 +31,12 @@ re_puntuacion = r"[\.,;\)\(\[\]\-“”\"'–:…¿\?‘’«»—/]+"
 re_corpus = re.compile(r"^"+re_puntuacion+"|"+re_puntuacion+"$")
 re_number = re.compile(r"^[\d\.,/%\-ºª]+$")
 re_sp = re.compile(r"\s+")
+
+def get_jaccard_sim(str1, str2):
+    a = set(str1.split())
+    b = set(str2.split())
+    c = a.intersection(b)
+    return float(len(c)) / (len(a) + len(b) - len(c))
 
 def mk_set(s):
     #s = s.replace(",", " ").replace("...", " ").replace("…", " ").lower()
@@ -39,27 +51,6 @@ excluir = mk_set('''
 a abajo acaso acá ahora ahí algo alguien alguna algunas alguno algunos allá allí ante antes apenas aquella aquellas aquello aquellos aquél aquí arriba así aunque ayer aún bajo bastante bien bueno cabe cerca claro como con conmigo conque consigo contigo contra cualesquiera cualquiera cuando cuanto cuidadosamente dado de debajo delante demasiada demasiadas demasiado demasiados demás desde detrás donde durante e el ella ellas ello ellos en encima enfrente entre esa esas escasa escasas escaso escasos ese eso esos esta estas este esto estos fin frecuentemente hacia hasta hoy igual inclusive jamás la las le lejos les lo los luego mal mas mañana me mediante mejor menos mientras misma mismas mismo mismos mucha muchas mucho muchos más mí mía mías mío míos nada nadie ni ninguna ningunas ninguno ningunos no nos nosotras nosotros nuestra nuestras nuestro nuestros nunca o obviamente ora os otra otras otro otros para peor pero pesar poca pocas poco pocos por porque probablemente pues puesto que quienesquiera quienquiera quizá se sea seguramente según si siempre sin sino siquiera so sobre suya suyas suyo suyos sí tal también tampoco tan tanta tantas tanto tantos te ti toda todas todo todos tras tuya tuyas tuyo tuyos tú u un una unas uno unos usted ustedes varias varios versus vos vosotras vosotros vuestra vuestras vuestro vuestros vía y ya yo él éste
 cualquier
 ''')
-promesa = mk_set('''
-acabar ayudar cierre condicionar control deportación depuración derogación devolución difusión dotar establecerán exclusión exigencia exigir fortalecer ilegalización incorporación persecución prohibición rechazar reforma reformar reforzar revisión revocación supresión suprimir suspensión transformar
-'''.lower())
-no_promesa = mk_set('''
-acabar ayudar cierre condicionar control deportación depuración derogación devolución difusión dotar establecerán exclusión exigencia exigir fortalecer ilegalización incorporación persecución prohibición rechazar reforma reformar reforzar revisión revocación supresión suprimir suspensión transformar
-'''.lower())
-
-promesa_stem = mk_set('''
-garantiz impuls mejor acab desarroll propon proteccion establec promov apoy reduccion
-actualiz aprovech complement compromet concienci
-configur consider consolid constitu contribu
-desatasc desbloqu descentraliz despenaliz despolitiz desprivatiz
-dispondr flexibiliz fortalec
-generaliz identific ilegaliz implement incentiv incorpor increment intensific introduc involucr mantendr moderniz multiplic normaliz
-planific posibilit profesionaliz profundiz prohibicion promocion propondr reformul reintegr reorient restablec restring revision revolucion simplific supresion suspension transform
-garantic armoniz optimiz paraliz penaliz prioriz
-persecu persegu potenci
-agiliz analiz avanz realiz rechaz reforz utiliz
-depur derog reform revoc suprim cierr
-''')
-
 excluir2 = mk_set('''
 parte partir partes partida publicidad plana ACTÚA ACTUAR
 ''')
@@ -71,22 +62,50 @@ def cd_mkdir(d):
 
 def get_stem(w):
     _w = stemmer.stem(w)
-    '''
-    if _w in promesa_stem:
-        return "PROMESA"
-    if w in promesa or (w.endswith("emos") and w not in no_promesa):
-        if w in promesa:
-            word_set.add(w)
-            stems_set.add(_w)
-        return "PROMESA"
-    if w in ("autónomos", "autónomo", "autónomas"):
-        return "autónomo"
-    '''
-    if _w == "españ":
-        _w = "español"
+    if _w.startswith("españ"):
+        _w = "españ"
     return _w
 
+
+def get_cosine_sim(*strs):
+    stems_strs=[]
+    for i, s in enumerate(strs):
+        stems=[]
+        for w in s.split():
+            stems.append(get_stem(w))
+        stems_strs.append(" ".join(stems))
+    vectors = [t for t in get_vectors(*strs)]
+    print(vectors)
+    return cosine_similarity(vectors)
+
+def get_vectors(*strs):
+    vectorizer = CountVectorizer(strs)
+    vectorizer.fit(strs)
+    print(text)
+    return vectorizer.transform(strs).toarray()
+
+def barh(savefig, objects, performance, xlabel, ylabel, title):
+    y_pos = np.arange(len(objects))
+    plt.rcdefaults()
+    plt.barh(y_pos, performance, align='center', alpha=0.5)
+    plt.yticks(y_pos, objects)#, rotation='30')
+    if xlabel is not None:
+        plt.xlabel(xlabel)
+    if ylabel is not None:
+        plt.ylabel(ylabel)
+    if title is not None:
+        plt.title(title)
+    plt.tight_layout()
+
+    plt.savefig(savefig)
+    plt.clf()
+
+#c = get_cosine_sim("AI is our friend and it has been friendly", "AI and humans have always been friendly")
+#print(c)
+#sys.exit()
+
 if reload:
+    datas = []
     for y in sorted(glob("*/info.yml")):
         d = os.path.dirname(y)
         if d in ("psoe110",):
@@ -181,20 +200,42 @@ if reload:
         data.imagen = data.output+".png"
         set_info(data)
 
-        y_pos = np.arange(len(objects))
-        plt.rcdefaults()
-        plt.barh(y_pos, performance, align='center', alpha=0.5)
-        plt.yticks(y_pos, objects)#, rotation='30')
-        plt.xlabel('‰ de uso')
-        plt.ylabel('Raiz')
-        plt.title("%s - %s - %s" % (data.year, data.partido, data.tipo))
-        plt.tight_layout()
+        barh(data.imagen, objects, performance, '‰ de uso', 'Raiz', "%s - %s - %s" % (data.year, data.partido, data.tipo))
 
-        plt.savefig(data.imagen)
         plt.clf()
 
+        data.aux_stems = corpus
+        datas.append(data)
 
-def bar_compare(file, title, groups, ori, res, txt_res='HTML'):
+    os.chdir(cwd)
+
+    partidos = [data.partido for data in datas]
+    stems = [" ".join(data.aux_stems) for data in datas]
+    count_vectorizer = TfidfVectorizer(lowercase=False)
+    sparse_matrix = count_vectorizer.fit_transform(stems)
+    rows = cosine_similarity(sparse_matrix, sparse_matrix)
+    for i, row in enumerate(rows):
+        d = datas[i]
+        objects=[]
+        performance=[]
+        col = []
+        for c, cell in enumerate(row):
+            if c!=i:
+                col.append((cell ,datas[c].partido))
+        for c, p in sorted(col):
+            objects.append(p)
+            performance.append(c)
+        barh(
+            d.root+"/analisis/cosine.png",
+            objects, performance,
+            'Cosine Similarity', None,
+            "Similitud con %s" % d.partido
+        )
+
+
+def bar_compare(file, title, groups, ori, res, legend=None):
+    if legend is None:
+        legend = ('Original', 'HTML')
     ind = np.arange(len(groups))
     width = 0.35
 
@@ -207,34 +248,21 @@ def bar_compare(file, title, groups, ori, res, txt_res='HTML'):
     ax.set_xticks(ind + width / 2)
     ax.set_xticklabels(parts)
 
-    ax.legend((rects1[0], rects2[0]), ('Original', txt_res))
+    ax.legend((rects1[0], rects2[0]), legend)
 
     plt.tight_layout()
     plt.savefig(file)
     plt.clf()
 
+def get_text(data):
+    soup = get_soup(data.root+"/"+data.output+".html")
+    body = soup.find("body")
+    body_txt = re.sub(r"  +", " ", body.get_text()).strip()
+    return body_txt
+
 os.chdir(cwd)
 
 datas = [get_info(yml_file=i, autocomplete=False) for i in sorted(glob("*/analisis/info.yml"))]
-
-if True or reload:
-    parts = []
-    pag_ori = []
-    siz_ori = []
-    pag_res = []
-    siz_res = []
-
-    for d in datas:
-        p0 = d.get("src_pages", None) or d.pdf["Pages"]
-        s0 = d.filesize.get("src_pdf", None) or d.filesize["src_html"]
-        parts.append(d.partido)
-        pag_ori.append(p0)
-        siz_ori.append(s0/1024)
-        pag_res.append(d.pages)
-        siz_res.append(d.filesize["epub"]/1024)
-
-    bar_compare("analisis/pag.png", "Páginas", parts, pag_ori, pag_res)
-    bar_compare("analisis/size.png", "Tamaño en KB", parts, siz_ori, siz_res, txt_res='EPUB')
 
 re_ltrim = re.compile(r" +$", re.MULTILINE)
 def write(f, s, *args, trim=True):
@@ -262,17 +290,15 @@ for d in datas:
     d.partido, formato, d.url,
     d.pages,
     d.parrafos,
-    int(d.riqueza_lexica*100),
-    "#", d.root,
-    "#" #d.output.replace(" ","%20")
     )
 write(f,"")
 write(f,'''
 Notas:
 
-* <sup>1</sup> Se puede descargar de https://we.tl/t-CwCneKiaFF y la contraseña de los `zip` es `programaelectoral`.
+* <sup>1</sup> Se puede descargar de [we.tl/t-CwCneKiaFF](https://we.tl/t-CwCneKiaFF) y la contraseña de los `zip` es `programaelectoral`.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`.
 ''')
+write(f,"")
 write(f,'''
 
 # ¿Por qué no usar PDF?

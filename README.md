@@ -302,7 +302,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
     * `4.17` ‰ sistema
     * `0.63` ‰ sistemas
     * `0.13` ‰ sistémica
-* `5.03` ‰ español*:
+* `5.03` ‰ españ*:
     * `3.79` ‰ españa
     * `0.38` ‰ española
     * `0.25` ‰ españolas
@@ -313,7 +313,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
 
 ![Ciudadanos](ciudadanos/analisis/2019%20-%20Generales%20-%20Ciudadanos.png)
 
-* `17.63` ‰ español*:
+* `17.63` ‰ españ*:
     * `9.88` ‰ españa
     * `2.61` ‰ españoles
     * `1.92` ‰ español
@@ -472,7 +472,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
 * `8.29` ‰ person*:
     * `6.64` ‰ personas
     * `0.92` ‰ persona
-* `6.89` ‰ español*:
+* `6.89` ‰ españ*:
     * `4.10` ‰ españa
     * `0.92` ‰ española
     * `0.71` ‰ españolas
@@ -508,7 +508,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
 
 ![PP](pp/analisis/2019%20-%20Generales%20-%20PP.png)
 
-* `12.06` ‰ español*:
+* `12.06` ‰ españ*:
     * `6.21` ‰ españa
     * `2.27` ‰ españoles
     * `1.46` ‰ española
@@ -595,7 +595,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
     * `2.31` ‰ socialista
     * `1.60` ‰ socialistas
     * `0.06` ‰ socialmente
-* `10.58` ‰ español*:
+* `10.58` ‰ españ*:
     * `6.12` ‰ españa
     * `1.35` ‰ española
     * `1.03` ‰ españoles
@@ -666,7 +666,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
 
 ![Vox](vox/analisis/2019%20-%20Generales%20-%20Vox.png)
 
-* `24.96` ‰ español*:
+* `24.96` ‰ españ*:
     * `8.85` ‰ españa
     * `4.43` ‰ españoles
     * `3.87` ‰ española

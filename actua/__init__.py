@@ -212,6 +212,7 @@ un
     md = re.sub(r"\n\n\* ", r"\n* ", md, flags=re.MULTILINE)
     md = re.sub(r":\n\* ", r":\n\n* ", md, flags=re.MULTILINE)
     md = md.replace(" publico ", " público ")
+    md = md.replace(" kmen ", " km en ")
 
     #md = re.sub(r"^(.{1,10})\n(.{1,10})", r"\1 \2", flags=re.MULTILINE)
 
