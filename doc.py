@@ -379,7 +379,7 @@ Los tres que nos quedan son innecesariamente difíciles por distintas razones:
 
 El de **Actua** esta mal generado (por los metadatos se ve que se ha hecho imprimiendo un `docx` a `pdf`)
 de manera que al extraer el texto muchas palabras se dividen en varios
-trozos (por ejemplo, `Póli tica So i a l`) y la posición y las coordenadas de los
+trozos (por ejemplo, `Polí tica So ci a l`) y la posición y las coordenadas de los
 bloques de texto están de tal manera que dificultaban la programación.
 
 El del **PP** está lleno de fotos del líder posando que estorban,
