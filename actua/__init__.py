@@ -16,7 +16,9 @@ def is_titulo(c):
         return 1
     if tp in ((21, 8),):
         return 2
-    return None
+    if tp in ((21, 6),):
+        return 3
+    return -1
 
 def clean(txt):
     txt = "".join(c for c in txt if c.isprintable())
@@ -43,7 +45,8 @@ def convert(xml, fprint):
         lastTop = None
         while childrens:
             c = childrens.pop(0)
-            if is_titulo(c)==1:
+            nivel = is_titulo(c)
+            if nivel==1:
                 titulo = ""
                 while childrens and is_titulo(c)==1:
                     titulo = titulo + " "  + c.get_text().strip()
@@ -55,8 +58,8 @@ def convert(xml, fprint):
                 lastTop = None
 
             txt = clean(c.get_text().strip())
-            if is_titulo(c)==2:
-                fprint("\n## %s\n" % txt)
+            if nivel>1:
+                fprint("\n%s %s\n" % ('#' * nivel, txt))
                 lastTop = None
                 continue
 
@@ -82,7 +85,7 @@ def convert(xml, fprint):
 def post_convert(file_out):
     with open(file_out, "r") as f:
         md = f.read()
-    md = re.sub(r"La\s+importancia\s+de\s+las\s+próximas\s+elecciones\s+europeas\.", "## La importancia de las próximas elecciones europeas.", md)
+    md = re.sub(r"(### )?La\s+(### )?importancia\s+(### )?de\s+(### )?las\s+(### )?próximas\s+(### )?elecciones\s+(### )?europeas\.", "## La importancia de las próximas elecciones europeas.", md)
     md = re.sub(r"A C T Ú A p o r", "ACTÚA por", md)
     md = re.sub("\s+([\.,])", r"\1", md)
     md = re.sub(r"(m)\s+", r"\1", md, flags=re.IGNORECASE)
@@ -213,6 +216,8 @@ un
     md = re.sub(r":\n\* ", r":\n\n* ", md, flags=re.MULTILINE)
     md = md.replace(" publico ", " público ")
     md = md.replace(" kmen ", " km en ")
+    md = re.sub(r"“\s+", "“", md)
+    md = re.sub(r"\s+”", "”", md)
 
     #md = re.sub(r"^(.{1,10})\n(.{1,10})", r"\1 \2", flags=re.MULTILINE)
 

@@ -22,11 +22,12 @@ pages: 33
 caracteres: 187522
 palabras: 29422
 parrafos: 292
+capitulos: 9
 root: podemos
 filesize:
   md: 192990
   html: 198784
-  epub: 84778
+  epub: 84792
   src_pdf: 859415
   src_html: 458030
   src_xml: 455581

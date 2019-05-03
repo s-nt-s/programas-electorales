@@ -124,6 +124,7 @@ if reload:
         data.caracteres = len(body_txt)
         data.palabras = len(body_slp)
         data.parrafos = len(body.findAll(["p", "li"]))
+        data.capitulos = len(body.findAll(["h1"]))#, "h2"]))
         data.root = d
         filesize = data.get("filesize", {})
         for k in ("md", "html", "epub"):
@@ -279,16 +280,17 @@ f=open("README.md", "w")
 write(f,'''
 # Resumen
 
-| Partido | Fuente | Párrafos | Resultado<sup>1</sup> | Páginas<sup>2</sup>
-|:--------|:------:|--------:|:---------:|---------:|
+| Partido | Fuente | Resultado<sup>1</sup> | Páginas<sup>2</sup> | Capítulos | Párrafos |
+|:--------|:------:|:---------------------:|--------------------:|----------:|---------:|
 '''.strip())
 for d in datas:
     formato = "PDF" if d.url.endswith(".pdf") else "HTML"
     write(f,'''
-| {0} | [{1}]({2}) | {4}  | HTML + EPUB + MD | {3} |
+| {0} | [{1}]({2}) | HTML + EPUB + MD | {3} | {4} | {5} |
     ''',
     d.partido, formato, d.url,
     d.pages,
+    d.capitulos,
     d.parrafos,
     )
 write(f,"")

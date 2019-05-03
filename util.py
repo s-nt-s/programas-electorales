@@ -60,12 +60,14 @@ def get_function(module, name, default=None):
         return lambda *args, **kargs: None
 
 
-def clean_tags(txt):
+def clean_tags(txt, extra=False):
     for tag in ("em", "strong", "b", "i"):
-        txt = re.sub("<"+tag+r">(\s+)", r"\1<"+tag+">", txt)
-        txt = re.sub(r"(\s+)</"+tag+">", "</"+tag+r">\1", txt)
         txt = re.sub(r"</"+tag+r">(\s*)<"+tag+r">", r"\1", txt)
         txt = re.sub(r"<"+tag+r">(\s*)</"+tag+r">", r"\1", txt)
+        txt = re.sub("<"+tag+r">(\s+)", r"\1<"+tag+">", txt)
+        txt = re.sub(r"(\s+)</"+tag+">", "</"+tag+r">\1", txt)
+        if extra:
+            txt = re.sub(r"(,)</"+tag+">", "</"+tag+r">\1", txt)
     return txt
 
 def get_soup(source, tp="lxml", save=None):
@@ -77,6 +79,9 @@ def get_soup(source, tp="lxml", save=None):
         soup = bs4.BeautifulSoup(txt, tp)
     if tp == "xml":
         for n in soup.select("*"):
+            if n.name == "text" and len(n.select("*"))==0 and len(n.get_text().strip())==0:
+                n.extract()
+                continue
             for a in ("top", "left", "right", "number", "font", "height"):
                 if a in n.attrs:
                     n.attrs[a]=int(n.attrs[a])

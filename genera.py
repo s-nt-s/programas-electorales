@@ -61,7 +61,7 @@ def end_convert(file_out):
     with open(file_out, "r") as f:
         md = f.read()
     md = clean_tags(md)
-    md = clean_tags(md)
+    md = clean_tags(md, extra=True)
     with open(file_out, "w") as f:
         f.write(md.strip())
 

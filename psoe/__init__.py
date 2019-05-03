@@ -148,6 +148,7 @@ def post_convert(file_out):
     md = md.replace("<b>• ", "**\\*** <b>")
     md = re.sub(r"(\*\*\\\*\*\* <b>[^<\.]+</b>$)", r"\1\n", md, flags=re.MULTILINE)
     md = md.replace("\n\n\n", "\n\n")
+    md = md.replace("<b>Para superar estas carencias", "\n<b>Para superar estas carencias")
     #md = re.sub(r"<b>\d+\)</b>\n", r"\1)", md)
     with open(file_out, "w") as f:
         f.write(md.strip())

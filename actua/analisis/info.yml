@@ -25,16 +25,17 @@ pdf:
 txt_cover: Programa Actua Generales 2019
 output: 2019 - Generales - Actua
 pages: 23
-caracteres: 103491
-palabras: 15947
-parrafos: 369
+caracteres: 103490
+palabras: 15946
+parrafos: 365
+capitulos: 11
 root: actua
 filesize:
-  md: 107193
-  html: 113376
-  epub: 58700
+  md: 107208
+  html: 113504
+  epub: 58777
   src_pdf: 1537368
-  src_html: 381972
+  src_html: 382100
   src_xml: 288221
 riqueza_lexica: 0.4250505561172902
 freq:
