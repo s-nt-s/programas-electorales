@@ -617,7 +617,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
     * `0.03` ‰ publicando
 * `7.36` ‰ polit*:
     * `3.14` ‰ políticas
-    * `3.05` ‰ política
+    * `3.04` ‰ política
     * `0.38` ‰ políticos
     * `0.32` ‰ político
 * `6.99` ‰ impuls*:
@@ -633,7 +633,7 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
     * `0.03` ‰ impulsó
     * `0.03` ‰ impulsan
     * `0.03` ‰ impulsa
-* `6.82` ‰ desarroll*:
+* `6.81` ‰ desarroll*:
     * `3.62` ‰ desarrollo
     * `1.38` ‰ desarrollar
     * `0.38` ‰ desarrollando

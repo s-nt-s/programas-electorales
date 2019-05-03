@@ -228,7 +228,7 @@ def post_convert(file_out):
             words.add(i)
     for w in words:
         md = re.sub(r"\b"+w+r"\b", w.replace("-\n","")+"\n", md)
-    md = re.sub(r"^(45|198)\n\. ", r"**\1.** ", md, flags=re.MULTILINE)
+    md = re.sub(r"^(45|198)\s*\. ", r"**\1.** ", md, flags=re.MULTILINE)
     md = re.sub(r"^361\s+Implementaremos", "**361.** Implementaremos", md, flags=re.MULTILINE)
     md = re.sub("\s+([\.,])", r"\1", md)
     md = re.sub("(\s+)”", r"”\1", md)

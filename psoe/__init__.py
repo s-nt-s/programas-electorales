@@ -149,6 +149,8 @@ def post_convert(file_out):
     md = re.sub(r"(\*\*\\\*\*\* <b>[^<\.]+</b>$)", r"\1\n", md, flags=re.MULTILINE)
     md = md.replace("\n\n\n", "\n\n")
     md = md.replace("<b>Para superar estas carencias", "\n<b>Para superar estas carencias")
+    md = re.sub(r"\s+\*\*2018\.\*\*\n", " 2018.\n\n", md)
+    md = md.replace("<b>(1)</b>", "(Desde la educación y la formación profesional, objeto de propuestas en el punto 2 de este Programa electoral)")
     #md = re.sub(r"<b>\d+\)</b>\n", r"\1)", md)
     with open(file_out, "w") as f:
         f.write(md.strip())

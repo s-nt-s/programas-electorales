@@ -72,6 +72,7 @@ def post_convert(file_out):
     md = re.sub(r"\s+\.", ".", md)
     md = re.sub(r"^ ", "", md, flags=re.MULTILINE)
     md = re.sub(r"([05])\s+(000)\b", r"\1.\2", md)
+    md = md.replace("xxi ,", "xxi,")
 
     with open(file_out, "w") as f:
         f.write(md.strip())

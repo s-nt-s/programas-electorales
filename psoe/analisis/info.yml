@@ -23,110 +23,110 @@ pdf:
 txt_cover: Programa PSOE Generales 2019
 output: 2019 - Generales - PSOE
 pages: 91
-caracteres: 415243
-palabras: 64357
+caracteres: 415350
+palabras: 64374
 parrafos: 1390
 capitulos: 9
 root: psoe
 filesize:
-  md: 455668
-  html: 482646
-  epub: 165652
+  md: 455765
+  html: 482748
+  epub: 165684
   src_pdf: 630621
-  src_html: 1110318
+  src_html: 1110420
   src_xml: 1068306
-riqueza_lexica: 0.2089116845648341
+riqueza_lexica: 0.2088581226164151
 freq:
   social:
-    count: 13.97403842860568
+    count: 13.970210580380073
     words:
-      social: 5.80221189293156
-      sociales: 3.301811187690335
-      socialista: 2.308062189453438
-      socialistas: 1.6028209648982208
-      socialmente: 0.06411283859592884
+      social: 5.800724289331154
+      sociales: 3.300964650834856
+      socialista: 2.307470435535045
+      socialistas: 1.6024100246771145
+      socialmente: 0.06409640098708458
   españ:
-    count: 10.583279104017537
+    count: 10.580380071905495
     words:
-      españa: 6.1227760859112035
-      española: 1.3463696105145055
-      españoles: 1.0258054175348614
-      español: 0.7052412245552172
-      españolas: 0.6731848052572528
-      españas: 0.03205641929796442
+      españa: 6.121206294266577
+      española: 1.3460244207287761
+      españoles: 1.0255424157933533
+      español: 0.7050604108579304
+      españolas: 0.6730122103643881
+      españas: 0.03204820049354229
   derech:
-    count: 7.6720210980580195
+    count: 7.669919534326314
     words:
-      derechos: 4.552011540310947
-      derecho: 2.308062189453438
-      derecha: 0.22439493508575092
-      derechas: 0.09616925789389325
+      derechos: 4.550844470083005
+      derecho: 2.307470435535045
+      derecha: 0.22433740345479602
+      derechas: 0.09614460148062687
   public:
-    count: 7.500770627119224
+    count: 7.498715973292245
     words:
-      pública: 1.8913287385799007
-      público: 1.763103061388043
-      públicos: 1.698990222792114
-      públicas: 1.538708126302292
-      publicación: 0.06411283859592884
-      públicamente: 0.03205641929796442
-      publicando: 0.03205641929796442
+      pública: 1.890843829118995
+      público: 1.762651027144826
+      públicos: 1.6985546261577413
+      públicas: 1.5383136236900299
+      publicación: 0.06409640098708458
+      públicamente: 0.03204820049354229
+      publicando: 0.03204820049354229
   polit:
-    count: 7.363770250368188
+    count: 7.361753124464989
     words:
-      políticas: 3.1415290912005127
-      política: 3.0453598333066196
-      políticos: 0.384677031575573
-      político: 0.32056419297964417
+      políticas: 3.1407236483671443
+      política: 3.0445790468865175
+      políticos: 0.38457840592250747
+      político: 0.3204820049354229
   impuls:
-    count: 6.98701921430284
+    count: 6.985105290190036
     words:
-      impulsar: 2.211892931559545
-      impulsaremos: 1.7310466420900785
-      impulso: 1.0258054175348614
-      impulsando: 0.5449591280653951
-      impulsado: 0.4167334508735374
-      impulse: 0.16028209648982208
-      impulsará: 0.16028209648982208
-      impulsarán: 0.12822567719185768
-      impulsadas: 0.06411283859592884
-      impulsó: 0.03205641929796442
-      impulsan: 0.03205641929796442
-      impulsa: 0.03205641929796442
+      impulsar: 2.211325834054418
+      impulsaremos: 1.7306028266512836
+      impulso: 1.0255424157933533
+      impulsando: 0.5448194083902189
+      impulsado: 0.41662660641604976
+      impulse: 0.16024100246771145
+      impulsará: 0.16024100246771145
+      impulsarán: 0.12819280197416916
+      impulsadas: 0.06409640098708458
+      impulsó: 0.03204820049354229
+      impulsan: 0.03204820049354229
+      impulsa: 0.03204820049354229
   desarroll:
-    count: 6.815768743364044
+    count: 6.813901729155966
     words:
-      desarrollo: 3.622375380669979
-      desarrollar: 1.37842602981247
-      desarrollando: 0.384677031575573
-      desarrollaremos: 0.3526206122776086
-      desarrollen: 0.12822567719185768
-      desarrolle: 0.09616925789389325
-      desarrollan: 0.09616925789389325
-      desarrollos: 0.06411283859592884
-      desarrollada: 0.06411283859592884
-      desarrolló: 0.03205641929796442
-      desarrollaran: 0.03205641929796442
-      desarrollados: 0.03205641929796442
-      desarrollado: 0.03205641929796442
-      desarrolladas: 0.03205641929796442
-      desarrolla: 0.03205641929796442
+      desarrollo: 3.6214466557702787
+      desarrollar: 1.3780726212223184
+      desarrollando: 0.38457840592250747
+      desarrollaremos: 0.3525302054289652
+      desarrollen: 0.12819280197416916
+      desarrolle: 0.09614460148062687
+      desarrollan: 0.09614460148062687
+      desarrollos: 0.06409640098708458
+      desarrollada: 0.06409640098708458
+      desarrolló: 0.03204820049354229
+      desarrollaran: 0.03204820049354229
+      desarrollados: 0.03204820049354229
+      desarrollado: 0.03204820049354229
+      desarrolladas: 0.03204820049354229
+      desarrolla: 0.03204820049354229
   person:
-    count: 6.747268554988526
+    count: 6.745420304742338
     words:
-      personas: 5.930437570123417
-      persona: 0.384677031575573
+      personas: 5.9289170913053235
+      persona: 0.38457840592250747
   gobiern:
-    count: 6.439017707298695
+    count: 6.437253894881014
     words:
-      gobierno: 5.9624939894213815
-      gobierne: 0.03205641929796442
-      gobierna: 0.03205641929796442
+      gobierno: 5.960965291798866
+      gobierne: 0.03204820049354229
+      gobierna: 0.03204820049354229
   sistem:
-    count: 6.199267047984382
+    count: 6.197568909433317
     words:
-      sistema: 5.032857829780413
-      sistemas: 0.7052412245552172
-      sistémico: 0.03205641929796442
-      sistémicas: 0.03205641929796442
+      sistema: 5.031567477486139
+      sistemas: 0.7050604108579304
+      sistémico: 0.03204820049354229
+      sistémicas: 0.03204820049354229
 imagen: 2019 - Generales - PSOE.png

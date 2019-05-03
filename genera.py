@@ -62,6 +62,11 @@ def end_convert(file_out):
         md = f.read()
     md = clean_tags(md)
     md = clean_tags(md, extra=True)
+    md = re.sub(r" +$", r"", md, flags=re.MULTILINE)
+    _md = None
+    while md != _md:
+        _md = md
+        md = re.sub(r"^(\S[^\.\-:\n]{1,20})\n(\S[^\.\-:\n]{1,20})", r"\1 \2", md, flags=re.MULTILINE)
     with open(file_out, "w") as f:
         f.write(md.strip())
 
