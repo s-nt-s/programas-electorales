@@ -25,15 +25,15 @@ output: 2019 - Generales - PSOE
 pages: 91
 caracteres: 415243
 palabras: 64357
-parrafos: 1389
+parrafos: 1390
 capitulos: 9
 root: psoe
 filesize:
-  md: 455667
-  html: 482639
-  epub: 165745
+  md: 455668
+  html: 482646
+  epub: 165652
   src_pdf: 630621
-  src_html: 1110311
+  src_html: 1110318
   src_xml: 1068306
 riqueza_lexica: 0.2089116845648341
 freq:

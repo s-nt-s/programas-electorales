@@ -7,7 +7,7 @@
 | PACMA | [HTML](https://pacma.es/elecciones-2019/compromisos) | HTML + EPUB + MD | 45 | 3 | 853 |
 | Podemos | [PDF](https://podemos.info/wp-content/uploads/2019/04/Podemos_programa_generales_28A.pdf) | HTML + EPUB + MD | 33 | 9 | 292 |
 | PP | [PDF](http://www.pp.es/sites/default/files/documentos/programa_electoral_2019_pp_0.pdf) | HTML + EPUB + MD | 42 | 11 | 693 |
-| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | HTML + EPUB + MD | 91 | 9 | 1389 |
+| PSOE | [PDF](https://www.psoe.es/media-content/2019/04/PSOE-programa-electoral-elecciones-generales-28-de-abril-de-2019.pdf) | HTML + EPUB + MD | 91 | 9 | 1390 |
 | Vox | [PDF](https://www.voxespana.es/biblioteca/espana/2018m/gal_c2d72e181103013447.pdf) | HTML + EPUB + MD | 6 | 10 | 100 |
 
 Notas:
