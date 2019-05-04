@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-import bs4
-import sys
 import re
+import sys
 from subprocess import run
-import argparse
-import os
-from util import get_info, set_info, get_function, get_soup, clean_tags, to_md, get_arg
+
+import bs4
 import pyminizip
-from glob import glob
+
+from util import (clean_tags, get_arg, get_function, get_info, get_soup,
+                  set_info, to_md)
 
 arg = get_arg('Genera un epub de un programa electoral')
 
@@ -18,6 +18,8 @@ re_ltrim = re.compile(r"^\s*\n+")
 yml = get_info(autocomplete=True)
 
 isLastLineBlank = False
+
+
 def fprint(txt, *args, re_clean=None, **kargs):
     global isLastLineBlank
     if isinstance(txt, bs4.Tag):
@@ -27,15 +29,17 @@ def fprint(txt, *args, re_clean=None, **kargs):
     txt = re_rtrim.sub("", txt)
     if isLastLineBlank:
         txt = re_ltrim.sub("", txt)
-        if len(txt)==0:
+        if len(txt) == 0:
             return
     #print(txt, *args, **kargs)
     if kargs.get("file", sys.stdout) == sys.stdout:
         kargs["file"] = out
         print(txt, *args, **kargs)
-    isLastLineBlank = len(txt.split("\n")[-1])==0
+    isLastLineBlank = len(txt.split("\n")[-1]) == 0
+
 
 out = open(yml.output+".md", "w")
+
 
 def print_meta(yml, fprint):
     fprint('''
@@ -54,8 +58,9 @@ URL: "{4}"
         yml.tipo,
         yml.fecha,
         yml.url,
-        )
     )
+    )
+
 
 def end_convert(file_out):
     with open(file_out, "r") as f:
@@ -66,9 +71,11 @@ def end_convert(file_out):
     _md = None
     while md != _md:
         _md = md
-        md = re.sub(r"^(\S[^\.\-:\n]{1,20})\n(\S[^\.\-:\n]{1,20})", r"\1 \2", md, flags=re.MULTILINE)
+        md = re.sub(
+            r"^(\S[^\.\-:\n]{1,20})\n(\S[^\.\-:\n]{1,20})", r"\1 \2", md, flags=re.MULTILINE)
     with open(file_out, "w") as f:
         f.write(md.strip())
+
 
 module = __import__(arg.target)
 convert = getattr(module, "convert")
@@ -76,7 +83,8 @@ pre_convert = get_function(module, "pre_convert")
 post_convert = get_function(module, "post_convert")
 print_meta = get_function(module, "print_meta", default=print_meta)
 
-xml = get_soup("wks/book.xml", "xml", save="wks/parsed.xml") or get_soup("wks/book.html", save="wks/parsed.html")
+xml = get_soup("wks/book.xml", "xml",
+               save="wks/parsed.xml") or get_soup("wks/book.html", save="wks/parsed.html")
 
 print_meta(yml, fprint)
 pre_convert(xml)
@@ -86,14 +94,17 @@ end_convert(yml.output+".md")
 post_convert(yml.output+".md")
 print("")
 
-run(["pandoc", "--standalone", "-t", "html5", "-o", yml.output+".html", yml.output+".md"])
+run(["pandoc", "--standalone", "-t", "html5",
+     "-o", yml.output+".html", yml.output+".md"])
 soup = get_soup(yml.output+".html")
 soup.find("header").extract()
 for n in soup.findAll(["div", "p"]):
-    if len(n.select("*"))==0 and len(n.get_text().strip())==0:
+    if len(n.select("*")) == 0 and len(n.get_text().strip()) == 0:
         n.extract()
 with open(yml.output+".html", "w") as f:
     f.write(str(soup))
-run(["miepub", "--chapter-level", "1", "--css", "../epub.css", "--txt-cover", yml.txt_cover, yml.output+".md"])
+run(["miepub", "--chapter-level", "1", "--css", "../epub.css",
+     "--txt-cover", yml.txt_cover, yml.output+".md"])
 
-pyminizip.compress_multiple([yml.output+'.'+i for i in ("md", "html", "epub")], [], yml.output+".zip", "programaelectoral", 9)
+pyminizip.compress_multiple([yml.output+'.'+i for i in ("md", "html", "epub")],
+                            [], yml.output+".zip", "programaelectoral", 9)

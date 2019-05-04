@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-import sys
 import re
 
 re_punto = re.compile(r"^(\d+\.)\s*$")
@@ -8,6 +7,7 @@ re_sp = re.compile(r"\s+")
 
 min_top = 295 - 1
 max_top = 823 + 1
+
 
 def get_cap(pag, punto=None):
     if punto == 452:
@@ -129,13 +129,15 @@ def get_cap(pag, punto=None):
         return "## Emigración"
     return None
 
+
 def get_text(childrens, top, left, bottom, right):
     txt = ""
-    for  c in childrens:
+    for c in childrens:
         _top, _left = (c.attrs["top"], c.attrs["left"])
-        if _top>=top and _top<=bottom and _left>=left and _left<=right:
+        if _top >= top and _top <= bottom and _left >= left and _left <= right:
             txt = txt + "\n" + c.decode_contents()
     return txt.strip()
+
 
 def convert(xml, fprint):
     punto = 0
@@ -148,17 +150,19 @@ def convert(xml, fprint):
         if pag < 6:
             continue
         txt = n.get_text().strip()
-        if len(txt)<100:
+        if len(txt) < 100:
             continue
-        childrens = [t for t in n.select("> *") if "top" in t.attrs and t.get_text().strip()]
+        childrens = [t for t in n.select(
+            "> *") if "top" in t.attrs and t.get_text().strip()]
 
         if pag < 8:
             _min_top = 284 if pag == 6 else 150
-            childrens = [t for t in childrens if t.attrs["top"]>_min_top and t.attrs["top"]<max_top]
+            childrens = [t for t in childrens if t.attrs["top"]
+                         > _min_top and t.attrs["top"] < max_top]
             fprint("")
             for i, c in enumerate(childrens):
-                prev = None if i==0 else childrens[i-1]
-                if prev and (c.attrs["top"]-prev.attrs["top"])>29:
+                prev = None if i == 0 else childrens[i-1]
+                if prev and (c.attrs["top"]-prev.attrs["top"]) > 29:
                     fprint("")
                 fprint(c)
             continue
@@ -185,16 +189,17 @@ def convert(xml, fprint):
         if pag < 13:
             continue
 
-        childrens = [t for t in childrens if t.attrs["top"]>min_top and t.attrs["top"]<max_top]
+        childrens = [t for t in childrens if t.attrs["top"]
+                     > min_top and t.attrs["top"] < max_top]
 
-        pag1 = [c for c in childrens if c.attrs["left"]<640]
-        pag2 = [c for c in childrens if c.attrs["left"]>640]
+        pag1 = [c for c in childrens if c.attrs["left"] < 640]
+        pag2 = [c for c in childrens if c.attrs["left"] > 640]
 
         for childrens in (pag1, pag2):
             childrens = sorted(childrens, key=lambda t: t.attrs["top"])
 
             for i, c in enumerate(childrens):
-                prev = None if i==0 else childrens[i-1]
+                prev = None if i == 0 else childrens[i-1]
                 txt = c.get_text().strip()
                 m = re_punto.match(txt)
                 if m:
@@ -208,9 +213,10 @@ def convert(xml, fprint):
                         fprint("")
                     fprint("*", end=" ")
                 else:
-                    if prev and (c.attrs["top"]-prev.attrs["top"])>32:
+                    if prev and (c.attrs["top"]-prev.attrs["top"]) > 32:
                         txt = "\n"+txt
                     fprint(txt)
+
 
 def post_convert(file_out):
     re_words = re.compile(r"\b([^\d\W]+-[^\d\W]+)\b")
@@ -227,15 +233,17 @@ def post_convert(file_out):
         if i not in full_word:
             words.add(i)
     for w in words:
-        md = re.sub(r"\b"+w+r"\b", w.replace("-\n","")+"\n", md)
+        md = re.sub(r"\b"+w+r"\b", w.replace("-\n", "")+"\n", md)
     md = re.sub(r"^(45|198)\s*\. ", r"**\1.** ", md, flags=re.MULTILINE)
-    md = re.sub(r"^361\s+Implementaremos", "**361.** Implementaremos", md, flags=re.MULTILINE)
+    md = re.sub(r"^361\s+Implementaremos",
+                "**361.** Implementaremos", md, flags=re.MULTILINE)
     md = re.sub("\s+([\.,])", r"\1", md)
     md = re.sub("(\s+)”", r"”\1", md)
     md = re.sub("“(\s+)", r"\1“", md)
     md = re.sub(r"^ +", r"", md, flags=re.MULTILINE)
     md = md.replace("I\nmplantaremos", "Implantaremos")
-    md = re.sub(r"^Seguridad vial\s+## Seguridad vial$", r"## Seguridad vial", md, flags=re.MULTILINE)
+    md = re.sub(r"^Seguridad vial\s+## Seguridad vial$",
+                r"## Seguridad vial", md, flags=re.MULTILINE)
 
     with open(file_out, "w") as f:
         f.write(md.strip())

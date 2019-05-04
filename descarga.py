@@ -2,20 +2,21 @@
 # -*- coding: utf-8 -*-
 
 import os
-import subprocess
-import bs4
 import re
-import argparse
-from glob import glob
+import subprocess
 import sys
-import yaml
-from util import get_info, set_info
 from datetime import datetime
-
+from glob import glob
 from urllib.request import urlretrieve
 
+import bs4
+import yaml
+
+from util import get_info, set_info
+
 re_float = re.compile(r"^\d+\.\d+$")
-dname=os.getcwd()
+dname = os.getcwd()
+
 
 def set_pdfinfo(pdf, info):
     info.pdf = info.get("pdf", {})
@@ -27,7 +28,7 @@ def set_pdfinfo(pdf, info):
             k, v = l.split(":", 1)
             k = k.strip()
             v = v.strip()
-            if len(v)==0 or v=='none':
+            if len(v) == 0 or v == 'none':
                 v = None
             elif v.isdigit():
                 v = int(v)
@@ -37,18 +38,19 @@ def set_pdfinfo(pdf, info):
                 v = False
             elif v == 'yes':
                 v = True
-            info.pdf[k]=v
+            info.pdf[k] = v
 
-    fecha=None
+    fecha = None
     for k, v in info.pdf.items():
         if v and k.endswith("Date"):
             d = datetime.strptime(v, "%a %b %d %H:%M:%S %Y %Z")
             if fecha is None or d < fecha:
                 fecha = d
     if fecha:
-        info.fecha = fecha.date()#.strftime('%Y-%m-%d')
+        info.fecha = fecha.date()  # .strftime('%Y-%m-%d')
 
-indices=[]
+
+indices = []
 for c in glob("*/info.yml"):
     indices.append((c, os.path.dirname(c), get_info(c, autocomplete=False)))
 
@@ -75,11 +77,13 @@ for path_info, codigo, info in sorted(indices):
             os.chdir(pth)
             _pdf = book + ".pdf"
             subprocess.run(["pdftohtml", "-q", _pdf])
-            subprocess.run(["sed", "s/<head>/<head><meta charset=\"UTF-8\">/", "-i", book+"s.html"])
+            subprocess.run(
+                ["sed", "s/<head>/<head><meta charset=\"UTF-8\">/", "-i", book+"s.html"])
             subprocess.run(["pdftohtml", "-q", "-xml", _pdf])
             subprocess.run(["pdftotext", "-q", _pdf])
             if glob("*.png"):
-                subprocess.run("mogrify +repage -fuzz 600 -trim -resize 720> -format jpg -quality 75 *.png".split())
+                subprocess.run(
+                    "mogrify +repage -fuzz 600 -trim -resize 720> -format jpg -quality 75 *.png".split())
 
     else:
         if not os.path.isfile(htm):

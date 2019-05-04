@@ -1,16 +1,18 @@
-import yaml
-from bunch import Bunch
-import bs4
+import argparse
+import io
 import os
 import re
-from markdownify import markdownify
-import argparse
 import sys
-from PyPDF2 import PdfFileReader
+
+import bs4
 import pdfkit
-import io
+import yaml
+from bunch import Bunch
+from markdownify import markdownify
+from PyPDF2 import PdfFileReader
 
 re_sp = re.compile(r"\s+")
+
 
 def get_pages(html):
     options = {
@@ -29,26 +31,32 @@ def get_pages(html):
         pdf = PdfFileReader(fp)
         return pdf.getNumPages()
 
+
 class CustomDumper(yaml.Dumper):
     def represent_dict_preserve_order(self, data):
         return self.represent_dict(data.items())
 
+
 CustomDumper.add_representer(dict, CustomDumper.represent_dict_preserve_order)
 
-def get_info(yml_file = "info.yml", autocomplete=False):
+
+def get_info(yml_file="info.yml", autocomplete=False):
     with open(yml_file, 'r') as f:
         yml = Bunch(yaml.load(f))
         if autocomplete:
             if "txt_cover" not in yml:
-                yml.txt_cover = "Programa %s %s %s" % (yml.partido, yml.tipo, yml.year)
+                yml.txt_cover = "Programa %s %s %s" % (
+                    yml.partido, yml.tipo, yml.year)
             if "output" not in yml:
                 yml.output = "%s - %s - %s" % (yml.year, yml.tipo, yml.partido)
     return yml
 
-def set_info(yml, yml_file = "info.yml"):
+
+def set_info(yml, yml_file="info.yml"):
     with open(yml_file, 'w') as f:
         yml = dict(yml)
-        yaml.dump(dict(yml), f, default_flow_style=False, Dumper=CustomDumper, allow_unicode=True)
+        yaml.dump(dict(yml), f, default_flow_style=False,
+                  Dumper=CustomDumper, allow_unicode=True)
 
 
 def get_function(module, name, default=None):
@@ -70,6 +78,7 @@ def clean_tags(txt, extra=False):
             txt = re.sub(r"(,)</"+tag+">", "</"+tag+r">\1", txt)
     return txt
 
+
 def get_soup(source, tp="lxml", save=None):
     if not os.path.isfile(source):
         return None
@@ -79,28 +88,30 @@ def get_soup(source, tp="lxml", save=None):
         soup = bs4.BeautifulSoup(txt, tp)
     if tp == "xml":
         for n in soup.select("*"):
-            if n.name == "text" and len(n.select("*"))==0 and len(n.get_text().strip())==0:
+            if n.name == "text" and len(n.select("*")) == 0 and len(n.get_text().strip()) == 0:
                 n.extract()
                 continue
             for a in ("top", "left", "right", "number", "font", "height"):
                 if a in n.attrs:
-                    n.attrs[a]=int(n.attrs[a])
+                    n.attrs[a] = int(n.attrs[a])
     for n in soup.findAll(["text", "div", "p", "h1", "h2", "h3", "h4", "h5", "h6"]):
-        if len(n.select("> *"))==0 and len(n.get_text().strip())==0:
+        if len(n.select("> *")) == 0 and len(n.get_text().strip()) == 0:
             n.extract()
     for n in soup.findAll(["i", "em", "b", "strong", "span"]):
-        if len(n.select("> *"))==0 and len(n.get_text().strip())==0:
+        if len(n.select("> *")) == 0 and len(n.get_text().strip()) == 0:
             n.unwrap()
     if save is not None:
         with open(save, "w") as f:
             f.write(str(soup))
     return soup
 
+
 def to_md(n):
     txt = n.decode_contents()
     txt = re_sp.sub(" ", txt).strip()
     txt = markdownify(txt)
     return txt
+
 
 def get_arg(description):
     parser = argparse.ArgumentParser(description=description)

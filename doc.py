@@ -1,27 +1,24 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-import nltk
-import re
-from util import get_arg, get_info, get_soup, set_info, get_pages
-from glob import glob
 import os
+import re
 import sys
-import pandas as pd
+from glob import glob
 
-from bunch import Bunch
-
-import numpy as np
 import matplotlib.pyplot as plt
-
+import nltk
+import numpy as np
+import pandas as pd
+from bunch import Bunch
 from nltk import word_tokenize
 from nltk.stem import SnowballStemmer
-
-from collections import Counter
+from scipy import spatial
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from scipy import spatial
 
-reload = len(sys.argv)>1 and sys.argv[1]=="--reload"
+from util import get_arg, get_info, get_pages, get_soup, set_info
+
+reload = len(sys.argv) > 1 and sys.argv[1] == "--reload"
 
 stemmer = SnowballStemmer('spanish')
 
@@ -32,11 +29,13 @@ re_corpus = re.compile(r"^"+re_puntuacion+"|"+re_puntuacion+"$")
 re_number = re.compile(r"^[\d\.,/%\-ºª]+$")
 re_sp = re.compile(r"\s+")
 
+
 def get_jaccard_sim(str1, str2):
     a = set(str1.split())
     b = set(str2.split())
     c = a.intersection(b)
     return float(len(c)) / (len(a) + len(b) - len(c))
+
 
 def mk_set(s):
     #s = s.replace(",", " ").replace("...", " ").replace("…", " ").lower()
@@ -44,6 +43,7 @@ def mk_set(s):
     #s = set(s.split())
     #print (" ".join(sorted(s)))
     return set(s.strip().split())
+
 
 # preposiciones + conjunciones + articulos + pronombres + adverbios
 # + cosas varias
@@ -55,10 +55,12 @@ excluir2 = mk_set('''
 parte partir partes partida publicidad plana ACTÚA ACTUAR
 ''')
 
+
 def cd_mkdir(d):
     if not os.path.isdir(d):
         os.mkdir(d)
     os.chdir(d)
+
 
 def get_stem(w):
     _w = stemmer.stem(w)
@@ -68,9 +70,9 @@ def get_stem(w):
 
 
 def get_cosine_sim(*strs):
-    stems_strs=[]
+    stems_strs = []
     for i, s in enumerate(strs):
-        stems=[]
+        stems = []
         for w in s.split():
             stems.append(get_stem(w))
         stems_strs.append(" ".join(stems))
@@ -78,17 +80,19 @@ def get_cosine_sim(*strs):
     print(vectors)
     return cosine_similarity(vectors)
 
+
 def get_vectors(*strs):
     vectorizer = CountVectorizer(strs)
     vectorizer.fit(strs)
     print(text)
     return vectorizer.transform(strs).toarray()
 
+
 def barh(savefig, objects, performance, xlabel, ylabel, title):
     y_pos = np.arange(len(objects))
     plt.rcdefaults()
     plt.barh(y_pos, performance, align='center', alpha=0.5)
-    plt.yticks(y_pos, objects)#, rotation='30')
+    plt.yticks(y_pos, objects)  # , rotation='30')
     if xlabel is not None:
         plt.xlabel(xlabel)
     if ylabel is not None:
@@ -101,8 +105,9 @@ def barh(savefig, objects, performance, xlabel, ylabel, title):
     plt.clf()
 
 #c = get_cosine_sim("AI is our friend and it has been friendly", "AI and humans have always been friendly")
-#print(c)
-#sys.exit()
+# print(c)
+# sys.exit()
+
 
 if reload:
     datas = []
@@ -124,33 +129,33 @@ if reload:
         data.caracteres = len(body_txt)
         data.palabras = len(body_slp)
         data.parrafos = len(body.findAll(["p", "li"]))
-        data.capitulos = len(body.findAll(["h1"]))#, "h2"]))
+        data.capitulos = len(body.findAll(["h1"]))  # , "h2"]))
         data.root = d
         filesize = data.get("filesize", {})
         for k in ("md", "html", "epub"):
-            filesize[k]=os.path.getsize(data.output+'.'+k)
+            filesize[k] = os.path.getsize(data.output+'.'+k)
         for k in ("pdf", "html", "xml"):
             if "src_"+k in filesize:
                 continue
             book = "wks/book."+k
             if os.path.isfile(book):
-                filesize["src_"+k]=os.path.getsize(book)
+                filesize["src_"+k] = os.path.getsize(book)
             book = "wks/books."+k
             if os.path.isfile(book):
-                filesize["src_"+k]=filesize.get(k, 0) + os.path.getsize(book)
+                filesize["src_"+k] = filesize.get(k, 0) + os.path.getsize(book)
         data.filesize = filesize
 
         corpus = []
         stems = {}
         for w in body_slp:
             w = re_corpus.sub("", w)
-            if len(w)>3 and w.lower() not in excluir and not re_number.match(w):
+            if len(w) > 3 and w.lower() not in excluir and not re_number.match(w):
                 corpus.append(w)
         for i, w in enumerate(corpus):
             _w = w.lower()
             if w.upper() != w and _w != w:
                 w = _w
-                corpus[i]=w
+                corpus[i] = w
 
         data.riqueza_lexica = len(set(corpus)) / len(corpus)
         #data.corpus = sorted(set(corpus), key=lambda x: (-len(x), x))
@@ -160,13 +165,12 @@ if reload:
             if w in excluir2:
                 continue
             _w = get_stem(w)
-            if len(_w)<4:
+            if len(_w) < 4:
                 continue
             corpus_stem.append(_w)
             st = stems.get(_w, set())
             st.add(w)
-            stems[_w]=st
-
+            stems[_w] = st
 
         objects = []
         performance = []
@@ -174,25 +178,26 @@ if reload:
         l_corpus_stem = len(corpus_stem)
         l_corpus = len(corpus)
         freq_stem = nltk.FreqDist(corpus_stem)
-        freq_corpus = {w:c for w,c in nltk.FreqDist(corpus).most_common()}
-        data.freq={}
+        freq_corpus = {w: c for w, c in nltk.FreqDist(corpus).most_common()}
+        data.freq = {}
         for s, c in freq_stem.most_common(10):
-            words=[]
-            prct=[]
+            words = []
+            prct = []
             for w in stems[s]:
                 f = freq_corpus[w]
-                words.append((f,w))
+                words.append((f, w))
                 prct.append(f)
-            words={w:(c*1000/l_corpus) for c,w in sorted(words, reverse=True)}
+            words = {w: (c*1000/l_corpus)
+                     for c, w in sorted(words, reverse=True)}
             c = (c*1000/l_corpus_stem)
-            data.freq[s]={
+            data.freq[s] = {
                 "count": c,
                 "words": words
             }
-            if len(words)==1:
-                s=list(words.keys())[0]
+            if len(words) == 1:
+                s = list(words.keys())[0]
             else:
-                s=s+"*"
+                s = s+"*"
             objects.append(s)
             performance.append(c)
             slices.append(sorted(prct))
@@ -201,7 +206,8 @@ if reload:
         data.imagen = data.output+".png"
         set_info(data)
 
-        barh(data.imagen, objects, performance, '‰ de uso', 'Raiz', "%s - %s - %s" % (data.year, data.partido, data.tipo))
+        barh(data.imagen, objects, performance, '‰ de uso', 'Raiz',
+             "%s - %s - %s" % (data.year, data.partido, data.tipo))
 
         plt.clf()
 
@@ -217,12 +223,12 @@ if reload:
     rows = cosine_similarity(sparse_matrix, sparse_matrix)
     for i, row in enumerate(rows):
         d = datas[i]
-        objects=[]
-        performance=[]
+        objects = []
+        performance = []
         col = []
         for c, cell in enumerate(row):
-            if c!=i:
-                col.append((cell ,datas[c].partido))
+            if c != i:
+                col.append((cell, datas[c].partido))
         for c, p in sorted(col):
             objects.append(p)
             performance.append(c)
@@ -255,29 +261,34 @@ def bar_compare(file, title, groups, ori, res, legend=None):
     plt.savefig(file)
     plt.clf()
 
+
 def get_text(data):
     soup = get_soup(data.root+"/"+data.output+".html")
     body = soup.find("body")
     body_txt = re.sub(r"  +", " ", body.get_text()).strip()
     return body_txt
 
+
 os.chdir(cwd)
 
-datas = [get_info(yml_file=i, autocomplete=False) for i in sorted(glob("*/analisis/info.yml"))]
+datas = [get_info(yml_file=i, autocomplete=False)
+         for i in sorted(glob("*/analisis/info.yml"))]
 
 re_ltrim = re.compile(r" +$", re.MULTILINE)
+
+
 def write(f, s, *args, trim=True):
     s = re_ltrim.sub("", s)
     if trim:
         s = s.strip()
-    if len(args)>0:
+    if len(args) > 0:
         s = s.format(*args)
     f.write(s+"\n")
 
 
-f=open("README.md", "w")
+f = open("README.md", "w")
 
-write(f,'''
+write(f, '''
 # Resumen
 
 | Partido | Fuente | Resultado<sup>1</sup> | Páginas<sup>2</sup> | Capítulos | Párrafos |
@@ -285,23 +296,23 @@ write(f,'''
 '''.strip())
 for d in datas:
     formato = "PDF" if d.url.endswith(".pdf") else "HTML"
-    write(f,'''
+    write(f, '''
 | {0} | [{1}]({2}) | HTML + EPUB + MD | {3} | {4} | {5} |
     ''',
-    d.partido, formato, d.url,
-    d.pages,
-    d.capitulos,
-    d.parrafos,
-    )
-write(f,"")
-write(f,'''
+          d.partido, formato, d.url,
+          d.pages,
+          d.capitulos,
+          d.parrafos,
+          )
+write(f, "")
+write(f, '''
 Notas:
 
 * <sup>1</sup> Se puede descargar de [we.tl/t-CwCneKiaFF](https://we.tl/t-CwCneKiaFF) y la contraseña de los `zip` es `programaelectoral`.
 * <sup>2</sup> Valor calculado del resultado de imprimir el `html` generado en formato `Din A4`, con fuente `Arial 12pt` y margen de `1cm`.
 ''')
-write(f,"")
-write(f,'''
+write(f, "")
+write(f, '''
 
 # ¿Por qué no usar PDF?
 
@@ -417,7 +428,7 @@ que cualquiera de los originales.
 
 ''')
 
-write(f,'''
+write(f, '''
 # Páginas y tamaño
 
 <table>
@@ -441,7 +452,7 @@ write(f,'''
 for d in datas:
     p0 = d.get("src_pages", None) or d.pdf["Pages"]
     s0 = d.filesize.get("src_pdf", None) or d.filesize["src_html"]
-    write(f,'''
+    write(f, '''
     <tr>
         <td>{0}</td>
         <td align="right">{1}</td>
@@ -452,15 +463,15 @@ for d in datas:
         <td align="right">{6} %</td>
     </tr>
     ''',
-    d.partido,
-    p0,
-    d.pages,
-    int((p0-d.pages)*100/p0),
-    int(s0/1024),
-    int(d.filesize["epub"]/1024),
-    int((s0-d.filesize["epub"])*100/s0)
-    )
-write(f,'''
+          d.partido,
+          p0,
+          d.pages,
+          int((p0-d.pages)*100/p0),
+          int(s0/1024),
+          int(d.filesize["epub"]/1024),
+          int((s0-d.filesize["epub"])*100/s0)
+          )
+write(f, '''
 </tbody>
 </table>
 
@@ -505,27 +516,27 @@ Bajo los gráficos se encuentra el desglose de palabras pertenecientes a una ra�
 **¡OJO!** Que los porcentajes son en ‰ (tanto por mil), no en % (tanto por ciento).
 
 ''')
-write(f,"")
+write(f, "")
 for d in datas:
-    write(f,"## {0}", d.partido)
-    write(f,"")
-    write(f,'''
+    write(f, "## {0}", d.partido)
+    write(f, "")
+    write(f, '''
 ![{0}]({1}/analisis/{2})
-    ''',d.partido, d.root, d.imagen.replace(" ","%20"))
-    write(f,"")
+    ''', d.partido, d.root, d.imagen.replace(" ", "%20"))
+    write(f, "")
     for s, vl in d.freq.items():
         c = vl["count"]
         words = vl["words"]
-        if len(words)==1:
+        if len(words) == 1:
             s = list(words.keys())[0]
         else:
             s = s + "*:"
-        write(f,"* `{0:.2f}` ‰ {1}", c, s)
-        if len(words)>1:
+        write(f, "* `{0:.2f}` ‰ {1}", c, s)
+        if len(words) > 1:
             for w, c in words.items():
-                write(f,"    * `{0:2.2f}` ‰ {1}", c, w, trim=False)
-    write(f,"")
-write(f,'''
+                write(f, "    * `{0:2.2f}` ‰ {1}", c, w, trim=False)
+    write(f, "")
+write(f, '''
 ## Conclusiones
 
 No creo que realmente se pueda extraer conclusiones serias de estos gráficos

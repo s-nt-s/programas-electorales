@@ -1,37 +1,40 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-import bs4
-import sys
 import re
-from subprocess import run
+
+import bs4
 
 re_punto = re.compile(r"^<b>(\d+\.) *</b> *")
 re_sp = re.compile(r"\s+")
+
 
 def mktag(inner):
     div = bs4.BeautifulSoup("<unwrapme>"+inner+"\n</unwrapme>", 'lxml')
     return div.find("unwrapme")
 
+
 def get_cap(page):
-    if page==6:
+    if page == 6:
         return "La España del conocimiento"
-    if page==14:
+    if page == 14:
         return "La España competititva y de las oportunidades"
-    if page==24:
+    if page == 24:
         return "La España del bienestar"
-    if page==30:
+    if page == 30:
         return "La España feminista"
-    if page==34:
+    if page == 34:
         return "La España de la transición ecológica"
-    if page==38:
+    if page == 38:
         return "La España de los nuevos derechos y libertades"
-    if page==44:
+    if page == 44:
         return "Una España europea abierta al mundo"
     return None
+
 
 min_top = 104 - 1
 max_top = 846
 sub = None
+
 
 def print_meta(yml, fprint):
     fprint('''
@@ -50,8 +53,9 @@ URL: "{4}"
         yml.tipo,
         yml.fecha,
         yml.url,
-        )
     )
+    )
+
 
 def convert(xml, fprint):
     for n in xml.findAll("page"):
@@ -59,24 +63,26 @@ def convert(xml, fprint):
         cap = get_cap(pag)
         if cap:
             fprint("\n# %s" % cap)
-        if pag<6:
+        if pag < 6:
             continue
         txt = n.get_text().strip()
-        if len(txt)<100:
-            flag=True
+        if len(txt) < 100:
+            flag = True
             continue
-        childrens = [t for t in n.select("> *") if "top" in t.attrs and t.attrs["top"]>min_top and t.attrs["top"]<max_top]
+        childrens = [t for t in n.select(
+            "> *") if "top" in t.attrs and t.attrs["top"] > min_top and t.attrs["top"] < max_top]
         childrens = sorted(childrens, key=lambda t: int(t.attrs["top"]/10))
 
         while childrens:
             c = childrens.pop(0)
             txt = c.get_text().strip()
-            if len(txt)==0:
+            if len(txt) == 0:
                 continue
 
             b1 = c.find("b")
             if b1 and txt.startswith("/ ") and txt == b1.get_text().strip():
-                txt = "%s %s %s" % (txt[1:], childrens.pop(0).get_text(), childrens.pop(0).get_text())
+                txt = "%s %s %s" % (txt[1:], childrens.pop(
+                    0).get_text(), childrens.pop(0).get_text())
                 txt = re_sp.sub(" ", txt).strip()
                 txt = txt.replace(" TRABA JAR ", " TRABAJAR ")
                 txt = txt.capitalize().replace("españa", "España")
@@ -88,6 +94,7 @@ def convert(xml, fprint):
                 fprint(txt, end=" ")
             else:
                 fprint(txt)
+
 
 def post_convert(file_out):
     re_words = re.compile(r"\b([^\d\W]+-[^\d\W]+)\b")
@@ -108,7 +115,7 @@ def post_convert(file_out):
         if i not in full_word:
             words.add(i)
     for w in words:
-        md = re.sub(r"\b"+w+r"\b", w.replace("-\n","")+"\n", md)
+        md = re.sub(r"\b"+w+r"\b", w.replace("-\n", "")+"\n", md)
     md = re.sub(r" *\n *([:,\.])", r"\1\n", md)
     md = re.sub(r"\s+\.", ".", md)
     md = re.sub(r"^ ", "", md, flags=re.MULTILINE)
